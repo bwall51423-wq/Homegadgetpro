@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Product — HomeGadgetPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0a0d08;--surface:#121510;--surface2:#1a1f16;--surface3:#222920;--border:#252e1e;--accent:#85d44e;--accent2:#f5aa3f;--accent3:#4eccd4;--btn-fg:#0a0d08;--text:#f0f3ec;--muted:#7a8a6a;--muted2:#3a4830;--hi:rgba(133,212,78,.09);--hi-border:rgba(133,212,78,.22);--red:#ff6b6b;--yellow:#f5aa3f;--shadow:rgba(0,0,0,.5);--nav-bg:rgba(10,13,8,.92);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden;}
+nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 16px;height:54px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--text);}
+.logo-mark{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;}
+.logo span{color:var(--accent);}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);overflow:hidden;flex:1;}
+.breadcrumb a{color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s;}
+.breadcrumb a:hover{color:var(--accent);}
+.bc-sep{opacity:.4;}
+.bc-cur{color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;}
+.nav-compare-btn{flex-shrink:0;background:var(--hi);border:1px solid var(--hi-border);color:var(--accent);padding:7px 14px;border-radius:8px;font-size:12px;font-weight:600;white-space:nowrap;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px;}
+.nav-compare-btn:hover,.nav-compare-btn.added{background:var(--accent);color:var(--btn-fg);border-color:var(--accent);}
+.page{max-width:900px;margin:0 auto;padding:24px 14px 100px;}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px;}
+@media(max-width:620px){.product-hero{grid-template-columns:1fr;}}
+.gallery-main{background:var(--surface);border:1px solid var(--border);border-radius:18px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:100px;margin-bottom:10px;position:relative;overflow:hidden;}
+.gallery-main::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(133,212,78,.05),transparent 60%);}
+.g-badge{position:absolute;top:14px;left:14px;background:var(--accent);color:var(--btn-fg);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;}
+.g-sponsored{position:absolute;top:14px;right:14px;background:var(--surface2);border:1px solid var(--border);color:var(--muted);font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:3px 8px;border-radius:5px;}
+.gallery-thumbs{display:flex;gap:8px;}
+.thumb{flex:1;aspect-ratio:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;transition:all .2s;}
+.thumb:hover,.thumb.active{border-color:var(--accent);}
+.product-info{display:flex;flex-direction:column;}
+.pi-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.pi-brand{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);font-weight:600;}
+.pi-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:2px 8px;border-radius:4px;background:var(--hi);color:var(--accent);}
+.pi-name{font-family:'Syne',sans-serif;font-size:clamp(20px,4vw,26px);font-weight:800;line-height:1.15;letter-spacing:-.5px;margin-bottom:10px;}
+.pi-rating{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+.r-stars{color:var(--yellow);font-size:14px;}
+.r-num{font-size:14px;font-weight:600;}
+.r-count{font-size:13px;color:var(--muted);}
+.r-div{width:1px;height:14px;background:var(--border);}
+.homescore{display:flex;align-items:center;gap:5px;background:var(--hi);border:1px solid var(--hi-border);padding:3px 10px;border-radius:6px;}
+.hs-num{font-family:'Syne',sans-serif;font-size:13px;font-weight:800;color:var(--accent);}
+.hs-lbl{font-size:11px;color:var(--muted);}
+.price-block{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;}
+.price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap;}
+.price-main{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--accent);}
+.price-old{font-size:16px;color:var(--muted);text-decoration:line-through;}
+.price-save{font-size:13px;font-weight:600;color:var(--red);background:rgba(255,107,107,.1);padding:2px 8px;border-radius:5px;}
+.price-note{font-size:12px;color:var(--muted);margin-bottom:10px;}
+.price-updated{font-size:11px;color:var(--muted2);margin-top:6px;}
+.retailer-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;}
+.retailer-chip{display:flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border);padding:5px 11px;border-radius:8px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .2s;text-decoration:none;}
+.retailer-chip:hover{border-color:var(--accent);color:var(--text);}
+.retailer-chip.cheapest{border-color:var(--accent);background:var(--hi);color:var(--accent);}
+.rc-price{font-weight:700;}
+.cta-stack{display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+.btn-buy{background:var(--accent);color:var(--btn-fg);border:none;padding:14px 20px;border-radius:12px;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 0 24px rgba(133,212,78,.2);transition:all .2s;text-decoration:none;width:100%;}
+.btn-buy:hover{box-shadow:0 0 32px rgba(133,212,78,.4);transform:translateY(-1px);}
+.btn-buy-sub{font-size:11px;font-weight:500;opacity:.7;}
+.btn-row{display:flex;gap:8px;}
+.btn-compare{background:transparent;color:var(--text);border:1px solid var(--border);padding:12px 20px;border-radius:12px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s;flex:1;}
+.btn-compare:hover,.btn-compare.added{border-color:var(--accent);color:var(--accent);background:var(--hi);}
+.btn-wishlist{background:transparent;color:var(--muted);border:1px solid var(--border);padding:12px;border-radius:12px;font-size:16px;cursor:pointer;transition:all .2s;width:48px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.btn-wishlist:hover{border-color:var(--red);color:var(--red);}
+.key-specs{display:flex;gap:8px;flex-wrap:wrap;}
+.key-spec{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:7px 11px;}
+.ks-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:1px;}
+.ks-val{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;}
+.tabs-wrap{margin-bottom:24px;border-bottom:1px solid var(--border);}
+.tabs{display:flex;overflow-x:auto;scrollbar-width:none;}
+.tabs::-webkit-scrollbar{display:none;}
+.tab{flex-shrink:0;padding:12px 18px;font-size:13px;font-weight:600;color:var(--muted);border:none;background:transparent;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+.tab-panel{display:none;animation:fadeIn .3s ease;}
+.tab-panel.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+@media(max-width:500px){.overview-grid{grid-template-columns:1fr;}}
+.pros-card{background:rgba(133,212,78,.06);border:1px solid rgba(133,212,78,.18);border-radius:14px;padding:16px;}
+.cons-card{background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.18);border-radius:14px;padding:16px;}
+.pc-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;}
+.pros-card .pc-title{color:var(--accent);}.cons-card .pc-title{color:var(--red);}
+.pc-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--muted);margin-bottom:7px;line-height:1.45;}
+.pc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:6px;}
+.pros-card .pc-dot{background:var(--accent);}.cons-card .pc-dot{background:var(--red);}
+.verdict-block{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:20px;display:flex;gap:16px;align-items:flex-start;}
+.verdict-icon{font-size:28px;flex-shrink:0;margin-top:2px;}
+.verdict-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:5px;}
+.verdict-body{font-size:13px;color:var(--muted);line-height:1.6;}
+.verdict-tag{display:inline-flex;align-items:center;gap:4px;background:var(--hi);border:1px solid var(--hi-border);color:var(--accent);padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700;margin-top:8px;}
+.score-bars{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.sbar-row{display:flex;align-items:center;gap:10px;}
+.sbar-lbl{font-size:12px;color:var(--muted);width:110px;flex-shrink:0;}
+.sbar-track{flex:1;height:6px;background:var(--border);border-radius:6px;overflow:hidden;}
+.sbar-fill{height:100%;border-radius:6px;background:var(--accent);transition:width 1s cubic-bezier(.34,1.56,.64,1);}
+.sbar-val{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--accent);width:28px;text-align:right;flex-shrink:0;}
+.specs-table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.specs-table thead th{background:var(--surface2);padding:12px 16px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--border);}
+.specs-table tbody tr{border-bottom:1px solid var(--border);transition:background .15s;}
+.specs-table tbody tr:last-child{border-bottom:none;}
+.specs-table tbody tr:hover{background:var(--hi);}
+.specs-table td{padding:11px 16px;font-size:13px;}
+.spec-key{color:var(--muted);font-weight:500;}
+.spec-val{font-weight:600;text-align:right;}
+.spec-best{color:var(--accent);}
+.chart-wrap{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:16px;}
+.chart-summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+.chart-stat{flex:1;min-width:70px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;}
+.cs-lbl{font-size:11px;color:var(--muted);margin-bottom:2px;}
+.cs-val{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;}
+.cs-val.low{color:var(--accent);}.cs-val.high{color:var(--red);}.cs-val.now{color:var(--yellow);}
+.alert-box{background:var(--hi);border:1px solid var(--hi-border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.alert-text{font-size:13px;color:var(--muted);}
+.alert-text strong{color:var(--text);}
+.alert-btn{background:var(--accent);color:var(--btn-fg);border:none;padding:8px 16px;border-radius:8px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.review-summary-block{display:flex;gap:20px;align-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:18px;flex-wrap:wrap;}
+.big-score{text-align:center;flex-shrink:0;}
+.big-num{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:var(--accent);line-height:1;}
+.big-stars{color:var(--yellow);font-size:16px;margin:4px 0;}
+.big-count{font-size:12px;color:var(--muted);}
+.rbar-rows{flex:1;display:flex;flex-direction:column;gap:6px;min-width:160px;}
+.rbar-row{display:flex;align-items:center;gap:8px;font-size:12px;}
+.rbar-lbl{color:var(--muted);width:12px;text-align:right;flex-shrink:0;}
+.rbar-track{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden;}
+.rbar-fill{height:100%;border-radius:3px;background:var(--yellow);}
+.rbar-pct{color:var(--muted);width:28px;text-align:right;flex-shrink:0;}
+.review-filters{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-bottom:16px;}
+.review-filters::-webkit-scrollbar{display:none;}
+.rf-btn{flex-shrink:0;background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:5px 13px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.rf-btn.active{background:var(--hi);border-color:var(--accent);color:var(--accent);}
+.review-card{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:10px;}
+.rc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;gap:8px;}
+.rc-left{display:flex;align-items:center;gap:10px;}
+.avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;flex-shrink:0;}
+.rc-name{font-size:14px;font-weight:600;line-height:1.2;}
+.rc-meta{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+.rc-verified{color:var(--accent);font-size:10px;font-weight:600;}
+.rc-stars{color:var(--yellow);font-size:13px;flex-shrink:0;}
+.rc-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:5px;}
+.rc-body{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:10px;}
+.rc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.rc-tag{font-size:11px;background:var(--surface3);border:1px solid var(--border);color:var(--muted);padding:2px 9px;border-radius:4px;}
+.rc-helpful{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);}
+.helpful-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:6px;font-size:12px;cursor:pointer;transition:all .2s;}
+.helpful-btn:hover{border-color:var(--accent);color:var(--accent);}
+.submit-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;margin-top:10px;}
+.submit-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:14px;}
+.star-picker{display:flex;gap:8px;margin-bottom:14px;}
+.star-btn{font-size:26px;color:var(--border);cursor:pointer;background:none;border:none;transition:color .15s;line-height:1;}
+.star-btn.lit{color:var(--yellow);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+@media(max-width:480px){.form-row{grid-template-columns:1fr;}}
+.form-input{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 13px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color .2s;width:100%;}
+.form-input:focus{border-color:var(--accent);}
+.form-textarea{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 13px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;width:100%;transition:border-color .2s;margin-bottom:10px;}
+.form-textarea:focus{border-color:var(--accent);}
+.submit-btn{width:100%;background:var(--accent);color:var(--btn-fg);border:none;padding:12px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;cursor:pointer;}
+.video-wrap{background:var(--surface2);border:1px solid var(--border);border-radius:14px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;cursor:pointer;margin-bottom:14px;}
+.video-play-btn{width:60px;height:60px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.video-lbl{font-size:14px;color:var(--muted);}
+.related-video{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:12px;display:flex;align-items:center;gap:12px;cursor:pointer;margin-bottom:8px;}
+.rv-icon{width:40px;height:40px;background:var(--hi);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.rv-title{font-size:13px;font-weight:600;margin-bottom:2px;}
+.rv-sub{font-size:11px;color:var(--muted);}
+.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+@media(max-width:500px){.similar-grid{grid-template-columns:repeat(2,1fr);}}
+.similar-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px;text-decoration:none;color:var(--text);display:block;transition:all .22s;}
+.similar-card:hover{border-color:rgba(133,212,78,.35);transform:translateY(-3px);box-shadow:0 8px 20px var(--shadow);}
+.sc-emoji{font-size:28px;margin-bottom:8px;display:block;}
+.sc-brand{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:1px;}
+.sc-name{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;line-height:1.25;margin-bottom:5px;}
+.sc-price{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.sc-rating{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:3px;}
+.sc-stars{color:var(--yellow);font-size:10px;}
+.sec-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin:28px 0 14px;display:flex;align-items:center;gap:8px;}
+.sec-title::before{content:'';width:3px;height:18px;background:var(--accent);border-radius:2px;display:block;}
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:12px 16px 18px;display:none;}
+@media(max-width:620px){.sticky-bar{display:block;}}
+.sticky-inner{display:flex;gap:10px;align-items:center;}
+.sticky-price{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--accent);flex-shrink:0;}
+.sticky-buy{flex:1;background:var(--accent);color:var(--btn-fg);border:none;padding:12px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;}
+.sticky-cmp{flex-shrink:0;background:var(--surface2);border:1px solid var(--border);color:var(--muted);padding:12px 14px;border-radius:10px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
+.sticky-cmp:hover,.sticky-cmp.added{border-color:var(--accent);color:var(--accent);background:var(--hi);}
+.divider{height:1px;background:var(--border);margin:20px 0;}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="landing.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
+  <div class="breadcrumb">
+    <a href="homespec.html" id="catLink">Coffee Machines</a>
+    <span class="bc-sep">›</span>
+    <span class="bc-cur" id="bcName">Loading...</span>
+  </div>
+  <button class="nav-compare-btn" id="navCmpBtn" onclick="toggleCompare()">⚖️ Compare</button>
+</nav>
+
+<div class="page" id="pageContent">
+  <div style="text-align:center;padding:80px 20px;color:var(--muted)">Loading product...</div>
+</div>
+
+<div class="sticky-bar">
+  <div class="sticky-inner">
+    <div class="sticky-price" id="stickyPrice">£—</div>
+    <button class="sticky-buy" id="stickyBuy">🛒 Buy on Amazon</button>
+    <button class="sticky-cmp" id="stickyCmp" onclick="toggleCompare()">⚖️</button>
+  </div>
+</div>
+
+<script>
+SHAREDEOF
+
+echo "$SHARED" >> /mnt/user-data/outputs/product.html
+
+cat >> /mnt/user-data/outputs/product.html << 'PRODUCT2EOF'
+
+// ── STATE
+let product = null;
+let inCompare = false;
+let selectedStars = 0;
+let userSubmittedReviews = [];
+let chartDrawn = false;
+
+// ── LOAD PRODUCT FROM URL PARAM
+function loadProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'));
+  product = PRODUCT_MAP[id];
+  if (!product) {
+    document.getElementById('pageContent').innerHTML = '<div style="text-align:center;padding:80px;color:var(--muted)">Product not found. <a href="homespec.html" style="color:var(--accent)">Browse products →</a></div>';
+    return;
+  }
+  const cat = getCatForProduct(id);
+  const catNames = {coffee:'Coffee Machines',airfryers:'Air Fryers',hoovers:'Robot Hoovers',speakers:'Speakers',kettles:'Kettles',blenders:'Blenders'};
+  document.title = `${product.brand} ${product.name} Review — HomeGadgetPro`;
+  document.getElementById('bcName').textContent = product.name;
+  document.getElementById('catLink').textContent = catNames[cat] || 'Products';
+  document.getElementById('catLink').href = `homespec.html?cat=${cat}`;
+  document.getElementById('stickyPrice').textContent = `£${product.price}`;
+  document.getElementById('stickyBuy').onclick = () => handleBuy(product.retailers[0]);
+  renderPage();
+}
+
+function handleBuy(retailer) {
+  const url = retailer.asin ? getAffiliateLink(retailer.asin) : (retailer.link || '#');
+  window.open(url, '_blank');
+}
+
+function renderPage() {
+  const p = product;
+  const specEntries = Object.entries(p.specs).filter(([k])=>k!=='Score');
+  const months = ['Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb'];
+  const minP = Math.min(...p.priceHistory), maxP = Math.max(...p.priceHistory);
+  const avgP = Math.round(p.priceHistory.reduce((a,b)=>a+b,0)/p.priceHistory.length);
+  const allReviews = [...p.userReviews, ...userSubmittedReviews];
+  const avgRating = allReviews.length ? (allReviews.reduce((a,r)=>a+r.stars,0)/allReviews.length).toFixed(1) : p.rating;
+  const totalR = p.reviews;
+  const scoreEntries = Object.entries(p.scores||{});
+  const catProds = Object.values(ALL_PRODUCTS).flat().filter(pr => pr.id !== p.id && getCatForProduct(pr.id) === getCatForProduct(p.id)).slice(0,3);
+
+  document.getElementById('pageContent').innerHTML = `
+  <div class="product-hero">
+    <div>
+      <div class="gallery-main" id="galleryMain">
+        ${p.badge ? `<div class="g-badge">${p.badge==='best'?'★ Best Pick':p.badge==='new'?'✦ New':'% Sale'}</div>` : ''}
+        ${p.sponsored ? '<div class="g-sponsored">Sponsored</div>' : ''}
+        <span id="mainEmoji" style="position:relative;z-index:1;font-size:100px">${p.emoji}</span>
+      </div>
+      <div class="gallery-thumbs">
+        <div class="thumb active" onclick="setView('${p.emoji}',this)">${p.emoji}</div>
+        <div class="thumb" onclick="setView('📦',this)">📦</div>
+        <div class="thumb" onclick="setView('⚙️',this)">⚙️</div>
+        <div class="thumb" onclick="setView('📋',this)">📋</div>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="pi-eyebrow">
+        <span class="pi-brand">${p.brand}</span>
+        ${p.badge ? `<span class="pi-badge">${p.badge==='best'?'★ Editor\'s Choice':p.badge==='new'?'✦ New Arrival':'% On Sale'}</span>` : ''}
+      </div>
+      <h1 class="pi-name">${p.name}</h1>
+      <div class="pi-rating">
+        <span class="r-stars">${'★'.repeat(Math.floor(p.rating))}</span>
+        <span class="r-num">${p.rating}</span>
+        <span class="r-count">(${p.reviews.toLocaleString()} reviews)</span>
+        <div class="r-div"></div>
+        <div class="homescore"><span class="hs-num">${p.specs.Score}</span><span class="hs-lbl">/100 HGP Score</span></div>
+      </div>
+      <div class="price-block">
+        <div class="price-row">
+          <span class="price-main">£${p.price}</span>
+          ${p.oldPrice ? `<span class="price-old">£${p.oldPrice}</span><span class="price-save">Save £${p.oldPrice-p.price}</span>` : ''}
+        </div>
+        <div class="price-note">Free delivery · Usually dispatched within 24 hrs</div>
+        <div class="retailer-chips">
+          ${p.retailers.map((r,i)=>`<a class="retailer-chip${i===0?' cheapest':''}" href="#" onclick="event.preventDefault();handleBuy(product.retailers[${i}])"><span>${r.logo}</span><span>${r.name}</span><span class="rc-price">${r.price}</span></a>`).join('')}
+        </div>
+        <div class="price-updated">🕐 Prices last checked: today</div>
+      </div>
+      <div class="cta-stack">
+        <a class="btn-buy" href="#" onclick="event.preventDefault();handleBuy(product.retailers[0])">
+          <span>🛒</span>
+          <span>Buy on ${p.retailers[0].name} — £${p.price}<div class="btn-buy-sub">Best price · Free delivery</div></span>
+        </a>
+        <div class="btn-row">
+          <button class="btn-compare" id="compareBtn" onclick="toggleCompare()">⚖️ Add to Compare</button>
+          <button class="btn-wishlist" id="wishlistBtn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+      </div>
+      <div class="key-specs" id="keySpecs"></div>
+    </div>
+  </div>
+
+  <div class="tabs-wrap">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(this,'overview')">Overview</button>
+      <button class="tab" onclick="switchTab(this,'specs')">Full Specs</button>
+      <button class="tab" onclick="switchTab(this,'price')">Price History</button>
+      <button class="tab" onclick="switchTab(this,'reviews')">Reviews (${p.reviews.toLocaleString()})</button>
+      <button class="tab" onclick="switchTab(this,'video')">Video Review</button>
+    </div>
+  </div>
+
+  <div class="tab-panel active" id="panel-overview">
+    <div class="verdict-block">
+      <div class="verdict-icon">🏆</div>
+      <div>
+        <div class="verdict-title">HomeGadgetPro Verdict</div>
+        <div class="verdict-body">${p.verdict}</div>
+        <div class="verdict-tag">🎯 ${p.verdictTag}</div>
+      </div>
+    </div>
+    <div class="overview-grid">
+      <div class="pros-card">
+        <div class="pc-title">✓ Pros</div>
+        ${p.pros.map(pr=>`<div class="pc-item"><div class="pc-dot"></div>${pr}</div>`).join('')}
+      </div>
+      <div class="cons-card">
+        <div class="pc-title">✕ Cons</div>
+        ${p.cons.map(c=>`<div class="pc-item"><div class="pc-dot"></div>${c}</div>`).join('')}
+      </div>
+    </div>
+    ${scoreEntries.length ? `
+      <div class="sec-title" style="font-size:14px;margin-top:0;margin-bottom:12px">Performance Scores</div>
+      <div class="score-bars">
+        ${scoreEntries.map(([k,v])=>`<div class="sbar-row"><span class="sbar-lbl">${k}</span><div class="sbar-track"><div class="sbar-fill" style="width:${v}%"></div></div><span class="sbar-val">${v}</span></div>`).join('')}
+      </div>` : ''}
+  </div>
+
+  <div class="tab-panel" id="panel-specs">
+    <table class="specs-table">
+      <thead><tr><th>Specification</th><th style="text-align:right">Value</th></tr></thead>
+      <tbody>
+        ${specEntries.map(([k,v])=>`<tr><td class="spec-key">${k}</td><td class="spec-val${typeof v==='boolean'?(v?' spec-best':''):''}">
+          ${typeof v==='boolean'?(v?'✓ Yes':'✕ No'):v}</td></tr>`).join('')}
+        <tr><td class="spec-key">HGP Score</td><td class="spec-val spec-best">${p.specs.Score} / 100</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-panel" id="panel-price">
+    <div class="chart-summary">
+      <div class="chart-stat"><div class="cs-lbl">Current</div><div class="cs-val now">£${p.price}</div></div>
+      <div class="chart-stat"><div class="cs-lbl">12-month low</div><div class="cs-val low">£${minP}</div></div>
+      <div class="chart-stat"><div class="cs-lbl">12-month high</div><div class="cs-val high">£${maxP}</div></div>
+      <div class="chart-stat"><div class="cs-lbl">Average</div><div class="cs-val">£${avgP}</div></div>
+    </div>
+    <div class="chart-wrap"><canvas id="priceChart" height="160"></canvas></div>
+    <div class="alert-box">
+      <div class="alert-text">🔔 <strong>Price drop alert</strong> — get notified when this drops below your target</div>
+      <button class="alert-btn" onclick="this.textContent='✓ Alert Set!'">Set Alert</button>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="panel-reviews">
+    <div class="review-summary-block">
+      <div class="big-score">
+        <div class="big-num">${avgRating}</div>
+        <div class="big-stars">${'★'.repeat(Math.round(avgRating))}</div>
+        <div class="big-count">${totalR.toLocaleString()} reviews</div>
+      </div>
+      <div class="rbar-rows">
+        ${[5,4,3,2,1].map(n=>{const pct=Math.round([62,22,10,4,2][5-n]);return`<div class="rbar-row"><span class="rbar-lbl">${n}</span><div class="rbar-track"><div class="rbar-fill" style="width:${pct}%"></div></div><span class="rbar-pct">${pct}%</span></div>`;}).join('')}
+      </div>
+    </div>
+    <div class="review-filters">
+      <button class="rf-btn active" onclick="filterReviews(this,'all')">All</button>
+      <button class="rf-btn" onclick="filterReviews(this,'5')">5 star</button>
+      <button class="rf-btn" onclick="filterReviews(this,'4')">4 star</button>
+      <button class="rf-btn" onclick="filterReviews(this,'verified')">Verified</button>
+    </div>
+    <div id="reviewsList"></div>
+    <div class="divider"></div>
+    <div class="submit-card">
+      <div class="submit-title">Write a Review</div>
+      <div class="star-picker" id="starPicker">
+        ${[1,2,3,4,5].map(n=>`<button class="star-btn" data-star="${n}" onclick="pickStar(${n})">★</button>`).join('')}
+      </div>
+      <div class="form-row">
+        <input class="form-input" id="rName" placeholder="Your name">
+        <input class="form-input" id="rLoc" placeholder="Location (optional)">
+      </div>
+      <input class="form-input" id="rTitle" placeholder="Review title" style="display:block;margin-bottom:10px">
+      <textarea class="form-textarea" id="rBody" placeholder="Share your experience..." rows="4"></textarea>
+      <button class="submit-btn" onclick="submitReview()">Post Review</button>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="panel-video">
+    <div class="video-wrap" id="videoWrap" onclick="loadVideo()">
+      <div class="video-play-btn">▶</div>
+      <div class="video-lbl">${p.brand} ${p.name} — Full Review</div>
+      <div style="font-size:12px;color:var(--muted2)">YouTube · tap to play</div>
+    </div>
+    <div class="related-video"><div class="rv-icon">▶</div><div><div class="rv-title">How to get the best out of your ${p.name}</div><div class="rv-sub">YouTube · 8 min</div></div></div>
+    <div class="related-video"><div class="rv-icon">▶</div><div><div class="rv-title">${p.brand} ${p.name} vs competitors — full comparison</div><div class="rv-sub">YouTube · 14 min</div></div></div>
+  </div>
+
+  <div class="sec-title">You might also like</div>
+  <div class="similar-grid">
+    ${catProds.map(pr=>`<a class="similar-card" href="product.html?id=${pr.id}">
+      <span class="sc-emoji">${pr.emoji}</span>
+      <div class="sc-brand">${pr.brand}</div>
+      <div class="sc-name">${pr.name}</div>
+      <div class="sc-price">£${pr.price}</div>
+      <div class="sc-rating"><span class="sc-stars">${'★'.repeat(Math.floor(pr.rating))}</span> ${pr.rating}</div>
+    </a>`).join('')}
+  </div>
+  `;
+
+  // Key specs — first 4 spec entries
+  const ksEl = document.getElementById('keySpecs');
+  specEntries.slice(0,4).forEach(([k,v]) => {
+    if (typeof v === 'boolean') return;
+    const el = document.createElement('div');
+    el.className = 'key-spec';
+    el.innerHTML = `<div class="ks-lbl">${k}</div><div class="ks-val">${v}</div>`;
+    ksEl.appendChild(el);
+  });
+
+  renderReviews();
+}
+
+function setView(emoji, el) {
+  document.getElementById('mainEmoji').textContent = emoji;
+  document.querySelectorAll('.thumb').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function switchTab(btn, id) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-'+id).classList.add('active');
+  if (id==='price' && !chartDrawn) { drawChart(); chartDrawn=true; }
+}
+
+function drawChart() {
+  const ctx = document.getElementById('priceChart');
+  if (!ctx || !product) return;
+  const months = ['Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb'];
+  new Chart(ctx, {
+    type:'line',
+    data:{labels:months,datasets:[{label:'Price (£)',data:product.priceHistory,borderColor:'#85d44e',backgroundColor:'rgba(133,212,78,0.07)',borderWidth:2.5,pointBackgroundColor:'#85d44e',pointRadius:4,pointHoverRadius:6,fill:true,tension:0.4}]},
+    options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`£${c.raw}`}}},scales:{x:{grid:{color:'rgba(255,255,255,.04)'},ticks:{color:'#7a8a6a',font:{size:11}}},y:{grid:{color:'rgba(255,255,255,.04)'},ticks:{color:'#7a8a6a',font:{size:11},callback:v=>`£${v}`}}}}
+  });
+}
+
+function loadVideo() {
+  const w = document.getElementById('videoWrap');
+  w.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${product.videoId}?autoplay=1" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen style="border-radius:14px;aspect-ratio:16/9;display:block"></iframe>`;
+}
+
+function toggleCompare() {
+  inCompare = !inCompare;
+  const btn = document.getElementById('compareBtn');
+  const nav = document.getElementById('navCmpBtn');
+  const sticky = document.getElementById('stickyCmp');
+  if (btn) { btn.textContent = inCompare ? '✓ In Compare' : '⚖️ Add to Compare'; btn.classList.toggle('added',inCompare); }
+  if (nav) { nav.textContent = inCompare ? '✓ Added' : '⚖️ Compare'; nav.classList.toggle('added',inCompare); }
+  if (sticky) { sticky.textContent = inCompare ? '✓' : '⚖️'; sticky.classList.toggle('added',inCompare); }
+  if (inCompare) {
+    setTimeout(() => {
+      if (confirm(`${product.name} added to compare!\n\nGo to the comparison tool?`)) window.location.href = `homespec.html?compare=${product.id}`;
+    }, 300);
+  }
+}
+
+function toggleWishlist(btn) {
+  const saved = btn.textContent === '🤍';
+  btn.textContent = saved ? '❤️' : '🤍';
+  btn.style.borderColor = saved ? 'var(--red)' : '';
+  btn.style.color = saved ? 'var(--red)' : '';
+}
+
+function pickStar(n) {
+  selectedStars = n;
+  document.querySelectorAll('.star-btn').forEach(s => s.classList.toggle('lit', parseInt(s.dataset.star) <= n));
+}
+
+function filterReviews(btn, filter) {
+  document.querySelectorAll('.rf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderReviews(filter);
+}
+
+function renderReviews(filter='all') {
+  const all = [...(product.userReviews||[]), ...userSubmittedReviews];
+  let filtered = filter==='5' ? all.filter(r=>r.stars===5) : filter==='4' ? all.filter(r=>r.stars===4) : filter==='verified' ? all.filter(r=>r.verified) : all;
+  const list = document.getElementById('reviewsList');
+  if (!list) return;
+  const avatarColors = ['#85d44e','#f5aa3f','#4eccd4','#f472b6','#a78bfa'];
+  list.innerHTML = filtered.length ? filtered.map((r,i)=>`
+    <div class="review-card">
+      <div class="rc-top">
+        <div class="rc-left">
+          <div class="avatar" style="background:${(r.avatar||avatarColors[i%5])}22;color:${r.avatar||avatarColors[i%5]}">${r.name[0]}</div>
+          <div>
+            <div class="rc-name">${r.name}</div>
+            <div class="rc-meta">${r.location?r.location+' · ':''}${r.date}${r.verified?'<span class="rc-verified">✓ Verified</span>':''}</div>
+          </div>
+        </div>
+        <div class="rc-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+      </div>
+      <div class="rc-title">${r.title}</div>
+      <div class="rc-body">${r.body}</div>
+      ${r.tags&&r.tags.length?`<div class="rc-tags">${r.tags.map(t=>`<span class="rc-tag">${t}</span>`).join('')}</div>`:''}
+      <div class="rc-helpful"><span>Helpful?</span>
+        <button class="helpful-btn" onclick="this.textContent='👍 Yes (${(r.helpful||0)+1})'">👍 Yes (${r.helpful||0})</button>
+        <button class="helpful-btn" onclick="this.textContent='Not helpful'">No</button>
+      </div>
+    </div>`).join('') : '<p style="color:var(--muted);font-size:13px;padding:12px 0">No reviews match this filter yet.</p>';
+}
+
+function submitReview() {
+  const name = document.getElementById('rName')?.value.trim();
+  const title = document.getElementById('rTitle')?.value.trim();
+  const body = document.getElementById('rBody')?.value.trim();
+  if (!name||!title||!body||!selectedStars) { alert('Please fill in all fields and select a star rating.'); return; }
+  const colors = ['#85d44e','#f5aa3f','#4eccd4','#f472b6','#a78bfa'];
+  userSubmittedReviews.unshift({name,title,body,stars:selectedStars,date:'Just now',verified:false,helpful:0,avatar:colors[Math.floor(Math.random()*5)],tags:[],location:document.getElementById('rLoc')?.value.trim()||''});
+  document.getElementById('rName').value='';document.getElementById('rTitle').value='';document.getElementById('rBody').value='';
+  selectedStars=0;
+  document.querySelectorAll('.star-btn').forEach(s=>s.classList.remove('lit'));
+  renderReviews();
+  document.getElementById('reviewsList').scrollIntoView({behavior:'smooth'});
+}
+
+loadProduct();
+</script>
+</body>
+</html>
+PRODUCT2EOF
+echo "product.html done: $(wc -l < /mnt/user-data/outputs/product.html) lines"

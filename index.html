@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>HomeGadgetPro — Find Your Perfect Home Appliance</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ─────────────────────────────────── */
+:root {
+  --bg: #0a0d08;
+  --surface: #121510;
+  --surface2: #1a1f16;
+  --border: #252e1e;
+  --accent: #85d44e;
+  --accent2: #f5aa3f;
+  --accent3: #4eccd4;
+  --text: #f0f3ec;
+  --muted: #7a8a6a;
+  --muted2: #3a4830;
+  --hi: rgba(133,212,78,.1);
+  --hi2: rgba(245,170,63,.1);
+  --red: #ff6b6b;
+}
+
+/* ── RESET ───────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'DM Sans',sans-serif; font-size:15px; line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ── NOISE OVERLAY ───────────────────────────── */
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.4;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+  background-size:200px;
+}
+
+/* ── NAV ─────────────────────────────────────── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:0 20px; height:58px;
+  display:flex; align-items:center; justify-content:space-between;
+  background:rgba(10,13,8,.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:all .3s;
+}
+
+.logo {
+  font-family:'Syne',sans-serif; font-weight:800; font-size:17px;
+  letter-spacing:-.5px; display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text);
+}
+.logo-mark {
+  width:32px; height:32px; background:var(--accent); border-radius:9px;
+  display:flex; align-items:center; justify-content:center; font-size:16px;
+  box-shadow:0 0 16px rgba(133,212,78,.3);
+}
+.logo span { color:var(--accent); }
+
+.nav-links { display:flex; align-items:center; gap:24px; }
+.nav-links a { color:var(--muted); text-decoration:none; font-size:13px; font-weight:500; transition:color .2s; }
+.nav-links a:hover { color:var(--text); }
+
+.nav-cta {
+  background:var(--accent); color:#0a0d08; border:none;
+  padding:8px 18px; border-radius:8px;
+  font-family:'Syne',sans-serif; font-weight:700; font-size:13px;
+  cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:5px;
+  box-shadow:0 0 20px rgba(133,212,78,.2);
+  transition:box-shadow .2s, transform .15s;
+}
+.nav-cta:hover { box-shadow:0 0 28px rgba(133,212,78,.4); transform:translateY(-1px); }
+
+.hamburger { display:none; flex-direction:column; gap:4px; background:none; border:none; cursor:pointer; padding:4px; }
+.hamburger span { width:22px; height:2px; background:var(--text); border-radius:2px; transition:all .25s; display:block; }
+
+@media(max-width:600px) {
+  .nav-links { display:none; }
+  .hamburger { display:flex; }
+}
+
+/* ── HERO ────────────────────────────────────── */
+.hero {
+  position:relative; z-index:1;
+  min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:100px 20px 60px; text-align:center; overflow:hidden;
+}
+
+/* Animated background orbs */
+.orb {
+  position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none;
+  animation:orbFloat 8s ease-in-out infinite;
+}
+.orb1 { width:400px; height:400px; background:rgba(133,212,78,.07); top:-100px; left:-100px; animation-delay:0s; }
+.orb2 { width:300px; height:300px; background:rgba(245,170,63,.06); bottom:-50px; right:-50px; animation-delay:-3s; }
+.orb3 { width:200px; height:200px; background:rgba(78,204,212,.05); top:40%; left:60%; animation-delay:-5s; }
+
+@keyframes orbFloat {
+  0%,100%{transform:translate(0,0) scale(1);}
+  33%{transform:translate(30px,-20px) scale(1.05);}
+  66%{transform:translate(-20px,15px) scale(.95);}
+}
+
+/* Grid lines */
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(133,212,78,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(133,212,78,.03) 1px, transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero-eyebrow {
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(133,212,78,.08); border:1px solid rgba(133,212,78,.2);
+  padding:5px 14px; border-radius:100px;
+  font-size:11px; color:var(--accent); font-weight:600; letter-spacing:1px; text-transform:uppercase;
+  margin-bottom:22px; position:relative; z-index:1;
+  animation:fadeUp .6s ease both;
+}
+.eyebrow-dot { width:6px; height:6px; background:var(--accent); border-radius:50%; animation:pulse 2s ease infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+
+.hero-title {
+  font-family:'Syne',sans-serif;
+  font-size:clamp(34px,9vw,72px); font-weight:800; line-height:1.0; letter-spacing:-2.5px;
+  margin-bottom:18px; position:relative; z-index:1;
+  animation:fadeUp .6s .1s ease both;
+}
+
+.hero-title .line2 { display:block; }
+
+.hero-title em {
+  font-style:normal;
+  background:linear-gradient(135deg, var(--accent) 0%, #c8f56a 50%, var(--accent2) 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+
+.hero-sub {
+  color:var(--muted); font-size:clamp(14px,3vw,17px); max-width:460px;
+  margin:0 auto 36px; font-weight:300; line-height:1.7;
+  position:relative; z-index:1;
+  animation:fadeUp .6s .2s ease both;
+}
+
+.hero-ctas {
+  display:flex; gap:12px; flex-wrap:wrap; justify-content:center;
+  position:relative; z-index:1;
+  animation:fadeUp .6s .3s ease both;
+}
+
+.btn-primary {
+  background:var(--accent); color:#0a0d08; border:none;
+  padding:14px 28px; border-radius:12px;
+  font-family:'Syne',sans-serif; font-weight:700; font-size:15px;
+  cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  box-shadow:0 0 32px rgba(133,212,78,.25);
+  transition:all .2s;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 0 40px rgba(133,212,78,.4); }
+
+.btn-secondary {
+  background:transparent; color:var(--text); border:1px solid var(--border);
+  padding:14px 28px; border-radius:12px;
+  font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;
+  cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  transition:all .2s; backdrop-filter:blur(8px);
+}
+.btn-secondary:hover { border-color:var(--accent); color:var(--accent); }
+
+/* Floating product pills */
+.floating-pills {
+  position:relative; z-index:1; margin-top:48px;
+  display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+  animation:fadeUp .6s .4s ease both;
+}
+.pill {
+  background:var(--surface); border:1px solid var(--border); border-radius:100px;
+  padding:8px 16px; font-size:13px; color:var(--muted); display:flex; align-items:center; gap:7px;
+  transition:all .25s; cursor:default;
+}
+.pill:hover { border-color:var(--accent); color:var(--text); transform:translateY(-2px); }
+.pill-emoji { font-size:15px; }
+
+/* Scroll indicator */
+.scroll-indicator {
+  position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:6px; z-index:1;
+  animation:fadeUp .6s .6s ease both;
+}
+.scroll-line { width:1px; height:40px; background:linear-gradient(to bottom, var(--accent), transparent); animation:scrollPulse 2s ease infinite; }
+@keyframes scrollPulse { 0%,100%{opacity:.3;transform:scaleY(.8)} 50%{opacity:1;transform:scaleY(1)} }
+.scroll-text { font-size:10px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── TRUST BAR ───────────────────────────────── */
+.trust-bar {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  padding:24px 20px;
+  background:var(--surface);
+}
+
+.trust-inner {
+  max-width:900px; margin:0 auto;
+  display:flex; align-items:center; justify-content:center;
+  gap:0; flex-wrap:wrap;
+}
+
+.trust-item {
+  flex:1; min-width:120px; text-align:center; padding:0 20px;
+  border-right:1px solid var(--border);
+}
+.trust-item:last-child { border-right:none; }
+
+.trust-num {
+  font-family:'Syne',sans-serif; font-size:24px; font-weight:800;
+  color:var(--accent); line-height:1.1; margin-bottom:2px;
+}
+.trust-label { font-size:12px; color:var(--muted); line-height:1.3; }
+
+/* ── HOW IT WORKS ────────────────────────────── */
+.section {
+  position:relative; z-index:1;
+  padding:80px 20px;
+}
+
+.section-inner { max-width:900px; margin:0 auto; }
+
+.section-eyebrow {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:11px; color:var(--accent); font-weight:600; letter-spacing:1px; text-transform:uppercase;
+  margin-bottom:12px;
+}
+.section-eyebrow::before { content:''; width:20px; height:1px; background:var(--accent); display:block; }
+
+.section-title {
+  font-family:'Syne',sans-serif; font-size:clamp(24px,5vw,38px); font-weight:800;
+  letter-spacing:-1px; line-height:1.1; margin-bottom:8px;
+}
+.section-title em { font-style:normal; color:var(--accent); }
+.section-sub { color:var(--muted); font-size:15px; max-width:420px; font-weight:300; margin-bottom:48px; }
+
+/* Steps */
+.steps {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:2px;
+  background:var(--border); border-radius:20px; overflow:hidden;
+}
+@media(max-width:600px){ .steps{ grid-template-columns:1fr; } }
+
+.step {
+  background:var(--surface); padding:32px 24px;
+  position:relative; overflow:hidden; transition:background .2s;
+}
+.step:hover { background:var(--surface2); }
+
+.step::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, var(--accent), transparent);
+  opacity:0; transition:opacity .3s;
+}
+.step:hover::before { opacity:1; }
+
+.step-num {
+  font-family:'Syne',sans-serif; font-size:48px; font-weight:800;
+  color:var(--muted2); line-height:1; margin-bottom:16px;
+  transition:color .2s;
+}
+.step:hover .step-num { color:var(--accent); }
+
+.step-icon {
+  width:44px; height:44px; background:var(--hi); border:1px solid rgba(133,212,78,.2);
+  border-radius:10px; display:flex; align-items:center; justify-content:center;
+  font-size:22px; margin-bottom:14px;
+}
+.step-title { font-family:'Syne',sans-serif; font-size:16px; font-weight:700; margin-bottom:6px; }
+.step-body { font-size:13px; color:var(--muted); line-height:1.6; }
+
+/* ── FEATURED PRODUCTS ───────────────────────── */
+.featured-section {
+  position:relative; z-index:1;
+  padding:0 20px 80px;
+}
+
+.featured-inner { max-width:900px; margin:0 auto; }
+
+.featured-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:12px;
+  margin-bottom:24px;
+}
+@media(min-width:560px){ .featured-grid{ grid-template-columns:repeat(3,1fr); } }
+@media(min-width:780px){ .featured-grid{ grid-template-columns:repeat(4,1fr); } }
+
+.featured-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  padding:16px; text-decoration:none; color:var(--text);
+  transition:all .25s; display:block; position:relative; overflow:hidden;
+  animation:fadeUp .5s ease both;
+}
+.featured-card::after {
+  content:''; position:absolute; inset:0; border-radius:16px;
+  background:linear-gradient(135deg, rgba(133,212,78,.04), transparent);
+  opacity:0; transition:opacity .25s;
+}
+.featured-card:hover { border-color:rgba(133,212,78,.4); transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.4); }
+.featured-card:hover::after { opacity:1; }
+
+.featured-card:nth-child(1){animation-delay:.05s}
+.featured-card:nth-child(2){animation-delay:.1s}
+.featured-card:nth-child(3){animation-delay:.15s}
+.featured-card:nth-child(4){animation-delay:.2s}
+.featured-card:nth-child(5){animation-delay:.25s}
+.featured-card:nth-child(6){animation-delay:.3s}
+.featured-card:nth-child(7){animation-delay:.35s}
+.featured-card:nth-child(8){animation-delay:.4s}
+
+.trending-tag {
+  display:inline-flex; align-items:center; gap:4px;
+  font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;
+  padding:2px 8px; border-radius:4px; margin-bottom:8px;
+}
+.trending-tag.hot { background:rgba(255,107,107,.12); color:var(--red); }
+.trending-tag.new { background:rgba(78,204,212,.12); color:var(--accent3); }
+.trending-tag.top { background:var(--hi); color:var(--accent); }
+
+.fc-emoji { font-size:28px; margin-bottom:10px; display:block; }
+.fc-cat { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); font-weight:600; margin-bottom:2px; }
+.fc-name { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; line-height:1.25; margin-bottom:6px; }
+.fc-price { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; color:var(--accent); margin-bottom:5px; }
+.fc-rating { display:flex; align-items:center; gap:4px; font-size:11px; }
+.fc-stars { color:var(--accent2); font-size:10px; }
+.fc-score {
+  display:flex; align-items:center; gap:5px;
+  margin-top:8px; padding-top:8px; border-top:1px solid var(--border);
+  font-size:11px; color:var(--muted);
+}
+.score-mini { font-family:'Syne',sans-serif; font-size:12px; font-weight:700; color:var(--accent); }
+
+.view-all-btn {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--surface); border:1px solid var(--border); color:var(--muted);
+  padding:14px; border-radius:12px; text-decoration:none;
+  font-size:13px; font-weight:600; transition:all .2s;
+}
+.view-all-btn:hover { border-color:var(--accent); color:var(--accent); }
+
+/* ── CATEGORIES ──────────────────────────────── */
+.cats-section {
+  position:relative; z-index:1;
+  padding:0 20px 80px;
+}
+.cats-inner { max-width:900px; margin:0 auto; }
+
+.cats-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+}
+@media(max-width:500px){ .cats-grid{ grid-template-columns:repeat(2,1fr); } }
+
+.cat-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:14px;
+  padding:20px 16px; text-decoration:none; color:var(--text);
+  display:flex; flex-direction:column; align-items:flex-start; gap:8px;
+  transition:all .22s; position:relative; overflow:hidden;
+}
+.cat-card:hover { border-color:rgba(133,212,78,.35); transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.3); }
+.cat-card-emoji { font-size:28px; }
+.cat-card-name { font-family:'Syne',sans-serif; font-size:14px; font-weight:700; }
+.cat-card-count { font-size:11px; color:var(--muted); }
+.cat-card-arrow {
+  position:absolute; bottom:14px; right:14px;
+  width:24px; height:24px; border-radius:50%; background:var(--hi); border:1px solid rgba(133,212,78,.2);
+  display:flex; align-items:center; justify-content:center; font-size:11px; color:var(--accent);
+  opacity:0; transform:scale(.7); transition:all .22s;
+}
+.cat-card:hover .cat-card-arrow { opacity:1; transform:scale(1); }
+
+/* ── TRUST MARQUEE ───────────────────────────── */
+.brands-section {
+  position:relative; z-index:1;
+  padding:32px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  overflow:hidden; margin-bottom:80px;
+}
+
+.brands-label {
+  text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:1px;
+  color:var(--muted); font-weight:600; margin-bottom:20px;
+}
+
+.marquee-wrap { overflow:hidden; position:relative; }
+.marquee-wrap::before, .marquee-wrap::after {
+  content:''; position:absolute; top:0; bottom:0; width:80px; z-index:2; pointer-events:none;
+}
+.marquee-wrap::before { left:0; background:linear-gradient(to right, var(--bg), transparent); }
+.marquee-wrap::after { right:0; background:linear-gradient(to left, var(--bg), transparent); }
+
+.marquee-track {
+  display:flex; gap:0;
+  animation:marquee 28s linear infinite;
+  width:max-content;
+}
+.marquee-track:hover { animation-play-state:paused; }
+
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+.brand-pill {
+  background:var(--surface); border:1px solid var(--border); border-radius:100px;
+  padding:8px 20px; font-size:13px; font-weight:600; color:var(--muted);
+  white-space:nowrap; margin:0 6px; flex-shrink:0;
+  transition:all .2s;
+}
+.brand-pill:hover { color:var(--text); border-color:var(--accent); }
+
+/* ── FINAL CTA ───────────────────────────────── */
+.cta-section {
+  position:relative; z-index:1;
+  padding:0 20px 80px;
+}
+
+.cta-inner {
+  max-width:700px; margin:0 auto;
+  background:var(--surface); border:1px solid var(--border); border-radius:24px;
+  padding:48px 32px; text-align:center; position:relative; overflow:hidden;
+}
+
+.cta-inner::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 0%, rgba(133,212,78,.08), transparent);
+  pointer-events:none;
+}
+
+.cta-icon { font-size:40px; margin-bottom:16px; display:block; }
+.cta-title { font-family:'Syne',sans-serif; font-size:clamp(22px,5vw,32px); font-weight:800; letter-spacing:-1px; margin-bottom:10px; }
+.cta-title em { font-style:normal; color:var(--accent); }
+.cta-sub { color:var(--muted); font-size:14px; max-width:360px; margin:0 auto 28px; font-weight:300; }
+
+/* ── FOOTER ──────────────────────────────────── */
+footer {
+  position:relative; z-index:1;
+  border-top:1px solid var(--border); padding:32px 20px 40px;
+}
+
+.footer-inner {
+  max-width:900px; margin:0 auto;
+  display:flex; flex-direction:column; align-items:center; gap:20px; text-align:center;
+}
+
+.footer-logo {
+  font-family:'Syne',sans-serif; font-weight:800; font-size:16px;
+  display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text);
+}
+.footer-logo span { color:var(--accent); }
+
+.footer-links { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.footer-links a { font-size:12px; color:var(--muted); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text); }
+
+.footer-copy { font-size:12px; color:var(--muted2); }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────── -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-mark">⚡</div>
+    HomeGadget<span>Pro</span>
+  </a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#categories">Categories</a>
+    <a href="#trending">Trending</a>
+  </div>
+  <a class="nav-cta" href="homespec.html">Start Comparing →</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────── -->
+<section class="hero">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <div class="hero-eyebrow">
+    <div class="eyebrow-dot"></div>
+    The UK's smartest appliance comparison
+  </div>
+
+  <h1 class="hero-title">
+    Stop Guessing.<br>
+    <em class="line2">Buy Smarter.</em>
+  </h1>
+
+  <p class="hero-sub">
+    Compare specs, prices and real reviews across hundreds of home appliances — coffee machines, air fryers, robot hoovers and more.
+  </p>
+
+  <div class="hero-ctas">
+    <a class="btn-primary" href="homespec.html">
+      ⚡ Start Comparing
+    </a>
+    <a class="btn-secondary" href="homespec.html#quiz">
+      🤖 Find My Perfect Pick
+    </a>
+  </div>
+
+  <div class="floating-pills">
+    <div class="pill"><span class="pill-emoji">☕</span> Coffee Machines</div>
+    <div class="pill"><span class="pill-emoji">🍟</span> Air Fryers</div>
+    <div class="pill"><span class="pill-emoji">🤖</span> Robot Hoovers</div>
+    <div class="pill"><span class="pill-emoji">🔊</span> Speakers</div>
+    <div class="pill"><span class="pill-emoji">🥤</span> Blenders</div>
+    <div class="pill"><span class="pill-emoji">🫖</span> Kettles</div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ────────────────────────────────── -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-num">340+</div>
+      <div class="trust-label">Products<br>reviewed</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">60+</div>
+      <div class="trust-label">Brands<br>covered</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">120+</div>
+      <div class="trust-label">Specs<br>tracked</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">48K+</div>
+      <div class="trust-label">Community<br>reviews</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num">4.9★</div>
+      <div class="trust-label">Average<br>user rating</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── HOW IT WORKS ─────────────────────────────── -->
+<section class="section" id="how">
+  <div class="section-inner">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">Find the right gadget<br>in <em>3 simple steps</em></h2>
+    <p class="section-sub">No more endless tab switching. We do the hard work so you don't have to.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">🔍</div>
+        <div class="step-title">Search or Browse</div>
+        <div class="step-body">Pick a category or search for a specific product. Filter by budget, brand, or what it's best for.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon">⚖️</div>
+        <div class="step-title">Compare Side by Side</div>
+        <div class="step-body">Select up to 4 products and see every spec, score and customer review lined up head to head.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon">🛒</div>
+        <div class="step-title">Buy with Confidence</div>
+        <div class="step-body">See the best price across retailers and click straight through to buy — no second-guessing.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BRANDS MARQUEE ───────────────────────────── -->
+<div class="brands-section">
+  <div class="brands-label">Brands we cover</div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+</div>
+
+<!-- ── TRENDING PRODUCTS ────────────────────────── -->
+<section class="featured-section" id="trending">
+  <div class="featured-inner">
+    <div class="section-eyebrow">Trending now</div>
+    <h2 class="section-title">Most compared<br>this <em>week</em></h2>
+    <p class="section-sub">The products everyone is talking about right now.</p>
+
+    <div class="featured-grid" id="featuredGrid"></div>
+
+    <a class="view-all-btn" href="homespec.html">
+      View all 340+ products →
+    </a>
+  </div>
+</section>
+
+<!-- ── CATEGORIES ───────────────────────────────── -->
+<section class="cats-section" id="categories">
+  <div class="cats-inner">
+    <div class="section-eyebrow">Browse by category</div>
+    <h2 class="section-title">What are you<br>looking for <em>today?</em></h2>
+    <p class="section-sub" style="margin-bottom:28px">Jump straight into the category that matters to you.</p>
+
+    <div class="cats-grid">
+      <a class="cat-card" href="homespec.html">
+        <span class="cat-card-emoji">☕</span>
+        <div class="cat-card-name">Coffee Machines</div>
+        <div class="cat-card-count">14 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html">
+        <span class="cat-card-emoji">🍟</span>
+        <div class="cat-card-name">Air Fryers</div>
+        <div class="cat-card-count">18 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html">
+        <span class="cat-card-emoji">🤖</span>
+        <div class="cat-card-name">Robot Hoovers</div>
+        <div class="cat-card-count">22 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html">
+        <span class="cat-card-emoji">🔊</span>
+        <div class="cat-card-name">Speakers</div>
+        <div class="cat-card-count">16 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html">
+        <span class="cat-card-emoji">🫖</span>
+        <div class="cat-card-name">Kettles</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html">
+        <span class="cat-card-emoji">🥤</span>
+        <div class="cat-card-name">Blenders</div>
+        <div class="cat-card-count">10 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ─────────────────────────────────── -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <span class="cta-icon">🎯</span>
+    <h2 class="cta-title">Not sure where<br>to <em>start?</em></h2>
+    <p class="cta-sub">Answer 6 quick questions and our AI quiz will build your perfect shortlist in seconds.</p>
+    <a class="btn-primary" href="homespec.html" style="display:inline-flex;margin:0 auto">
+      🤖 Take the Quiz →
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <a class="footer-logo" href="#">
+      <div class="logo-mark" style="width:26px;height:26px;font-size:13px">⚡</div>
+      HomeGadget<span>Pro</span>
+    </a>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">How We Score</a>
+      <a href="#">Affiliate Disclosure</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 HomeGadgetPro.co.uk · All prices correct at time of publication · We may earn commission on purchases</div>
+  </div>
+</footer>
+
+<script>
+/* ── FEATURED PRODUCTS ───────────────── */
+const featured = [
+  {emoji:'🍟',cat:'Air Fryers',name:'Ninja Foodi MAX Dual Zone',price:'£199',rating:4.9,score:97,tag:'hot',tagLabel:'🔥 Hot'},
+  {emoji:'🤖',cat:'Robot Hoovers',name:'Roborock S8 MaxV Ultra',price:'£1,199',rating:4.9,score:97,tag:'top',tagLabel:'★ Top Rated'},
+  {emoji:'☕',cat:'Coffee Machines',name:'Sage Barista Express',price:'£699',rating:4.9,score:96,tag:'top',tagLabel:'★ Top Rated'},
+  {emoji:'🥤',cat:'Blenders',name:'Vitamix E310 Explorian',price:'£349',rating:4.9,score:96,tag:'top',tagLabel:'★ Top Rated'},
+  {emoji:'🤖',cat:'Robot Hoovers',name:'Ecovacs Deebot T30 Pro',price:'£649',rating:4.7,score:91,tag:'hot',tagLabel:'🔥 Hot'},
+  {emoji:'🔊',cat:'Speakers',name:'Sonos Era 300',price:'£449',rating:4.8,score:94,tag:'top',tagLabel:'★ Top Rated'},
+  {emoji:'☕',cat:'Coffee Machines',name:"De'Longhi Magnifica Evo",price:'£449',rating:4.8,score:93,tag:'new',tagLabel:'✦ New'},
+  {emoji:'🍟',cat:'Air Fryers',name:'Philips Airfryer XXL',price:'£229',rating:4.7,score:89,tag:'hot',tagLabel:'🔥 Hot'},
+];
+
+const grid = document.getElementById('featuredGrid');
+featured.forEach(p => {
+  const card = document.createElement('a');
+  card.className = 'featured-card';
+  card.href = 'homespec.html';
+  card.innerHTML = `
+    <div class="trending-tag ${p.tag}">${p.tagLabel}</div>
+    <span class="fc-emoji">${p.emoji}</span>
+    <div class="fc-cat">${p.cat}</div>
+    <div class="fc-name">${p.name}</div>
+    <div class="fc-price">${p.price}</div>
+    <div class="fc-rating">
+      <span class="fc-stars">${'★'.repeat(Math.floor(p.rating))}</span>
+      <span>${p.rating}</span>
+    </div>
+    <div class="fc-score">
+      <span>HomeGadgetPro Score</span>
+      <span class="score-mini">${p.score}/100</span>
+    </div>
+  `;
+  grid.appendChild(card);
+});
+
+/* ── BRANDS MARQUEE ──────────────────── */
+const brands = ['Ninja','Dyson','Nespresso','De\'Longhi','Sage','Philips','Sonos','Bose','JBL','Vitamix','Roborock','Ecovacs','Roomba','KitchenAid','Smeg','Russell Hobbs','NutriBullet','Kenwood','Breville','Melitta','Tower','Cosori','Amazon','Bang & Olufsen'];
+const track = document.getElementById('marqueeTrack');
+// Duplicate for seamless loop
+[...brands, ...brands].forEach(b => {
+  const pill = document.createElement('div');
+  pill.className = 'brand-pill';
+  pill.textContent = b;
+  track.appendChild(pill);
+});
+
+/* ── NAV SCROLL EFFECT ───────────────── */
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.background = window.scrollY > 50
+    ? 'rgba(10,13,8,0.97)'
+    : 'rgba(10,13,8,0.85)';
+});
+</script>
+</body>
+</html>
