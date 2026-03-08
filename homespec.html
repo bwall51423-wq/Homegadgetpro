@@ -184,6 +184,41 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 .footer-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:4px;}
 .footer-logo em{font-style:normal;color:var(--accent);}
 .footer-text{font-size:12px;color:var(--muted);}
+
+/* ── MOBILE FIXES ─────────────────────────── */
+@media(max-width:480px) {
+  nav { padding:0 10px; height:50px; gap:6px; }
+  .logo { font-size:14px; }
+  .logo-mark { width:26px; height:26px; font-size:12px; }
+  .quiz-nav-btn { padding:5px 9px; font-size:11px; }
+  .hero { padding:20px 12px 10px; }
+  h1 { font-size:24px; letter-spacing:-1px; }
+  .hero p { font-size:13px; }
+  .search-wrap { padding:0 12px; }
+  .stats { padding:12px; gap:0; }
+  .stat-num { font-size:17px; }
+  .stat-label { font-size:10px; }
+  .main { padding:0 10px 140px; }
+  .cat-tab { padding:7px 11px; font-size:12px; }
+  .product-grid { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .product-card { padding:11px; }
+  .product-img { width:44px; height:44px; font-size:22px; }
+  .product-name { font-size:12px; }
+  .product-price { font-size:14px; }
+  .card-btns { flex-direction:column; gap:5px; }
+  .view-btn, .cmp-btn { padding:8px; font-size:12px; }
+  .compare-bar { padding:10px 12px 16px; }
+  .compare-slot { min-width:90px; padding:6px 9px; }
+  /* Comparison table scrolls horizontally */
+  .table-wrap { font-size:12px; }
+  thead th, tbody td { padding:8px 10px; }
+  /* Quiz modal full height on mobile */
+  .quiz-modal { max-height:95vh; }
+  .quiz-opt { padding:10px 13px; font-size:13px; }
+}
+@media(max-width:360px) {
+  .product-grid { grid-template-columns:1fr; }
+}
 </style>
 </head>
 <body>
