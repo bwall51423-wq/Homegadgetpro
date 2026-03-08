@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -17,7 +17,14 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 .logo span{color:var(--accent);transition:color .3s;}
 .nav-right{display:flex;align-items:center;gap:8px;}
 .quiz-nav-btn{display:flex;align-items:center;gap:5px;background:var(--hi);border:1px solid var(--hi-border);color:var(--accent);padding:6px 12px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;}
-.theme-toggle{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px;transition:all .3s;}
+.settings-btn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all .2s;position:relative;flex-shrink:0;}
+.settings-btn:hover{border-color:var(--accent);color:var(--accent);}
+.settings-menu{position:absolute;top:46px;right:12px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;min-width:200px;box-shadow:0 8px 32px var(--shadow);z-index:300;display:none;animation:fadeIn .2s ease;}
+.settings-menu.open{display:block;}
+.settings-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:10px;}
+.settings-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;}
+.settings-row-label{font-size:13px;color:var(--text);}
+.theme-toggle{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px;}
 .t-opt{padding:4px 10px;border-radius:16px;font-size:11px;font-weight:600;color:var(--muted);transition:all .25s;border:none;background:transparent;cursor:pointer;}
 .t-opt.active{background:var(--accent);color:var(--btn-fg);}
 .hero{position:relative;z-index:1;padding:36px 16px 20px;text-align:center;}
@@ -184,9 +191,18 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
   <a class="logo" href="landing.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
   <div class="nav-right">
     <button class="quiz-nav-btn" onclick="openQuiz()">✦ Find My Pick</button>
-    <div class="theme-toggle">
-      <button class="t-opt active" onclick="setTheme('dark',this)">🌙 Dark</button>
-      <button class="t-opt" onclick="setTheme('light',this)">☀️ Light</button>
+    <div style="position:relative">
+      <button class="settings-btn" onclick="toggleSettings()" id="settingsBtn" title="Settings">⚙️</button>
+      <div class="settings-menu" id="settingsMenu">
+        <div class="settings-label">Appearance</div>
+        <div class="settings-row">
+          <span class="settings-row-label">Theme</span>
+          <div class="theme-toggle">
+            <button class="t-opt active" id="lightBtn" onclick="setTheme('light',this)">☀️ Light</button>
+            <button class="t-opt" id="darkBtn" onclick="setTheme('dark',this)">🌙 Dark</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
@@ -660,7 +676,28 @@ function setTheme(t, btn) {
   document.documentElement.setAttribute('data-theme', t);
   document.querySelectorAll('.t-opt').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  localStorage.setItem('hgp-theme', t);
 }
+function toggleSettings() {
+  document.getElementById('settingsMenu').classList.toggle('open');
+}
+// Close settings if tapping outside
+document.addEventListener('click', e => {
+  const btn = document.getElementById('settingsBtn');
+  const menu = document.getElementById('settingsMenu');
+  if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+// Restore saved theme on load
+(function() {
+  const saved = localStorage.getItem('hgp-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  if (saved === 'dark') {
+    document.getElementById('darkBtn') && document.getElementById('darkBtn').classList.add('active');
+    document.getElementById('lightBtn') && document.getElementById('lightBtn').classList.remove('active');
+  }
+})();
 
 // ── RENDER PRODUCTS
 function renderProducts(cat) {

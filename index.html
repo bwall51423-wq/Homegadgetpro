@@ -466,7 +466,7 @@ footer {
 
 <!-- ── NAV ─────────────────────────────────────── -->
 <nav>
-  <a class="logo" href="#">
+  <a class="logo" href="index.html">
     <div class="logo-mark">⚡</div>
     HomeGadget<span>Pro</span>
   </a>
@@ -667,7 +667,7 @@ footer {
 <!-- ── FOOTER ────────────────────────────────────── -->
 <footer>
   <div class="footer-inner">
-    <a class="footer-logo" href="#">
+    <a class="footer-logo" href="index.html">
       <div class="logo-mark" style="width:26px;height:26px;font-size:13px">⚡</div>
       HomeGadget<span>Pro</span>
     </a>
@@ -699,7 +699,19 @@ const grid = document.getElementById('featuredGrid');
 featured.forEach(p => {
   const card = document.createElement('a');
   card.className = 'featured-card';
-  card.href = 'homespec.html';
+  // Map product names to IDs
+  const nameToId = {
+    'Ninja Foodi MAX Dual Zone': 10,
+    'Roborock S8 MaxV Ultra': 23,
+    'Sage Barista Express': 3,
+    'Vitamix E310 Explorian': 50,
+    'Ecovacs Deebot T30 Pro': 22,
+    'Sonos Era 300': 30,
+    "De'Longhi Magnifica Evo": 2,
+    'Philips Airfryer XXL': 11,
+  };
+  const pid = nameToId[p.name];
+  card.href = pid ? \`product.html?id=\${pid}\` : 'homespec.html';
   card.innerHTML = `
     <div class="trending-tag ${p.tag}">${p.tagLabel}</div>
     <span class="fc-emoji">${p.emoji}</span>

@@ -211,11 +211,6 @@ nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:b
 </div>
 
 <script>
-SHAREDEOF
-
-echo "$SHARED" >> /mnt/user-data/outputs/product.html
-
-cat >> /mnt/user-data/outputs/product.html << 'PRODUCT2EOF'
 
 // ── STATE
 let product = null;
@@ -553,5 +548,3 @@ loadProduct();
 </script>
 </body>
 </html>
-PRODUCT2EOF
-echo "product.html done: $(wc -l < /mnt/user-data/outputs/product.html) lines"
