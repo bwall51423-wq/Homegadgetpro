@@ -342,8 +342,7 @@ function getAffiliateLink(asin) {
 
 
 // Flatten all products to one lookup
-const PRODUCT_MAP = {};
-Object.values(ALL_PRODUCTS).flat().forEach(p => { PRODUCT_MAP[p.id] = p; });
+// PRODUCT_MAP defined in products.js
 
 // Get category for a product
 function getCatForProduct(id) {
