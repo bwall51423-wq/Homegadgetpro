@@ -331,13 +331,9 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 // ═══════════════════════════════════════════════
 // SHARED PRODUCT DATABASE — HomeGadgetPro
 // ═══════════════════════════════════════════════
-const AFFILIATE_TAG = 'homegadgetpro-21'; // ← replace with your Amazon Associates tag
+// AFFILIATE_TAG defined in products.js
 
-function getAffiliateLink(asin) {
-  if (!asin) return '#';
-  return `https://www.amazon.co.uk/dp/${asin}?tag=${AFFILIATE_TAG}`;
-}
-
+// getAffiliateLink defined in products.js
 // ALL_PRODUCTS loaded from products.js
 
 
@@ -352,14 +348,7 @@ function getCatForProduct(id) {
   return null;
 }
 
-const BEST_FOR_DATA = {
-  coffee:['Best Value','Best for Beginners','Best Bean-to-Cup','Best Premium','Best for Coffee Lovers','Best for Milk Drinks','Best Compact Bean-to-Cup'],
-  airfryers:['Best Overall','Best for Families','Best for Quiet Operation','Best Value','Best Budget','Best for Beginners'],
-  hoovers:['Best Overall','Best for Pet Hair','Best Suction Power','Best Mop & Vacuum Combo','Best Premium'],
-  speakers:['Best Smart Speaker','Best Sound Quality','Best Portable','Best Value Portable','Best for Outdoors','Best Budget Smart Speaker'],
-  kettles:['Best Design','Best for Tea Drinkers','Best Premium','Best Budget','Best Mid-Range'],
-  blenders:['Best Overall','Best for Smoothies','Best Value','Best for Beginners','Best for On-the-Go','Best Mid-Range']
-};
+// BEST_FOR_DATA defined in products.js
 // ── STATE
 let currentCat = 'coffee';
 let currentFilter = 'all';
@@ -646,8 +635,12 @@ function showQuizResults() {
 }
 
 // ── INIT
-renderProducts('coffee');
-checkUrlParams();
+if (typeof ALL_PRODUCTS === 'undefined') {
+  document.getElementById('productGrid').innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">Loading products failed — please refresh.</div>';
+} else {
+  renderProducts('coffee');
+  checkUrlParams();
+}
 
 </script>
 </body>
