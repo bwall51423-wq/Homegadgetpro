@@ -254,6 +254,7 @@ nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:b
   </div>
 </div>
 
+<script src="products.js"></script>
 <script>
 
 // ── STATE
@@ -588,7 +589,11 @@ function submitReview() {
   document.getElementById('reviewsList').scrollIntoView({behavior:'smooth'});
 }
 
-loadProduct();
+if (typeof PRODUCT_MAP === 'undefined') {
+  document.getElementById('pageContent').innerHTML = '<div style="text-align:center;padding:80px;color:var(--muted)">Products failed to load. <a href="homespec.html" style="color:var(--accent)">← Back to products</a></div>';
+} else {
+  loadProduct();
+}
 </script>
 </body>
 </html>
