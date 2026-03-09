@@ -270,6 +270,15 @@ nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:b
 <script src="products.js"></script>
 <script>
 
+function starsHTML(n, total) {
+  total = total || 5;
+  var s = '';
+  for (var i = 0; i < Math.min(total, Math.round(n)); i++) s += '&#9733;';
+  for (var i = Math.round(n); i < total; i++) s += '&#9734;';
+  return s;
+}
+
+
 // ── STATE
 let product = null;
 let inCompare = false;
@@ -326,7 +335,7 @@ function renderPage() {
      <span id="mainEmojiFallback" style="display:none;font-size:100px;position:relative;z-index:1">${p.emoji}</span>
       </div>
       <div class="gallery-thumbs">
-        <div class="thumb active" onclick="document.getElementById('mainImg').src='${p.image || \'\'}';document.getElementById('mainEmojiFallback').style.display='none';document.getElementById('mainImg').style.display='block'"><img src="${p.image || ''}" onerror="this.outerHTML='${p.emoji}'" style="width:100%;height:100%;object-fit:contain;border-radius:4px;"></div>
+        <div class="thumb active" onclick="document.getElementById('mainImg').src="${p.image || ''}";document.getElementById('mainEmojiFallback').style.display='none';document.getElementById('mainImg').style.display='block'"><img src="${p.image || ''}" onerror="this.outerHTML='${p.emoji}'" style="width:100%;height:100%;object-fit:contain;border-radius:4px;"></div>
         <div class="thumb" onclick="setView('📦',this)">📦</div>
         <div class="thumb" onclick="setView('⚙️',this)">⚙️</div>
         <div class="thumb" onclick="setView('📋',this)">📋</div>
@@ -335,11 +344,11 @@ function renderPage() {
     <div class="product-info">
       <div class="pi-eyebrow">
         <span class="pi-brand">${p.brand}</span>
-        ${p.badge ? `<span class="pi-badge">${p.badge==='best'?'★ Editor\'s Choice':p.badge==='new'?'✦ New Arrival':'% On Sale'}</span>` : ''}
+        ${p.badge ? `<span class="pi-badge">${p.badge==='best'?'★ Editor's Choice':p.badge==='new'?'✦ New Arrival':'% On Sale'}</span>` : ''}
       </div>
       <h1 class="pi-name">${p.name}</h1>
       <div class="pi-rating">
-        <span class="r-stars">${'★'.repeat(Math.floor(p.rating))}</span>
+        <span class="r-stars">${starsHTML(p.rating)}</span>
         <span class="r-num">${p.rating}</span>
         <span class="r-count">(${p.reviews.toLocaleString()} reviews)</span>
         <div class="r-div"></div>
@@ -435,7 +444,7 @@ function renderPage() {
     <div class="review-summary-block">
       <div class="big-score">
         <div class="big-num">${avgRating}</div>
-        <div class="big-stars">${'★'.repeat(Math.round(avgRating))}</div>
+        <div class="big-stars">${starsHTML(avgRating)}</div>
         <div class="big-count">${totalR.toLocaleString()} reviews</div>
       </div>
       <div class="rbar-rows">
@@ -482,7 +491,7 @@ function renderPage() {
       <div class="sc-brand">${pr.brand}</div>
       <div class="sc-name">${pr.name}</div>
       <div class="sc-price">£${pr.price}</div>
-      <div class="sc-rating"><span class="sc-stars">${'★'.repeat(Math.floor(pr.rating))}</span> ${pr.rating}</div>
+      <div class="sc-rating"><span class="sc-stars">${starsHTML(pr.rating)}</span> ${pr.rating}</div>
     </a>`).join('')}
   </div>
   `;
@@ -587,7 +596,7 @@ function renderReviews(filter='all') {
             <div class="rc-meta">${r.location?r.location+' · ':''}${r.date}${r.verified?'<span class="rc-verified">✓ Verified</span>':''}</div>
           </div>
         </div>
-        <div class="rc-stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div>
+        <div class="rc-stars">${starsHTML(r.stars)}</div>
       </div>
       <div class="rc-title">${r.title}</div>
       <div class="rc-body">${r.body}</div>

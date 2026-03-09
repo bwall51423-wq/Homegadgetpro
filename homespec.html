@@ -350,6 +350,15 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 </footer>
 <script src="products.js"></script>
 <script>
+
+function starsHTML(n, total) {
+  total = total || 5;
+  var s = '';
+  for (var i = 0; i < Math.min(total, Math.round(n)); i++) s += '&#9733;';
+  for (var i = Math.round(n); i < total; i++) s += '&#9734;';
+  return s;
+}
+
 // ═══════════════════════════════════════════════
 // SHARED PRODUCT DATABASE — HomeGadgetPro
 // ═══════════════════════════════════════════════
@@ -447,7 +456,7 @@ function renderProducts(cat) {
       <div class="product-brand">${p.brand}</div>
       <div class="product-name">${p.name}</div>
       <div class="product-price">£${p.price}${p.oldPrice?`<span class="old-price">£${p.oldPrice}</span>`:''}</div>
-      <div class="rating"><span class="stars">${'★'.repeat(Math.floor(p.rating))}</span><span>${p.rating}</span><span class="rating-count">(${p.reviews.toLocaleString()})</span></div>
+      <div class="rating"><span class="stars">${starsHTML(p.rating)}</span><span>${p.rating}</span><span class="rating-count">(${p.reviews.toLocaleString()})</span></div>
       <div class="card-btns">
         <button class="view-btn" onclick="goToProduct(${p.id},event)">View →</button>
         <button class="cmp-btn" onclick="toggleProduct(${p.id},event)">${isSel?'✓ Added':'+ Compare'}</button>
@@ -680,7 +689,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
       <div class="product-brand">\${p.brand}</div>
       <div class="product-name">\${p.name}</div>
       <div class="product-price">£\${p.price}</div>
-      <div class="rating"><span class="stars">\${'★'.repeat(Math.floor(p.rating))}</span><span>\${p.rating}</span><span class="rating-count">(\${p.reviews.toLocaleString()})</span></div>
+      <div class="rating"><span class="stars">\${starsHTML(p.rating)}</span><span>\${p.rating}</span><span class="rating-count">(\${p.reviews.toLocaleString()})</span></div>
       <div class="card-btns">
         <button class="view-btn" onclick="goToProduct(\${p.id},event)">View →</button>
         <button class="cmp-btn" onclick="toggleProduct(\${p.id},event)">\${isSel?'✓ Added':'+ Compare'}</button>

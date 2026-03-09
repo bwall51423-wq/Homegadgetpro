@@ -557,6 +557,7 @@ footer {
     <a href="#how">How it works</a>
     <a href="#categories">Categories</a>
     <a href="#trending">Trending</a>
+    <a href="homespec.html">Compare</a>
   </div>
   
   <button class="hamburger" aria-label="Menu">
@@ -612,7 +613,7 @@ footer {
 <div class="trust-bar">
   <div class="trust-inner">
     <div class="trust-item">
-      <div class="trust-num">340+</div>
+      <div class="trust-num">179</div>
       <div class="trust-label">Products<br>reviewed</div>
     </div>
     <div class="trust-item">
@@ -682,7 +683,7 @@ footer {
     <div class="featured-grid" id="featuredGrid"></div>
 
     <a class="view-all-btn" href="homespec.html">
-      View all 340+ products →
+      View all 179 products →
     </a>
   </div>
 </section>
@@ -698,25 +699,25 @@ footer {
       <a class="cat-card" href="homespec.html?cat=coffee">
         <span class="cat-card-emoji">☕</span>
         <div class="cat-card-name">Coffee Machines</div>
-        <div class="cat-card-count">14 products</div>
+        <div class="cat-card-count">12 products</div>
         <div class="cat-card-arrow">→</div>
       </a>
       <a class="cat-card" href="homespec.html?cat=airfryers">
         <span class="cat-card-emoji">🍟</span>
         <div class="cat-card-name">Air Fryers</div>
-        <div class="cat-card-count">18 products</div>
+        <div class="cat-card-count">12 products</div>
         <div class="cat-card-arrow">→</div>
       </a>
       <a class="cat-card" href="homespec.html?cat=hoovers">
         <span class="cat-card-emoji">🤖</span>
         <div class="cat-card-name">Robot Hoovers</div>
-        <div class="cat-card-count">22 products</div>
+        <div class="cat-card-count">12 products</div>
         <div class="cat-card-arrow">→</div>
       </a>
       <a class="cat-card" href="homespec.html?cat=speakers">
         <span class="cat-card-emoji">🔊</span>
         <div class="cat-card-name">Speakers</div>
-        <div class="cat-card-count">16 products</div>
+        <div class="cat-card-count">12 products</div>
         <div class="cat-card-arrow">→</div>
       </a>
       <a class="cat-card" href="homespec.html?cat=kettles">
@@ -728,7 +729,61 @@ footer {
       <a class="cat-card" href="homespec.html?cat=blenders">
         <span class="cat-card-emoji">🥤</span>
         <div class="cat-card-name">Blenders</div>
-        <div class="cat-card-count">10 products</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=vacuums">
+        <span class="cat-card-emoji">🧹</span>
+        <div class="cat-card-name">Vacuums</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=airpurifiers">
+        <span class="cat-card-emoji">💨</span>
+        <div class="cat-card-name">Air Purifiers</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=toasters">
+        <span class="cat-card-emoji">🍞</span>
+        <div class="cat-card-name">Toasters</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=headphones">
+        <span class="cat-card-emoji">🎧</span>
+        <div class="cat-card-name">Headphones</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=slowcookers">
+        <span class="cat-card-emoji">🥘</span>
+        <div class="cat-card-name">Slow Cookers</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=toothbrushes">
+        <span class="cat-card-emoji">🪥</span>
+        <div class="cat-card-name">Electric Toothbrushes</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=heaters">
+        <span class="cat-card-emoji">🌡️</span>
+        <div class="cat-card-name">Electric Heaters</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=smarthome">
+        <span class="cat-card-emoji">💡</span>
+        <div class="cat-card-name">Smart Home</div>
+        <div class="cat-card-count">12 products</div>
+        <div class="cat-card-arrow">→</div>
+      </a>
+      <a class="cat-card" href="homespec.html?cat=hairdryers">
+        <span class="cat-card-emoji">💈</span>
+        <div class="cat-card-name">Hair Dryers</div>
+        <div class="cat-card-count">12 products</div>
         <div class="cat-card-arrow">→</div>
       </a>
     </div>
@@ -766,6 +821,15 @@ footer {
 </footer>
 
 <script>
+
+function starsHTML(n, total) {
+  total = total || 5;
+  var s = '';
+  for (var i = 0; i < Math.min(total, Math.round(n)); i++) s += '&#9733;';
+  for (var i = Math.round(n); i < total; i++) s += '&#9734;';
+  return s;
+}
+
 /* ── FEATURED PRODUCTS ───────────────── */
 const featured = [
   {emoji:'🍟',cat:'Air Fryers',name:'Ninja Foodi MAX Dual Zone',price:'£199',rating:4.9,score:97,tag:'hot',tagLabel:'🔥 Hot'},
@@ -802,7 +866,7 @@ featured.forEach(p => {
     <div class="fc-name">${p.name}</div>
     <div class="fc-price">${p.price}</div>
     <div class="fc-rating">
-      <span class="fc-stars">${'★'.repeat(Math.floor(p.rating))}</span>
+      <span class="fc-stars">${p.rating >= 5 ? '★★★★★' : p.rating >= 4 ? '★★★★' : '★★★'}</span>
       <span>${p.rating}</span>
     </div>
     <div class="fc-score">
@@ -814,7 +878,7 @@ featured.forEach(p => {
 });
 
 /* ── BRANDS MARQUEE ──────────────────── */
-const brands = ['Ninja','Dyson','Nespresso','De\'Longhi','Sage','Philips','Sonos','Bose','JBL','Vitamix','Roborock','Ecovacs','Roomba','KitchenAid','Smeg','Russell Hobbs','NutriBullet','Kenwood','Breville','Melitta','Tower','Cosori','Amazon','Bang & Olufsen'];
+const brands = ['Ninja','Dyson','Nespresso','De\u0027Longhi','Sage','Philips','Sonos','Bose','JBL','Vitamix','Roborock','Ecovacs','Roomba','KitchenAid','Smeg','Russell Hobbs','NutriBullet','Kenwood','Breville','Melitta','Tower','Cosori','Amazon','Bang & Olufsen'];
 const track = document.getElementById('marqueeTrack');
 // Duplicate for seamless loop
 [...brands, ...brands].forEach(b => {
