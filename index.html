@@ -34,7 +34,7 @@
   --text: #0f172a;
   --muted: #64748b;
   --muted2: #94a3b8;
-  --hi: rgba(22,163,74,.08);
+  --hi: rgba(37,99,235,.08);
   --hi2: rgba(217,119,6,.08);
   --red: #dc2626;
   --nav-bg: rgba(248,249,250,.92);
@@ -846,7 +846,7 @@ const grid = document.getElementById('featuredGrid');
 featured.forEach(p => {
   const card = document.createElement('a');
   card.className = 'featured-card';
-  card.href = \`product.html?id=\${p.id}\`;
+  card.href = `product.html?id=${p.id}`;
   card.innerHTML = `
     <div class="trending-tag ${p.tag}">${p.tagLabel}</div>
     <span class="fc-emoji">${p.emoji}</span>
