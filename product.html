@@ -335,7 +335,7 @@ function renderPage() {
      <span id="mainEmojiFallback" style="display:none;font-size:100px;position:relative;z-index:1">${p.emoji}</span>
       </div>
       <div class="gallery-thumbs">
-        <div class="thumb active" onclick="document.getElementById('mainImg').src="${p.image || ''}";document.getElementById('mainEmojiFallback').style.display='none';document.getElementById('mainImg').style.display='block'"><img src="${p.image || ''}" onerror="this.outerHTML='${p.emoji}'" style="width:100%;height:100%;object-fit:contain;border-radius:4px;"></div>
+        <div class="thumb active" onclick="document.getElementById(&apos;mainImg&apos;).src=this.querySelector(&apos;img&apos;).src" style="cursor:pointer"><img src="${p.image || ''}" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:contain;border-radius:4px;"></div>
         <div class="thumb" onclick="setView('📦',this)">📦</div>
         <div class="thumb" onclick="setView('⚙️',this)">⚙️</div>
         <div class="thumb" onclick="setView('📋',this)">📋</div>
@@ -344,7 +344,7 @@ function renderPage() {
     <div class="product-info">
       <div class="pi-eyebrow">
         <span class="pi-brand">${p.brand}</span>
-        ${p.badge ? `<span class="pi-badge">${p.badge==='best'?'★ Editor's Choice':p.badge==='new'?'✦ New Arrival':'% On Sale'}</span>` : ''}
+        ${p.badge ? `<span class="pi-badge">${p.badge==='best'?'★ Editor\'s Choice':p.badge==='new'?'✦ New Arrival':'% On Sale'}</span>` : ''}
       </div>
       <h1 class="pi-name">${p.name}</h1>
       <div class="pi-rating">

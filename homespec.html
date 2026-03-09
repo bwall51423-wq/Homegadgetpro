@@ -685,17 +685,18 @@ document.getElementById('searchInput').addEventListener('input', function() {
     const isSel = selected.find(s => s.id === p.id);
     const card = document.createElement('div');
     card.className = 'product-card' + (isSel ? ' selected' : '');
-    card.innerHTML = \`
-      \${p.badge ? \`<div class="badge badge-\${p.badge}">\${p.badge==='best'?'★ Best':p.badge==='new'?'✦ New':'% Sale'}</div>\` : ''}
-      <div class="product-img"><img src="\${p.image || ''}" alt="\${p.brand}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="width:100%;height:100%;object-fit:contain;padding:4px;"><span style="display:none;font-size:40px">\${p.emoji}</span></div>
-      <div class="product-brand">\${p.brand}</div>
-      <div class="product-name">\${p.name}</div>
-      <div class="product-price">£\${p.price}</div>
-      <div class="rating"><span class="stars">\${starsHTML(p.rating)}</span><span>\${p.rating}</span><span class="rating-count">(\${p.reviews.toLocaleString()})</span></div>
-      <div class="card-btns">
-        <button class="view-btn" onclick="goToProduct(\${p.id},event)">View →</button>
-        <button class="cmp-btn" onclick="toggleProduct(\${p.id},event)">\${isSel?'✓ Added':'+ Compare'}</button>
-      </div>\`;
+    card.innerHTML = [
+      p.badge ? '<div class="badge badge-'+p.badge+'">'+(p.badge==='best'?'★ Best':p.badge==='new'?'✦ New':'% Sale')+'</div>' : '',
+      '<div class="product-img"><img src="'+(p.image||'')+'" alt="'+p.brand+'" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'" style="width:100%;height:100%;object-fit:contain;padding:4px;"><span style="display:none;font-size:40px">'+p.emoji+'</span></div>',
+      '<div class="product-brand">'+p.brand+'</div>',
+      '<div class="product-name">'+p.name+'</div>',
+      '<div class="product-price">£'+p.price+(p.oldPrice?'<span class="old-price">£'+p.oldPrice+'</span>':'')+'</div>',
+      '<div class="rating"><span class="stars">'+starsHTML(p.rating)+'</span><span>'+p.rating+'</span><span class="rating-count">('+p.reviews.toLocaleString()+')</span></div>',
+      '<div class="card-btns">',
+      '<button class="view-btn" onclick="goToProduct('+p.id+',event)">View →</button>',
+      '<button class="cmp-btn" onclick="toggleProduct('+p.id+',event)">'+(isSel?'✓ Added':'+ Compare')+'</button>',
+      '</div>'
+    ].join('');
     grid.appendChild(card);
   });
   if (!results.length) grid.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">No products found for "' + q + '"</div>';
