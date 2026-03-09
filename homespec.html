@@ -2,8 +2,21 @@
 <html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="Compare hundreds of home appliances side by side. Filter by price, brand and features. Find your perfect coffee machine, air fryer, robot hoover and more.">
+<meta name="keywords" content="compare home appliances UK, best air fryer 2026, best coffee machine UK, robot hoover comparison">
+<meta name="robots" content="index, follow">
+<meta name="author" content="HomeGadgetPro">
+<meta property="og:title" content="Compare Home Appliances UK — HomeGadgetPro">
+<meta property="og:description" content="Compare hundreds of home appliances side by side. Filter by price, brand and features. Find your perfect coffee machine, air fryer, robot hoover and more.">
+<meta property="og:url" content="https://www.homegadgetpro.co.uk/homespec.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.homegadgetpro.co.uk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare Home Appliances UK — HomeGadgetPro">
+<meta name="twitter:description" content="Compare hundreds of home appliances side by side. Filter by price, brand and features. Find your perfect coffee machine, air fryer, robot hoover and more.">
+<link rel="canonical" href="https://www.homegadgetpro.co.uk/homespec.html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Compare Home Appliances — HomeGadgetPro</title>
+<title>Compare Home Appliances UK — HomeGadgetPro</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 [data-theme="dark"]{--bg:#0a0d08;--surface:#121510;--surface2:#1a1f16;--surface3:#222920;--border:#252e1e;--accent:#85d44e;--btn-fg:#0a0d08;--text:#f0f3ec;--muted:#7a8a6a;--muted2:#3a4830;--hi:rgba(133,212,78,.09);--hi-border:rgba(133,212,78,.22);--red:#ff6b6b;--yellow:#f5aa3f;--shadow:rgba(0,0,0,.5);--nav-bg:rgba(10,13,8,.93);--accent2:#f5aa3f;}
@@ -75,7 +88,7 @@ h1 em{font-style:normal;color:var(--accent);}
 .sponsored-badge{position:absolute;top:0;right:0;background:var(--surface3);color:var(--muted);font-size:9px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:0 14px 0 8px;border-left:1px solid var(--border);border-bottom:1px solid var(--border);}
 .card-check{position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--btn-fg);font-weight:900;opacity:0;transform:scale(.4);transition:all .2s cubic-bezier(.34,1.56,.64,1);}
 .product-card.selected .card-check{opacity:1;transform:scale(1);}
-.product-img{width:56px;height:56px;background:var(--surface2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:9px;border:1px solid var(--border);}
+.product-img{ overflow:hidden; display:flex; align-items:center; justify-content:center;width:56px;height:56px;background:var(--surface2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:9px;border:1px solid var(--border);}
 .badge{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:2px 7px;border-radius:4px;margin-bottom:5px;}
 .badge-best{background:var(--hi);color:var(--accent);}
 .badge-new{background:rgba(78,204,212,.12);color:#4eccd4;}
@@ -202,7 +215,7 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
   .cat-tab { padding:7px 11px; font-size:12px; }
   .product-grid { grid-template-columns:repeat(2,1fr); gap:8px; }
   .product-card { padding:11px; }
-  .product-img { width:44px; height:44px; font-size:22px; }
+  .product-img { overflow:hidden; display:flex; align-items:center; justify-content:center; width:44px; height:44px; font-size:22px; }
   .product-name { font-size:12px; }
   .product-price { font-size:14px; }
   .card-btns { flex-direction:column; gap:5px; }
@@ -223,7 +236,7 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 </head>
 <body>
 <nav>
-  <a class="logo" href="landing.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
+  <a class="logo" href="index.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
   <div class="nav-right">
     <button class="quiz-nav-btn" onclick="openQuiz()">✦ Find My Pick</button>
     <div style="position:relative">
@@ -266,6 +279,15 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
     <button class="cat-tab" onclick="switchCat(this,'speakers')">🔊 Speakers</button>
     <button class="cat-tab" onclick="switchCat(this,'kettles')">🫖 Kettles</button>
     <button class="cat-tab" onclick="switchCat(this,'blenders')">🥤 Blenders</button>
+    <button class="cat-tab" onclick="switchCat(this,'vacuums')">🧹 Vacuums</button>
+    <button class="cat-tab" onclick="switchCat(this,'airpurifiers')">💨 Air Purifiers</button>
+    <button class="cat-tab" onclick="switchCat(this,'toasters')">🍞 Toasters</button>
+    <button class="cat-tab" onclick="switchCat(this,'headphones')">🎧 Headphones</button>
+    <button class="cat-tab" onclick="switchCat(this,'slowcookers')">🥘 Slow Cookers</button>
+    <button class="cat-tab" onclick="switchCat(this,'toothbrushes')">🪥 Toothbrushes</button>
+    <button class="cat-tab" onclick="switchCat(this,'heaters')">🌡️ Heaters</button>
+    <button class="cat-tab" onclick="switchCat(this,'smarthome')">💡 Smart Home</button>
+    <button class="cat-tab" onclick="switchCat(this,'hairdryers')">💈 Hair Dryers</button>
   </div>
   <div class="bestfor-strip" id="bestforStrip"></div>
   <div class="filter-row">
@@ -421,7 +443,7 @@ function renderProducts(cat) {
       ${p.sponsored ? '<div class="sponsored-badge">Sponsored</div>' : ''}
       <div class="card-check">✓</div>
       ${p.badge ? `<div class="badge badge-${p.badge}">${p.badge==='best'?'★ Best':p.badge==='new'?'✦ New':'% Sale'}</div>` : ''}
-      <div class="product-img">${p.emoji}</div>
+      <div class="product-img"><img src="${p.image || ''}" alt="${p.brand} ${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="width:100%;height:100%;object-fit:contain;padding:4px;"><span style="display:none;font-size:40px">${p.emoji}</span></div>
       <div class="product-brand">${p.brand}</div>
       <div class="product-name">${p.name}</div>
       <div class="product-price">£${p.price}${p.oldPrice?`<span class="old-price">£${p.oldPrice}</span>`:''}</div>
@@ -493,7 +515,7 @@ function showComp() {
   const specKeys = Object.keys(prods[0].specs).filter(k => k !== 'Score');
   const getNum = v => typeof v === 'boolean' ? null : parseFloat(String(v).replace(/[^0-9.]/g,'')) || null;
   let html = '<thead><tr><th>Spec</th>';
-  prods.forEach(p => { html += `<th class="th-product"><span class="th-emoji">${p.emoji}</span><div class="th-name">${p.brand} ${p.name}</div><div class="th-price">£${p.price}</div><a class="th-link" href="product.html?id=${p.id}">View →</a></th>`; });
+  prods.forEach(p => { html += `<th class="th-product"><img src="${p.image || ''}" alt="${p.brand}" onerror="this.style.display='none'" style="width:52px;height:52px;object-fit:contain;border-radius:6px;display:block;margin:0 auto 4px;"><div class="th-name">${p.brand} ${p.name}</div><div class="th-price">£${p.price}</div><a class="th-link" href="product.html?id=${p.id}">View →</a></th>`; });
   html += '</tr></thead><tbody>';
   const maxScore = Math.max(...prods.map(p => p.specs.Score));
   html += '<tr><td class="row-label">Score</td>';
@@ -622,7 +644,7 @@ function showQuizResults() {
   document.getElementById('resultsList').innerHTML=candidates.map((p,i)=>`
     <a class="result-card" href="product.html?id=${p.id}">
       <div class="result-rank">${['#1','#2','#3'][i]}</div>
-      <div class="result-emoji">${p.emoji}</div>
+      <div class="result-emoji"><img src="${p.image || ''}" alt="${p.brand}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="width:100%;height:100%;object-fit:contain;padding:2px;"><span style="display:none;font-size:28px">${p.emoji}</span></div>
       <div class="result-info">
         <div class="result-name">${p.brand} ${p.name}</div>
         <div class="result-reason">${reasons[priority]||reasons.default} · ${p.specs.Score}/100 score</div>
@@ -633,6 +655,40 @@ function showQuizResults() {
   document.getElementById('quizProgFill').style.width='100%';
   document.getElementById('quizProgLabel').textContent='Done!';
 }
+
+
+// ── SEARCH
+document.getElementById('searchInput').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (!q) { renderProducts(currentCat); return; }
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = '';
+  const all = Object.values(ALL_PRODUCTS).flat();
+  const results = all.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.brand.toLowerCase().includes(q) ||
+    (p.bestFor||[]).some(b => b.toLowerCase().includes(q))
+  );
+  document.getElementById('productCount').textContent = results.length + ' results';
+  results.forEach((p,i) => {
+    const isSel = selected.find(s => s.id === p.id);
+    const card = document.createElement('div');
+    card.className = 'product-card' + (isSel ? ' selected' : '');
+    card.innerHTML = \`
+      \${p.badge ? \`<div class="badge badge-\${p.badge}">\${p.badge==='best'?'★ Best':p.badge==='new'?'✦ New':'% Sale'}</div>\` : ''}
+      <div class="product-img"><img src="\${p.image || ''}" alt="\${p.brand}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="width:100%;height:100%;object-fit:contain;padding:4px;"><span style="display:none;font-size:40px">\${p.emoji}</span></div>
+      <div class="product-brand">\${p.brand}</div>
+      <div class="product-name">\${p.name}</div>
+      <div class="product-price">£\${p.price}</div>
+      <div class="rating"><span class="stars">\${'★'.repeat(Math.floor(p.rating))}</span><span>\${p.rating}</span><span class="rating-count">(\${p.reviews.toLocaleString()})</span></div>
+      <div class="card-btns">
+        <button class="view-btn" onclick="goToProduct(\${p.id},event)">View →</button>
+        <button class="cmp-btn" onclick="toggleProduct(\${p.id},event)">\${isSel?'✓ Added':'+ Compare'}</button>
+      </div>\`;
+    grid.appendChild(card);
+  });
+  if (!results.length) grid.innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">No products found for "' + q + '"</div>';
+});
 
 // ── INIT
 if (typeof ALL_PRODUCTS === 'undefined') {
