@@ -589,7 +589,7 @@ footer {
     <a class="btn-primary" href="homespec.html">
       ⚡ Start Comparing
     </a>
-    <a class="btn-secondary" href="homespec.html#quiz">
+    <a class="btn-secondary" href="homespec.html?openquiz=1">
       🤖 Find My Perfect Pick
     </a>
   </div>
@@ -832,33 +832,21 @@ function starsHTML(n, total) {
 
 /* ── FEATURED PRODUCTS ───────────────── */
 const featured = [
-  {emoji:'🍟',cat:'Air Fryers',name:'Ninja Foodi MAX Dual Zone',price:'£199',rating:4.9,score:97,tag:'hot',tagLabel:'🔥 Hot'},
-  {emoji:'🤖',cat:'Robot Hoovers',name:'Roborock S8 MaxV Ultra',price:'£1,199',rating:4.9,score:97,tag:'top',tagLabel:'★ Top Rated'},
-  {emoji:'☕',cat:'Coffee Machines',name:'Sage Barista Express',price:'£699',rating:4.9,score:96,tag:'top',tagLabel:'★ Top Rated'},
-  {emoji:'🥤',cat:'Blenders',name:'Vitamix E310 Explorian',price:'£349',rating:4.9,score:96,tag:'top',tagLabel:'★ Top Rated'},
-  {emoji:'🤖',cat:'Robot Hoovers',name:'Ecovacs Deebot T30 Pro',price:'£649',rating:4.7,score:91,tag:'hot',tagLabel:'🔥 Hot'},
-  {emoji:'🔊',cat:'Speakers',name:'Sonos Era 300',price:'£449',rating:4.8,score:94,tag:'top',tagLabel:'★ Top Rated'},
-  {emoji:'☕',cat:'Coffee Machines',name:"De'Longhi Magnifica Evo",price:'£449',rating:4.8,score:93,tag:'new',tagLabel:'✦ New'},
-  {emoji:'🍟',cat:'Air Fryers',name:'Philips Airfryer XXL',price:'£229',rating:4.7,score:89,tag:'hot',tagLabel:'🔥 Hot'},
+  {id:131,emoji:'🤖',cat:'Robot Hoovers',name:'MONSGA Robot Vacuum & Mop',price:'£289',rating:4.9,score:97,tag:'top',tagLabel:'★ Top Rated'},
+  {id:115,emoji:'🍟',cat:'Air Fryers',name:'Ninja Air Fryer PRO 4.7L',price:'£79',rating:4.8,score:95,tag:'hot',tagLabel:'🔥 Hot'},
+  {id:175,emoji:'🧹',cat:'Vacuums',name:'Cordless Vacuum 600W 50KPA',price:'£130',rating:4.8,score:94,tag:'top',tagLabel:'★ Top Rated'},
+  {id:101,emoji:'☕',cat:'Coffee Machines',name:'Ninja Luxe Premier 3-in-1',price:'£479',rating:4.4,score:91,tag:'new',tagLabel:'✦ New'},
+  {id:165,emoji:'🥤',cat:'Blenders',name:'Ninja 700W Slim Blender',price:'£48',rating:4.7,score:93,tag:'hot',tagLabel:'🔥 Hot'},
+  {id:141,emoji:'🔊',cat:'Speakers',name:'aowoka Portable Speaker 2026',price:'£14',rating:4.8,score:92,tag:'new',tagLabel:'✦ New'},
+  {id:209,emoji:'🎧',cat:'Headphones',name:'soundcore Q20i ANC Headphones',price:'£32',rating:4.6,score:90,tag:'top',tagLabel:'★ Top Rated'},
+  {id:221,emoji:'🍲',cat:'Slow Cookers',name:'Crockpot Digital Slow Cooker',price:'£39',rating:4.6,score:89,tag:'hot',tagLabel:'🔥 Hot'},
 ];
 
 const grid = document.getElementById('featuredGrid');
 featured.forEach(p => {
   const card = document.createElement('a');
   card.className = 'featured-card';
-  // Map product names to IDs
-  const nameToId = {
-    'Ninja Foodi MAX Dual Zone': 10,
-    'Roborock S8 MaxV Ultra': 23,
-    'Sage Barista Express': 3,
-    'Vitamix E310 Explorian': 50,
-    'Ecovacs Deebot T30 Pro': 22,
-    'Sonos Era 300': 30,
-    "De'Longhi Magnifica Evo": 2,
-    'Philips Airfryer XXL': 11,
-  };
-  const pid = nameToId[p.name];
-  card.href = pid ? \`product.html?id=\${pid}\` : 'homespec.html';
+  card.href = \`product.html?id=\${p.id}\`;
   card.innerHTML = `
     <div class="trending-tag ${p.tag}">${p.tagLabel}</div>
     <span class="fc-emoji">${p.emoji}</span>

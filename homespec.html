@@ -238,7 +238,6 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 <nav>
   <a class="logo" href="index.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
   <div class="nav-right">
-    <button class="quiz-nav-btn" onclick="openQuiz()">✦ Find My Pick</button>
     <div style="position:relative">
       <button class="settings-btn" onclick="toggleSettings()" id="settingsBtn" title="Settings">⚙️</button>
       <div class="settings-menu" id="settingsMenu">
@@ -400,6 +399,9 @@ function checkUrlParams() {
   if (compareId && PRODUCT_MAP[compareId]) {
     selected = [PRODUCT_MAP[compareId]];
     updateBar();
+  }
+  if (params.get('openquiz') === '1') {
+    setTimeout(openQuiz, 400);
   }
 }
 
