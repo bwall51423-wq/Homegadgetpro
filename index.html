@@ -8,13 +8,13 @@
 <meta name="author" content="HomeGadgetPro">
 <meta property="og:title" content="HomeGadgetPro — Compare the Best Home Appliances UK 2026">
 <meta property="og:description" content="Find and compare the best home appliances in the UK. Coffee machines, air fryers, robot hoovers, speakers and more — with honest reviews, real prices and side-by-side comparisons.">
-<meta property="og:url" content="https://www.homegadgetpro.co.uk/index.html">
+<meta property="og:url" content="https://www.homegadgetpro.co.uk/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.homegadgetpro.co.uk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HomeGadgetPro — Compare the Best Home Appliances UK 2026">
 <meta name="twitter:description" content="Find and compare the best home appliances in the UK. Coffee machines, air fryers, robot hoovers, speakers and more — with honest reviews, real prices and side-by-side comparisons.">
-<link rel="canonical" href="https://www.homegadgetpro.co.uk/index.html">
+<link rel="canonical" href="https://www.homegadgetpro.co.uk/">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>HomeGadgetPro — Compare the Best Home Appliances UK 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -40,21 +40,21 @@
   --nav-bg: rgba(248,249,250,.92);
 }
 [data-theme="dark"] {
-  --bg: #0a0d08;
-  --surface: #121510;
-  --surface2: #1a1f16;
-  --border: #252e1e;
-  --accent: #2563eb;
+  --bg: #0a0d14;
+  --surface: #111827;
+  --surface2: #1a2236;
+  --border: #1e2a45;
+  --accent: #3b82f6;
   --accent2: #f5aa3f;
   --accent3: #4eccd4;
-  --btn-fg: #0a0d08;
-  --text: #f0f3ec;
-  --muted: #7a8a6a;
-  --muted2: #3a4830;
-  --hi: rgba(37,99,235,.1);
+  --btn-fg: #ffffff;
+  --text: #f0f4ff;
+  --muted: #6b7fa8;
+  --muted2: #2d3f6b;
+  --hi: rgba(59,130,246,.1);
   --hi2: rgba(245,170,63,.1);
   --red: #ff6b6b;
-  --nav-bg: rgba(10,13,8,.92);
+  --nav-bg: rgba(10,13,20,.93);
 }
 
 /* ── RESET ───────────────────────────────────── */
@@ -218,6 +218,7 @@ nav {
   transition:all .25s; cursor:default;
 }
 .pill:hover { border-color:var(--accent); color:var(--text); transform:translateY(-2px); }
+.pill { text-decoration:none; }
 .pill-emoji { font-size:15px; }
 
 /* Scroll indicator */
@@ -363,6 +364,7 @@ nav {
 .trending-tag.top { background:var(--hi); color:var(--accent); }
 
 .fc-emoji { font-size:28px; margin-bottom:10px; display:block; }
+.fc-img { width:100%; aspect-ratio:1; object-fit:contain; border-radius:10px; background:#f8faff; padding:8px; margin-bottom:10px; display:block; }
 .fc-cat { font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); font-weight:600; margin-bottom:2px; }
 .fc-name { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; line-height:1.25; margin-bottom:6px; }
 .fc-price { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; color:var(--accent); margin-bottom:5px; }
@@ -589,18 +591,15 @@ footer {
     <a class="btn-primary" href="homespec.html">
       ⚡ Start Comparing
     </a>
-    <a class="btn-secondary" href="homespec.html">
-      🤖 Find My Perfect Pick
-    </a>
   </div>
 
   <div class="floating-pills">
-    <div class="pill"><span class="pill-emoji">☕</span> Coffee Machines</div>
-    <div class="pill"><span class="pill-emoji">🍟</span> Air Fryers</div>
-    <div class="pill"><span class="pill-emoji">🤖</span> Robot Hoovers</div>
-    <div class="pill"><span class="pill-emoji">🔊</span> Speakers</div>
-    <div class="pill"><span class="pill-emoji">🥤</span> Blenders</div>
-    <div class="pill"><span class="pill-emoji">🫖</span> Kettles</div>
+    <a class="pill" href="homespec.html?cat=coffee"><span class="pill-emoji">☕</span> Coffee Machines</a>
+    <a class="pill" href="homespec.html?cat=airfryers"><span class="pill-emoji">🍟</span> Air Fryers</a>
+    <a class="pill" href="homespec.html?cat=hoovers"><span class="pill-emoji">🤖</span> Robot Hoovers</a>
+    <a class="pill" href="homespec.html?cat=speakers"><span class="pill-emoji">🔊</span> Speakers</a>
+    <a class="pill" href="homespec.html?cat=blenders"><span class="pill-emoji">🥤</span> Blenders</a>
+    <a class="pill" href="homespec.html?cat=kettles"><span class="pill-emoji">🫖</span> Kettles</a>
   </div>
 
   <div class="scroll-indicator">
@@ -613,7 +612,7 @@ footer {
 <div class="trust-bar">
   <div class="trust-inner">
     <div class="trust-item">
-      <div class="trust-num">179</div>
+      <div class="trust-num" id="trustProductCount">179</div>
       <div class="trust-label">Products<br>reviewed</div>
     </div>
     <div class="trust-item">
@@ -683,7 +682,7 @@ footer {
     <div class="featured-grid" id="featuredGrid"></div>
 
     <a class="view-all-btn" href="homespec.html">
-      View all 179 products →
+      View all <span id="viewAllCount">179</span> products →
     </a>
   </div>
 </section>
@@ -832,14 +831,14 @@ function starsHTML(n, total) {
 
 /* ── FEATURED PRODUCTS ───────────────── */
 const featured = [
-  {id:131,emoji:'🤖',cat:'Robot Hoovers',name:'MONSGA Robot Vacuum & Mop',price:'£289',rating:4.9,score:97,tag:'top',tagLabel:'★ Top Rated'},
-  {id:115,emoji:'🍟',cat:'Air Fryers',name:'Ninja Air Fryer PRO 4.7L',price:'£79',rating:4.8,score:95,tag:'hot',tagLabel:'🔥 Hot'},
-  {id:175,emoji:'🧹',cat:'Vacuums',name:'Cordless Vacuum 600W 50KPA',price:'£130',rating:4.8,score:94,tag:'top',tagLabel:'★ Top Rated'},
-  {id:101,emoji:'☕',cat:'Coffee Machines',name:'Ninja Luxe Premier 3-in-1',price:'£479',rating:4.4,score:91,tag:'new',tagLabel:'✦ New'},
-  {id:165,emoji:'🥤',cat:'Blenders',name:'Ninja 700W Slim Blender',price:'£48',rating:4.7,score:93,tag:'hot',tagLabel:'🔥 Hot'},
-  {id:141,emoji:'🔊',cat:'Speakers',name:'aowoka Portable Speaker 2026',price:'£14',rating:4.8,score:92,tag:'new',tagLabel:'✦ New'},
-  {id:209,emoji:'🎧',cat:'Headphones',name:'soundcore Q20i ANC Headphones',price:'£32',rating:4.6,score:90,tag:'top',tagLabel:'★ Top Rated'},
-  {id:221,emoji:'🍲',cat:'Slow Cookers',name:'Crockpot Digital Slow Cooker',price:'£39',rating:4.6,score:89,tag:'hot',tagLabel:'🔥 Hot'},
+  {id:131,image:'https://m.media-amazon.com/images/I/71MX6RgbXHL._AC_UY218_.jpg',emoji:'🤖',cat:'Robot Hoovers',name:'MONSGA Robot Vacuum & Mop',price:'£289',rating:4.9,score:97,tag:'top',tagLabel:'★ Top Rated'},
+  {id:115,image:'https://m.media-amazon.com/images/I/61dFSoLUvUL._AC_UY218_.jpg',emoji:'🍟',cat:'Air Fryers',name:'Ninja Air Fryer PRO 4.7L',price:'£79',rating:4.8,score:95,tag:'hot',tagLabel:'🔥 Hot'},
+  {id:175,image:'https://m.media-amazon.com/images/I/71pSgeQa8jL._AC_UY218_.jpg',emoji:'🧹',cat:'Vacuums',name:'Cordless Vacuum 600W 50KPA',price:'£130',rating:4.8,score:94,tag:'top',tagLabel:'★ Top Rated'},
+  {id:101,image:'https://m.media-amazon.com/images/I/61XrgBDkS6L._AC_UL320_.jpg',emoji:'☕',cat:'Coffee Machines',name:'Ninja Luxe Premier 3-in-1',price:'£479',rating:4.4,score:91,tag:'new',tagLabel:'✦ New'},
+  {id:165,image:'https://m.media-amazon.com/images/I/616E1sfbwHL._AC_UY218_.jpg',emoji:'🥤',cat:'Blenders',name:'Ninja 700W Slim Blender',price:'£48',rating:4.7,score:93,tag:'hot',tagLabel:'🔥 Hot'},
+  {id:141,image:'https://m.media-amazon.com/images/I/81fWf-QLpJL._AC_UY218_.jpg',emoji:'🔊',cat:'Speakers',name:'aowoka Portable Speaker 2026',price:'£14',rating:4.8,score:92,tag:'new',tagLabel:'✦ New'},
+  {id:209,image:'https://m.media-amazon.com/images/I/51V2SOMrpXL._AC_UY218_.jpg',emoji:'🎧',cat:'Headphones',name:'soundcore Q20i ANC Headphones',price:'£32',rating:4.6,score:90,tag:'top',tagLabel:'★ Top Rated'},
+  {id:221,image:'https://m.media-amazon.com/images/I/81hDv7kP-KL._AC_UY218_.jpg',emoji:'🍲',cat:'Slow Cookers',name:'Crockpot Digital Slow Cooker',price:'£39',rating:4.6,score:89,tag:'hot',tagLabel:'🔥 Hot'},
 ];
 
 const grid = document.getElementById('featuredGrid');
@@ -849,7 +848,8 @@ featured.forEach(p => {
   card.href = `product.html?id=${p.id}`;
   card.innerHTML = `
     <div class="trending-tag ${p.tag}">${p.tagLabel}</div>
-    <span class="fc-emoji">${p.emoji}</span>
+    <img class="fc-img" src="${p.image}" alt="${p.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="fc-emoji" style="display:none">${p.emoji}</span>
     <div class="fc-cat">${p.cat}</div>
     <div class="fc-name">${p.name}</div>
     <div class="fc-price">${p.price}</div>
@@ -866,7 +866,7 @@ featured.forEach(p => {
 });
 
 /* ── BRANDS MARQUEE ──────────────────── */
-const brands = ['Ninja','Dyson','Nespresso','De\u0027Longhi','Sage','Philips','Sonos','Bose','JBL','Vitamix','Roborock','Ecovacs','Roomba','KitchenAid','Smeg','Russell Hobbs','NutriBullet','Kenwood','Breville','Melitta','Tower','Cosori','Amazon','Bang & Olufsen'];
+const brands = ['Ninja','Philips','Russell Hobbs','Breville','Nespresso','De\'Longhi','Shark','Dyson','NutriBullet','Tefal','Morphy Richards','soundcore','JBL','Sony','Oral-B','Remington','BaByliss','Revlon','LEVOIT','Govee','Tapo','eufy','roborock','Vax','Swan','Tower','Anker','Crockpot','Tassimo','NESCAFÉ','Amazon Basics','Dreo','Ortizan','Belaco','Keplin','Oypla','Crock-Pot','TRESemme','Sumvision','aowoka'];
 const track = document.getElementById('marqueeTrack');
 // Duplicate for seamless loop
 [...brands, ...brands].forEach(b => {
@@ -876,12 +876,23 @@ const track = document.getElementById('marqueeTrack');
   track.appendChild(pill);
 });
 
+/* ── DYNAMIC PRODUCT COUNT ──────────────── */
+if (typeof ALL_PRODUCTS !== 'undefined') {
+  const totalProducts = Object.values(ALL_PRODUCTS).flat().length;
+  const trustEl = document.getElementById('trustProductCount');
+  const viewAllEl = document.getElementById('viewAllCount');
+  if (trustEl) trustEl.textContent = totalProducts;
+  if (viewAllEl) viewAllEl.textContent = totalProducts;
+}
+
 /* ── NAV SCROLL EFFECT ───────────────── */
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
-  nav.style.background = window.scrollY > 50
-    ? 'var(--nav-bg)'
-    : 'var(--nav-bg)';
+  if (window.scrollY > 50) {
+    nav.style.boxShadow = '0 2px 20px rgba(0,0,0,.08)';
+  } else {
+    nav.style.boxShadow = '';
+  }
 });
 </script>
 </body>

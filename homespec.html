@@ -19,7 +19,6 @@
 <title>Compare Home Appliances UK — HomeGadgetPro</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
-[data-theme="dark"]{--bg:#0a0d14;--surface:#111827;--surface2:#1a2236;--surface3:#1e2a45;--border:#1e2a45;--accent:#3b82f6;--btn-fg:#ffffff;--text:#f0f4ff;--muted:#6b7fa8;--muted2:#2d3f6b;--hi:rgba(59,130,246,.09);--hi-border:rgba(59,130,246,.22);--red:#ff6b6b;--yellow:#f5aa3f;--shadow:rgba(0,0,0,.5);--nav-bg:rgba(10,13,20,.93);--accent2:#f59e0b;}
 [data-theme="light"]{--bg:#ffffff;--surface:#ffffff;--surface2:#f4f6fb;--surface3:#eaedf5;--border:#e0e6ee;--accent:#2563eb;--btn-fg:#ffffff;--text:#0f172a;--muted:#5a6a9a;--muted2:#b0bcd8;--hi:rgba(37,99,235,.08);--hi-border:rgba(37,99,235,.25);--red:#ef4444;--yellow:#d97706;--shadow:rgba(0,0,0,.08);--nav-bg:rgba(255,255,255,.95);--accent2:#f59e0b;}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;transition:background .3s,color .3s;}
@@ -30,16 +29,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:b
 .logo span{color:var(--accent);transition:color .3s;}
 .nav-right{display:flex;align-items:center;gap:8px;}
 .quiz-nav-btn{display:flex;align-items:center;gap:5px;background:var(--hi);border:1px solid var(--hi-border);color:var(--accent);padding:6px 12px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;}
-.settings-btn{background:var(--surface2);border:1px solid var(--border);color:var(--muted);width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all .2s;position:relative;flex-shrink:0;}
-.settings-btn:hover{border-color:var(--accent);color:var(--accent);}
-.settings-menu{position:absolute;top:46px;right:12px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;min-width:200px;box-shadow:0 8px 32px var(--shadow);z-index:300;display:none;animation:fadeIn .2s ease;}
-.settings-menu.open{display:block;}
-.settings-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:10px;}
-.settings-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;}
-.settings-row-label{font-size:13px;color:var(--text);}
-.theme-toggle{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px;}
-.t-opt{padding:4px 10px;border-radius:16px;font-size:11px;font-weight:600;color:var(--muted);transition:all .25s;border:none;background:transparent;cursor:pointer;}
-.t-opt.active{background:var(--accent);color:var(--btn-fg);}
+
 .hero{position:relative;z-index:1;padding:36px 16px 20px;text-align:center;}
 .hero-badge{display:inline-flex;align-items:center;gap:5px;background:var(--hi);border:1px solid var(--hi-border);padding:4px 12px;border-radius:100px;font-size:11px;color:var(--accent);font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:14px;}
 h1{font-family:'Syne',sans-serif;font-size:clamp(26px,7vw,44px);font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin-bottom:10px;}
@@ -239,21 +229,7 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 <body>
 <nav>
   <a class="logo" href="index.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
-  <div class="nav-right">
-    <div style="position:relative">
-      <button class="settings-btn" onclick="toggleSettings()" id="settingsBtn" title="Settings">⚙️</button>
-      <div class="settings-menu" id="settingsMenu">
-        <div class="settings-label">Appearance</div>
-        <div class="settings-row">
-          <span class="settings-row-label">Theme</span>
-          <div class="theme-toggle">
-            <button class="t-opt active" id="lightBtn" onclick="setTheme('light',this)">☀️ Light</button>
-            <button class="t-opt" id="darkBtn" onclick="setTheme('dark',this)">🌙 Dark</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </nav>
 <section class="hero">
   <div class="hero-badge">🏆 UK's smartest appliance comparison</div>
@@ -268,7 +244,7 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
   </div>
 </div>
 <div class="stats">
-  <div class="stat"><div class="stat-num">340+</div><div class="stat-label">Products</div></div>
+  <div class="stat"><div class="stat-num" id="hspecProductCount">179</div><div class="stat-label">Products</div></div>
   <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Brands</div></div>
   <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Avg rating</div></div>
 </div>
@@ -408,33 +384,7 @@ function checkUrlParams() {
   }
 }
 
-// ── THEME
-function setTheme(t, btn) {
-  document.documentElement.setAttribute('data-theme', t);
-  document.querySelectorAll('.t-opt').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  localStorage.setItem('hgp-theme', t);
-}
-function toggleSettings() {
-  document.getElementById('settingsMenu').classList.toggle('open');
-}
-// Close settings if tapping outside
-document.addEventListener('click', e => {
-  const btn = document.getElementById('settingsBtn');
-  const menu = document.getElementById('settingsMenu');
-  if (btn && menu && !btn.contains(e.target) && !menu.contains(e.target)) {
-    menu.classList.remove('open');
-  }
-});
-// Restore saved theme on load
-(function() {
-  const saved = localStorage.getItem('hgp-theme') || 'light';
-  document.documentElement.setAttribute('data-theme', saved);
-  if (saved === 'dark') {
-    document.getElementById('darkBtn') && document.getElementById('darkBtn').classList.add('active');
-    document.getElementById('lightBtn') && document.getElementById('lightBtn').classList.remove('active');
-  }
-})();
+
 
 // ── RENDER PRODUCTS
 function renderProducts(cat) {
@@ -526,34 +476,85 @@ function showComp() {
   section.classList.add('visible');
   setTimeout(() => section.scrollIntoView({behavior:'smooth',block:'start'}), 50);
   const prods = selected;
-  const specKeys = Object.keys(prods[0].specs).filter(k => k !== 'Score');
-  const getNum = v => typeof v === 'boolean' ? null : parseFloat(String(v).replace(/[^0-9.]/g,'')) || null;
+
+  // Header with product images
   let html = '<thead><tr><th>Spec</th>';
-  prods.forEach(p => { html += `<th class="th-product"><img src="${p.image || ''}" alt="${p.brand}" onerror="this.style.display='none'" style="width:52px;height:52px;object-fit:contain;border-radius:6px;display:block;margin:0 auto 4px;"><div class="th-name">${p.brand} ${p.name}</div><div class="th-price">£${p.price}</div><a class="th-link" href="product.html?id=${p.id}">View →</a></th>`; });
+  prods.forEach(p => {
+    html += '<th class="th-product">' +
+      '<img src="'+(p.image||'')+'" alt="'+p.brand+'" onerror="this.style.display=\'none\'" style="width:64px;height:64px;object-fit:contain;border-radius:8px;background:#f4f6fb;padding:4px;display:block;margin:0 auto 6px;">' +
+      '<div class="th-name">'+p.brand+' '+p.name+'</div>' +
+      '<div class="th-price">£'+p.price+'</div>' +
+      '<a class="th-link" href="product.html?id='+p.id+'">View &rarr;</a>' +
+      '</th>';
+  });
   html += '</tr></thead><tbody>';
+
+  // Overall Score
   const maxScore = Math.max(...prods.map(p => p.specs.Score));
-  html += '<tr><td class="row-label">Score</td>';
-  prods.forEach(p => { const best = p.specs.Score === maxScore; html += `<td class="cell-value${best?' cell-best':''}"><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:${p.specs.Score}%"></div></div><span>${p.specs.Score}</span></div></td>`; });
+  html += '<tr><td class="row-label">Overall Score</td>';
+  prods.forEach(p => {
+    const best = p.specs.Score === maxScore;
+    html += '<td class="cell-value'+(best?' cell-best':'')+'"><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:'+p.specs.Score+'%"></div></div><span>'+p.specs.Score+'</span></div></td>';
+  });
   html += '</tr>';
-  specKeys.forEach(key => {
-    html += `<tr><td class="row-label">${key}</td>`;
-    const vals = prods.map(p => p.specs[key]);
-    const nums = vals.map(getNum);
-    const validNums = nums.filter(n => n !== null && !isNaN(n));
+
+  // Price (lowest = best)
+  const minPrice = Math.min(...prods.map(p => p.price));
+  html += '<tr><td class="row-label">Price</td>';
+  prods.forEach(p => {
+    html += '<td class="cell-value'+(p.price===minPrice?' cell-best':'')+'">£'+p.price+'</td>';
+  });
+  html += '</tr>';
+
+  // Customer Rating
+  const maxRating = Math.max(...prods.map(p => p.rating));
+  html += '<tr><td class="row-label">Customer Rating</td>';
+  prods.forEach(p => {
+    const stars = '★'.repeat(Math.round(p.rating))+'☆'.repeat(5-Math.round(p.rating));
+    html += '<td class="cell-value'+(p.rating===maxRating?' cell-best':'')+'">'+stars+' '+p.rating+'</td>';
+  });
+  html += '</tr>';
+
+  // Number of Reviews
+  const maxRev = Math.max(...prods.map(p => p.reviews||0));
+  html += '<tr><td class="row-label">No. of Reviews</td>';
+  prods.forEach(p => {
+    html += '<td class="cell-value'+((p.reviews||0)===maxRev?' cell-best':'')+'">'+((p.reviews||0).toLocaleString())+'</td>';
+  });
+  html += '</tr>';
+
+  // Score breakdown (Performance, Value for Money, Ease of Use, Build Quality, Features)
+  ['Performance','Value for Money','Ease of Use','Build Quality','Features'].forEach(key => {
+    const vals = prods.map(p => (p.scores && p.scores[key]) || 0);
+    const maxVal = Math.max(...vals);
+    html += '<tr><td class="row-label">'+key+'</td>';
     prods.forEach((p,i) => {
-      const v = p.specs[key];
-      if (typeof v === 'boolean') { html += `<td class="cell-value"><span class="${v?'check-yes':'check-no'}">${v?'✓':'✕'}</span></td>`; }
-      else { let best = false; if (validNums.length>1&&nums[i]!==null){const hi=!['Noise'].includes(key);best=hi?nums[i]===Math.max(...validNums):nums[i]===Math.min(...validNums);} html += `<td class="cell-value${best?' cell-best':''}">${v}</td>`; }
+      const v = vals[i];
+      html += '<td class="cell-value'+(v===maxVal&&maxVal>0?' cell-best':'')+'"><div class="score-bar"><div class="bar-track"><div class="bar-fill" style="width:'+v+'%"></div></div><span>'+v+'</span></div></td>';
     });
     html += '</tr>';
   });
-  const sorted = [...prods].sort((a,b)=>b.specs.Score-a.specs.Score);
+
+  // Key Strengths (top 2 pros)
+  html += '<tr><td class="row-label">Key Strengths</td>';
+  prods.forEach(p => {
+    const topPros = (p.pros||[]).slice(0,2).map(pr => '<div style="font-size:11px;color:var(--muted);padding:2px 0;display:flex;gap:4px"><span style="color:var(--accent);flex-shrink:0">✓</span>'+pr+'</div>').join('');
+    html += '<td class="cell-value">'+(topPros||'—')+'</td>';
+  });
+  html += '</tr>';
+
+  // Verdict
+  const sorted = [...prods].sort((a,b) => b.specs.Score - a.specs.Score);
   html += '<tr class="verdict-row"><td class="row-label" style="font-weight:600">Verdict</td>';
-  prods.forEach(p => { const rank=sorted.findIndex(s=>s.id===p.id); const labels=['🏆 Best Pick','🥈 Runner Up','🥉 Good Value','Also Consider']; const cls=['verdict-winner','verdict-runner','verdict-third','verdict-third']; html+=`<td class="verdict-cell"><span class="verdict-badge ${cls[rank]}">${labels[rank]}</span></td>`; });
+  prods.forEach(p => {
+    const rank = sorted.findIndex(s => s.id === p.id);
+    const labels = ['🏆 Best Pick','🥈 Runner Up','🥉 Good Value','Also Consider'];
+    const cls = ['verdict-winner','verdict-runner','verdict-third','verdict-third'];
+    html += '<td class="verdict-cell"><span class="verdict-badge '+cls[rank]+'">'+labels[rank]+'</span></td>';
+  });
   html += '</tr></tbody>';
   table.innerHTML = html;
 }
-
 function closeComp() { document.getElementById('compSection').classList.remove('visible'); }
 
 // ── CAT / FILTER / SORT
@@ -671,76 +672,6 @@ function showQuizResults() {
   document.getElementById('quizProgLabel').textContent='Done!';
 }
 
-function renderQuiz() {
-  const container = document.getElementById('quizSteps');
-  const results = document.getElementById('quizResults');
-  results.classList.remove('active');
-  container.innerHTML = '';
-  quizQuestions.forEach((q,i) => {
-    const step = document.createElement('div');
-    step.className = 'quiz-step'+(i===currentStep?' active':'');
-    step.id = `qstep${i}`;
-    step.innerHTML = `<div class="quiz-q">${q.q}</div><div class="quiz-options">${q.opts.map(o=>`<button class="quiz-opt${quizAnswers[i]===o.value?' selected':''}" onclick="selectQuizOpt(${i},'${o.value}',this)"><span class="quiz-opt-icon">${o.icon}</span>${o.label}</button>`).join('')}</div>`;
-    container.appendChild(step);
-  });
-  const nav = document.createElement('div');
-  nav.className='quiz-nav';
-  nav.innerHTML=`<button class="quiz-back-btn" onclick="quizBack()" ${currentStep===0?'style="opacity:.3;pointer-events:none"':''}>← Back</button><button class="quiz-next-btn" id="quizNextBtn" onclick="quizNext()" ${quizAnswers[currentStep]===undefined?'disabled':''}>${currentStep===quizQuestions.length-1?'See My Picks 🎯':'Next →'}</button>`;
-  container.appendChild(nav);
-  const pct=((currentStep)/quizQuestions.length)*100;
-  document.getElementById('quizProgFill').style.width=pct+'%';
-  document.getElementById('quizProgLabel').textContent=`Question ${currentStep+1} of ${quizQuestions.length}`;
-}
-
-function selectQuizOpt(stepIdx,value,btn) {
-  quizAnswers[stepIdx]=value;
-  document.querySelectorAll(`#qstep${stepIdx} .quiz-opt`).forEach(b=>b.classList.remove('selected'));
-  btn.classList.add('selected');
-  document.getElementById('quizNextBtn').disabled=false;
-}
-function quizNext() { if(quizAnswers[currentStep]===undefined)return; if(currentStep<quizQuestions.length-1){currentStep++;renderQuiz();}else{showQuizResults();} }
-function quizBack() { if(currentStep>0){currentStep--;renderQuiz();} }
-function restartQuiz() { quizAnswers={}; currentStep=0; renderQuiz(); }
-
-function showQuizResults() {
-  document.getElementById('quizSteps').innerHTML='';
-  const results=document.getElementById('quizResults');
-  results.classList.add('active');
-  const cat=quizAnswers[0]||'coffee';
-  const budget=quizAnswers[1];
-  const size=quizAnswers[2];
-  const priority=quizAnswers[4];
-  let candidates=[...ALL_PRODUCTS[cat]];
-  if(budget==='under100') candidates=candidates.filter(p=>p.price<100);
-  else if(budget==='100to250') candidates=candidates.filter(p=>p.price>=100&&p.price<=250);
-  else if(budget==='250to500') candidates=candidates.filter(p=>p.price>=250&&p.price<=500);
-  else if(budget==='over500') candidates=candidates.filter(p=>p.price>500);
-  if(!candidates.length) candidates=[...ALL_PRODUCTS[cat]];
-  candidates=candidates.map(p=>{
-    let score=p.specs.Score;
-    if(priority==='value') score+=(p.oldPrice?10:0)+(p.price<100?8:0);
-    if(priority==='quality') score+=p.specs.Score>90?10:0;
-    if(priority==='design') score+=['Smeg','Sage','KitchenAid','Sonos'].includes(p.brand)?10:0;
-    if(size==='large'||size==='entertain'){const cs=JSON.stringify(p.specs);if(cs.includes('9.5')||cs.includes('9L')||cs.includes('1.8L')||cs.includes('2L'))score+=8;}
-    return{...p,matchScore:Math.min(score,99)};
-  }).sort((a,b)=>b.matchScore-a.matchScore).slice(0,3);
-  const reasons={value:'Great value for money',quality:'Top performance score',design:'Outstanding design',speed:'Fast and convenient',default:'Strong all-round choice'};
-  document.getElementById('resultsList').innerHTML=candidates.map((p,i)=>`
-    <a class="result-card" href="product.html?id=${p.id}">
-      <div class="result-rank">${['#1','#2','#3'][i]}</div>
-      <div class="result-emoji"><img src="${p.image || ''}" alt="${p.brand}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" style="width:100%;height:100%;object-fit:contain;padding:2px;"><span style="display:none;font-size:28px">${p.emoji}</span></div>
-      <div class="result-info">
-        <div class="result-name">${p.brand} ${p.name}</div>
-        <div class="result-reason">${reasons[priority]||reasons.default} · ${p.specs.Score}/100 score</div>
-        <div class="result-match">✦ ${p.matchScore}% match</div>
-      </div>
-      <div class="result-price">£${p.price}</div>
-    </a>`).join('');
-  document.getElementById('quizProgFill').style.width='100%';
-  document.getElementById('quizProgLabel').textContent='Done!';
-}
-
-
 // ── SEARCH
 document.getElementById('searchInput').addEventListener('input', function() {
   const q = this.value.toLowerCase().trim();
@@ -776,6 +707,11 @@ document.getElementById('searchInput').addEventListener('input', function() {
 });
 
 // ── INIT
+if (typeof ALL_PRODUCTS !== 'undefined') {
+  const _total = Object.values(ALL_PRODUCTS).flat().length;
+  const _el = document.getElementById('hspecProductCount');
+  if (_el) _el.textContent = _total;
+}
 if (typeof ALL_PRODUCTS === 'undefined') {
   document.getElementById('productGrid').innerHTML = '<div style="padding:40px;text-align:center;color:var(--muted)">Loading products failed — please refresh.</div>';
 } else {
