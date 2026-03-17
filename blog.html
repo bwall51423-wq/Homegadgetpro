@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Buying guides and product comparisons for home appliances in the UK. Coffee machines, air fryers, robot hoovers, blenders and more — researched and compared.">
+<meta name="keywords" content="home appliance buying guide UK, best coffee machine 2026, best air fryer UK, robot hoover guide">
+<meta name="robots" content="index, follow">
+<meta name="author" content="HomeGadgetPro">
+<meta property="og:title" content="Blog & Buying Guides — HomeGadgetPro">
+<meta property="og:description" content="Buying guides and product comparisons for home appliances in the UK. Researched and compared so you don't have to.">
+<meta property="og:url" content="https://www.homegadgetpro.co.uk/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.homegadgetpro.co.uk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog & Buying Guides — HomeGadgetPro">
+<meta name="twitter:description" content="Buying guides and product comparisons for home appliances in the UK.">
+<link rel="canonical" href="https://www.homegadgetpro.co.uk/blog.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Blog & Buying Guides — HomeGadgetPro</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+[data-theme="light"]{--bg:#ffffff;--surface:#ffffff;--surface2:#f4f6fb;--border:#e0e6ee;--accent:#2563eb;--btn-fg:#ffffff;--text:#0f172a;--muted:#64748b;--muted2:#94a3b8;--hi:rgba(37,99,235,.08);--hi-border:rgba(37,99,235,.25);--red:#dc2626;--yellow:#d97706;--nav-bg:rgba(255,255,255,.95);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 20px;height:58px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;letter-spacing:-.5px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text);}
+.logo-mark{width:32px;height:32px;background:var(--accent);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.logo span{color:var(--accent);}
+.nav-links{display:flex;align-items:center;gap:24px;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{background:var(--accent);color:#ffffff;border:none;padding:8px 18px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:all .2s;}
+.nav-cta:hover{opacity:.9;transform:translateY(-1px);}
+@media(max-width:600px){.nav-links{display:none;}}
+
+/* ── HERO ── */
+.page-hero{padding:60px 20px 48px;text-align:center;border-bottom:1px solid var(--border);}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:6px;background:var(--hi);border:1px solid var(--hi-border);padding:5px 14px;border-radius:100px;font-size:11px;color:var(--accent);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(28px,6vw,52px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:14px;}
+.hero-title em{font-style:normal;color:var(--accent);}
+.hero-sub{color:var(--muted);font-size:16px;max-width:480px;margin:0 auto 28px;font-weight:300;line-height:1.7;}
+.hero-stats{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
+.hero-stat{text-align:center;}
+.hero-stat-num{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent);}
+.hero-stat-lbl{font-size:12px;color:var(--muted);}
+
+/* ── MAIN ── */
+.main{max-width:900px;margin:0 auto;padding:48px 20px 80px;}
+
+/* ── FILTER TABS ── */
+.filter-row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:36px;}
+.filter-row::-webkit-scrollbar{display:none;}
+.filter-tab{flex-shrink:0;padding:7px 16px;border-radius:20px;font-size:13px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all .2s;font-weight:500;white-space:nowrap;}
+.filter-tab.active,.filter-tab:hover{background:var(--hi);border-color:var(--accent);color:var(--accent);}
+
+/* ── FEATURED POST ── */
+.featured-post{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;position:relative;overflow:hidden;text-decoration:none;color:var(--text);transition:all .25s;}
+.featured-post::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#60a5fa);}
+.featured-post:hover{border-color:rgba(37,99,235,.35);box-shadow:0 8px 32px rgba(0,0,0,.06);transform:translateY(-2px);}
+.fp-tag{display:inline-flex;align-items:center;gap:5px;background:var(--hi);border:1px solid var(--hi-border);color:var(--accent);padding:3px 10px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px;}
+.fp-title{font-family:'Syne',sans-serif;font-size:clamp(18px,3vw,26px);font-weight:800;letter-spacing:-.5px;line-height:1.15;margin-bottom:10px;}
+.fp-sub{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px;max-width:500px;}
+.fp-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--muted);flex-wrap:wrap;}
+.fp-cta{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:10px 20px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;white-space:nowrap;flex-shrink:0;}
+@media(max-width:600px){.featured-post{grid-template-columns:1fr;}.fp-cta{width:100%;justify-content:center;}}
+
+/* ── BLOG GRID ── */
+.section-label{font-family:'Syne',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border);}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px;}
+@media(min-width:700px){.blog-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:500px){.blog-grid{grid-template-columns:1fr;}}
+
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;text-decoration:none;color:var(--text);display:block;transition:all .22s;position:relative;overflow:hidden;}
+.blog-card:hover{border-color:rgba(37,99,235,.35);box-shadow:0 6px 20px rgba(0,0,0,.06);transform:translateY(-3px);}
+.bc-emoji{font-size:32px;margin-bottom:12px;display:block;}
+.bc-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:4px;margin-bottom:8px;background:var(--hi);color:var(--accent);}
+.bc-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;line-height:1.25;margin-bottom:8px;letter-spacing:-.3px;}
+.bc-sub{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:12px;}
+.bc-meta{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted2);}
+.bc-arrow{color:var(--accent);font-size:14px;transition:transform .2s;}
+.blog-card:hover .bc-arrow{transform:translateX(3px);}
+
+/* ── CTA BAND ── */
+.cta-band{background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:36px;text-align:center;margin-top:16px;}
+.cta-band h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px;}
+.cta-band p{color:var(--muted);font-size:14px;margin-bottom:20px;}
+.cta-band a{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:12px 24px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;text-decoration:none;transition:all .2s;}
+.cta-band a:hover{opacity:.9;transform:translateY(-1px);}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:24px 20px;text-align:center;}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;color:var(--text);}
+.footer-logo em{font-style:normal;color:var(--accent);}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:8px;}
+.footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--accent);}
+.footer-copy{font-size:12px;color:var(--muted2);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">
+    <div class="logo-mark">⚡</div>
+    HomeGadget<span>Pro</span>
+  </a>
+  <div class="nav-links">
+    <a href="homespec.html">Compare</a>
+    <a href="blog.html" style="color:var(--accent)">Blog</a>
+    <a href="about.html">About</a>
+  </div>
+  <a class="nav-cta" href="homespec.html">⚡ Start Comparing</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-eyebrow">📖 Buying Guides</div>
+  <h1 class="hero-title">Researched.<br><em>Compared. Honest.</em></h1>
+  <p class="hero-sub">No sponsored rankings. No fluff. Just honest guides to help you buy the right appliance first time.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">15</div><div class="hero-stat-lbl">Guides</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">60+</div><div class="hero-stat-lbl">Products covered</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">2026</div><div class="hero-stat-lbl">Updated</div></div>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- FILTER TABS -->
+  <div class="filter-row">
+    <button class="filter-tab active" onclick="filterPosts(this,'all')">All guides</button>
+    <button class="filter-tab" onclick="filterPosts(this,'kitchen')">🍳 Kitchen</button>
+    <button class="filter-tab" onclick="filterPosts(this,'cleaning')">🧹 Cleaning</button>
+    <button class="filter-tab" onclick="filterPosts(this,'audio')">🎧 Audio</button>
+    <button class="filter-tab" onclick="filterPosts(this,'home')">🏠 Home</button>
+    <button class="filter-tab" onclick="filterPosts(this,'beauty')">💈 Beauty</button>
+  </div>
+
+  <!-- FEATURED -->
+  <a class="featured-post" href="blog-best-coffee-machines-uk-2026.html">
+    <div>
+      <div class="fp-tag">☕ Featured Guide</div>
+      <div class="fp-title">Best Coffee Machines UK 2026 — Compared & Reviewed</div>
+      <p class="fp-sub">From pod machines under £50 to bean-to-cup monsters at £500+, we've compared every type so you can stop guessing and start brewing.</p>
+      <div class="fp-meta">
+        <span>📅 Updated March 2026</span>
+        <span>⏱ 8 min read</span>
+        <span>☕ 5 products compared</span>
+      </div>
+    </div>
+    <span class="fp-cta">Read guide →</span>
+  </a>
+
+  <!-- ALL GUIDES GRID -->
+  <div class="section-label">All buying guides</div>
+  <div class="blog-grid" id="blogGrid">
+
+    <a class="blog-card" href="blog-best-air-fryers-uk-2026.html" data-cat="kitchen">
+      <span class="bc-emoji">🍟</span>
+      <span class="bc-tag">Kitchen</span>
+      <div class="bc-title">Best Air Fryers UK 2026</div>
+      <p class="bc-sub">Which air fryer actually delivers crispy results without the faff? We compared the top models from Ninja, Philips and more.</p>
+      <div class="bc-meta"><span>March 2026 · 7 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-robot-hoovers-uk-2026.html" data-cat="cleaning">
+      <span class="bc-emoji">🤖</span>
+      <span class="bc-tag">Cleaning</span>
+      <div class="bc-title">Best Robot Hoovers UK 2026</div>
+      <p class="bc-sub">We compared the best robot vacuums on Amazon UK — from budget models under £100 to LiDAR-guided powerhouses.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-slow-cookers-uk-2026.html" data-cat="kitchen">
+      <span class="bc-emoji">🥘</span>
+      <span class="bc-tag">Kitchen</span>
+      <div class="bc-title">Best Slow Cookers UK 2026</div>
+      <p class="bc-sub">Crockpot, Ninja, or Russell Hobbs? We compared the top-rated slow cookers across every size and price point.</p>
+      <div class="bc-meta"><span>March 2026 · 5 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-headphones-uk-2026.html" data-cat="audio">
+      <span class="bc-emoji">🎧</span>
+      <span class="bc-tag">Audio</span>
+      <div class="bc-title">Best Headphones UK 2026</div>
+      <p class="bc-sub">ANC, wireless, wired — we compared the best headphones on Amazon UK from soundcore, Sony, Bose and more.</p>
+      <div class="bc-meta"><span>March 2026 · 7 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-hair-dryers-uk-2026.html" data-cat="beauty">
+      <span class="bc-emoji">💈</span>
+      <span class="bc-tag">Beauty</span>
+      <div class="bc-title">Best Hair Dryers UK 2026</div>
+      <p class="bc-sub">From Dyson Supersonic dupes to pro-grade salon dryers, we compared the best options at every budget.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-electric-heaters-uk-2026.html" data-cat="home">
+      <span class="bc-emoji">🌡️</span>
+      <span class="bc-tag">Home</span>
+      <div class="bc-title">Best Electric Heaters UK 2026</div>
+      <p class="bc-sub">Panel heater, oil radiator, or fan heater? We cut through the confusion and found the most efficient options.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-electric-toothbrushes-uk-2026.html" data-cat="beauty">
+      <span class="bc-emoji">🪥</span>
+      <span class="bc-tag">Beauty</span>
+      <div class="bc-title">Best Electric Toothbrushes UK 2026</div>
+      <p class="bc-sub">Oral-B vs Philips Sonicare vs the budget alternatives — we compared real specs and review counts to find the best.</p>
+      <div class="bc-meta"><span>March 2026 · 5 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-smart-bulbs-uk-2026.html" data-cat="home">
+      <span class="bc-emoji">💡</span>
+      <span class="bc-tag">Home</span>
+      <div class="bc-title">Best Smart Bulbs UK 2026</div>
+      <p class="bc-sub">Philips Hue, Govee, Tapo — we compared the best smart home lighting on Amazon UK for every budget.</p>
+      <div class="bc-meta"><span>March 2026 · 5 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-kettles-uk-2026.html" data-cat="kitchen">
+      <span class="bc-emoji">🫖</span>
+      <span class="bc-tag">Kitchen</span>
+      <div class="bc-title">Best Kettles UK 2026</div>
+      <p class="bc-sub">We compared the top-rated kettles on Amazon UK — from rapid-boil basics to temperature-controlled models for tea lovers.</p>
+      <div class="bc-meta"><span>March 2026 · 5 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-blenders-uk-2026.html" data-cat="kitchen">
+      <span class="bc-emoji">🥤</span>
+      <span class="bc-tag">Kitchen</span>
+      <div class="bc-title">Best Blenders UK 2026</div>
+      <p class="bc-sub">Hand blender, personal blender or jug blender? We compared Ninja, NutriBullet, Tefal and more to find the right fit.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-vacuums-uk-2026.html" data-cat="cleaning">
+      <span class="bc-emoji">🧹</span>
+      <span class="bc-tag">Cleaning</span>
+      <div class="bc-title">Best Cordless Vacuums UK 2026</div>
+      <p class="bc-sub">Dyson, Shark, or the budget alternatives? We compared suction power, battery life and value across the top cordless models.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-airpurifiers-uk-2026.html" data-cat="home">
+      <span class="bc-emoji">💨</span>
+      <span class="bc-tag">Home</span>
+      <div class="bc-title">Best Air Purifiers UK 2026</div>
+      <p class="bc-sub">LEVOIT, Dyson, or Shark? We compared CADR ratings, filter costs and real review scores to find the best value models.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-toasters-uk-2026.html" data-cat="kitchen">
+      <span class="bc-emoji">🍞</span>
+      <span class="bc-tag">Kitchen</span>
+      <div class="bc-title">Best Toasters UK 2026</div>
+      <p class="bc-sub">2-slice or 4-slice? We compared the top-rated toasters from Breville, Russell Hobbs, Dualit and more.</p>
+      <div class="bc-meta"><span>March 2026 · 5 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-speakers-uk-2026.html" data-cat="audio">
+      <span class="bc-emoji">🔊</span>
+      <span class="bc-tag">Audio</span>
+      <div class="bc-title">Best Bluetooth Speakers UK 2026</div>
+      <p class="bc-sub">From pocket-sized to party speakers, we compared battery life, sound quality and waterproofing across the best Bluetooth options.</p>
+      <div class="bc-meta"><span>March 2026 · 6 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+    <a class="blog-card" href="blog-best-coffee-machines-uk-2026.html" data-cat="kitchen">
+      <span class="bc-emoji">☕</span>
+      <span class="bc-tag">Kitchen</span>
+      <div class="bc-title">Best Coffee Machines UK 2026</div>
+      <p class="bc-sub">Pod vs bean-to-cup vs filter — we compared every type so you can find the right machine for how you actually drink coffee.</p>
+      <div class="bc-meta"><span>March 2026 · 8 min</span><span class="bc-arrow">→</span></div>
+    </a>
+
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="cta-band">
+    <h3>Ready to compare?</h3>
+    <p>Browse all 179 products side by side — filter by price, brand, and what you need it for.</p>
+    <a href="homespec.html">⚡ Start comparing →</a>
+  </div>
+
+</main>
+
+<footer>
+  <a class="footer-logo" href="index.html">
+    <div style="width:24px;height:24px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;">⚡</div>
+    HomeGadget<em>Pro</em>
+  </a>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="homespec.html">Compare</a>
+    <a href="about.html">About</a>
+    <a href="howwescore.html">How We Score</a>
+    <a href="disclosure.html">Affiliate Disclosure</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 HomeGadgetPro.co.uk · We may earn commission on purchases · <a href="disclosure.html" style="color:var(--muted);text-decoration:none;">Affiliate disclosure</a></div>
+</footer>
+
+<script>
+function filterPosts(btn, cat) {
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.blog-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

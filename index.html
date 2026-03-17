@@ -545,6 +545,116 @@ footer {
   .trust-item { padding:0 5px; }
   .hero-title { font-size:28px; }
 }
+
+/* ── MOBILE MENU ─────────────────────────── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+.mobile-menu.open { display: block; }
+.menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  backdrop-filter: blur(4px);
+  animation: fadeIn .2s ease;
+}
+.menu-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(300px, 85vw);
+  height: 100%;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn .25s cubic-bezier(.34,1.56,.64,1);
+  overflow-y: auto;
+}
+@keyframes slideIn { from{transform:translateX(100%)} to{transform:translateX(0)} }
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.menu-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+}
+.menu-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+}
+.menu-close:hover { background: var(--border); color: var(--text); }
+.menu-links { padding: 8px 0; flex: 1; }
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 20px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background .15s;
+  border-radius: 0;
+}
+.menu-link:hover { background: var(--surface2); }
+.menu-link-icon { font-size: 18px; width: 24px; text-align: center; flex-shrink: 0; }
+.menu-divider { height: 1px; background: var(--border); margin: 8px 20px; }
+.menu-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted2);
+  font-weight: 600;
+  padding: 10px 20px 6px;
+}
+.menu-cta-wrap { padding: 16px 20px 0; }
+.menu-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  padding: 13px;
+  border-radius: 12px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.menu-cta:hover { opacity: .9; }
+
+/* Hamburger animation */
+.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 </style>
 </head>
 <body>
@@ -562,7 +672,7 @@ footer {
     <a href="homespec.html">Compare</a>
   </div>
   
-  <button class="hamburger" aria-label="Menu">
+  <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -885,6 +995,31 @@ if (typeof ALL_PRODUCTS !== 'undefined') {
   if (viewAllEl) viewAllEl.textContent = totalProducts;
 }
 
+/* ── MOBILE MENU ─────────────────────── */
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburgerBtn');
+  const isOpen = menu.classList.contains('open');
+  if (isOpen) {
+    closeMenu();
+  } else {
+    menu.classList.add('open');
+    btn.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburgerBtn');
+  menu.classList.remove('open');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+// Close on Escape key
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
 /* ── NAV SCROLL EFFECT ───────────────── */
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
@@ -895,5 +1030,38 @@ window.addEventListener('scroll', () => {
   }
 });
 </script>
+
+<!-- ── MOBILE MENU ──────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="menu-backdrop" onclick="closeMenu()"></div>
+  <div class="menu-drawer">
+    <div class="menu-header">
+      <a class="menu-logo" href="index.html">
+        <div class="logo-mark" style="width:26px;height:26px;font-size:13px">⚡</div>
+        HomeGadget<span style="color:var(--accent)">Pro</span>
+      </a>
+      <button class="menu-close" onclick="closeMenu()">✕</button>
+    </div>
+    <div class="menu-links">
+      <a class="menu-link" href="homespec.html"><span class="menu-link-icon">⚖️</span>Compare Products</a>
+      <a class="menu-link" href="homespec.html#categories"><span class="menu-link-icon">🗂️</span>All Categories</a>
+      <a class="menu-link" href="blog.html"><span class="menu-link-icon">📖</span>Blog & Guides</a>
+      <a class="menu-link" href="index.html#how"><span class="menu-link-icon">💡</span>How It Works</a>
+      <div class="menu-divider"></div>
+      <div class="menu-section-label">About us</div>
+      <a class="menu-link" href="howwescore.html"><span class="menu-link-icon">⭐</span>How We Score</a>
+      <a class="menu-link" href="about.html"><span class="menu-link-icon">👋</span>About</a>
+      <a class="menu-link" href="contact.html"><span class="menu-link-icon">✉️</span>Contact</a>
+      <div class="menu-divider"></div>
+      <div class="menu-section-label">Legal</div>
+      <a class="menu-link" href="disclosure.html"><span class="menu-link-icon">📋</span>Affiliate Disclosure</a>
+      <a class="menu-link" href="privacy.html"><span class="menu-link-icon">🔒</span>Privacy Policy</a>
+    </div>
+    <div class="menu-cta-wrap">
+      <a class="menu-cta" href="homespec.html?openquiz=1">🤖 Take the Quiz →</a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
