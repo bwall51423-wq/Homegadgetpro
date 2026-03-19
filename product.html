@@ -310,7 +310,7 @@ function handleBuy(retailer) {
 
 function renderPage() {
   const p = product;
-  const specEntries = Object.entries(p.specs).filter(([k])=>k!=='Score');
+  const specEntries = Object.entries(p.specs).filter(([k,v])=>k!=='Score' && v!=='' && v!==null && v!==undefined);
   const months = ['Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb'];
   const minP = Math.min(...p.priceHistory), maxP = Math.max(...p.priceHistory);
   const avgP = Math.round(p.priceHistory.reduce((a,b)=>a+b,0)/p.priceHistory.length);
@@ -467,10 +467,8 @@ function renderPage() {
   </div>
 
   <div class="tab-panel" id="panel-video">
-    <div class="video-wrap" id="videoWrap" onclick="loadVideo()">
-      <div class="video-play-btn">▶</div>
-      <div class="video-lbl">${p.brand} ${p.name} — Full Review</div>
-      <div style="font-size:12px;color:var(--muted2)">YouTube · tap to play</div>
+    <div class="video-wrap" id="videoWrap" ${p.videoId ? 'onclick="loadVideo()" style="cursor:pointer"' : 'style="cursor:default"'}>
+      ${p.videoId ? `<div class="video-play-btn">▶</div><div class="video-lbl">${p.brand} ${p.name} — Full Review</div><div style="font-size:12px;color:var(--muted2)">YouTube · tap to play</div>` : `<div style="text-align:center;padding:20px"><div style="font-size:40px;margin-bottom:12px">🎬</div><div style="font-size:14px;font-weight:600;margin-bottom:6px">No video available yet</div><div style="font-size:12px;color:var(--muted2)">Check back soon or search YouTube for a review.</div></div>`}
     </div>
     <div class="related-video"><div class="rv-icon">▶</div><div><div class="rv-title">How to get the best out of your ${p.name}</div><div class="rv-sub">YouTube · 8 min</div></div></div>
     <div class="related-video"><div class="rv-icon">▶</div><div><div class="rv-title">${p.brand} ${p.name} vs competitors — full comparison</div><div class="rv-sub">YouTube · 14 min</div></div></div>
@@ -537,6 +535,10 @@ function drawChart() {
 
 function loadVideo() {
   const w = document.getElementById('videoWrap');
+  if (!product.videoId) {
+    w.innerHTML = `<div style="text-align:center;padding:40px 20px;color:var(--muted)"><div style="font-size:40px;margin-bottom:12px">🎬</div><div style="font-size:14px;font-weight:600;margin-bottom:6px">No video available yet</div><div style="font-size:12px">Check back soon or search YouTube for a review.</div></div>`;
+    return;
+  }
   w.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${product.videoId}?autoplay=1" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen style="border-radius:14px;aspect-ratio:16/9;display:block"></iframe>`;
 }
 

@@ -22,7 +22,12 @@
 [data-theme="light"]{--bg:#f8f9fa;--surface:#ffffff;--border:#e0e6ee;--accent:#2563eb;--text:#0f172a;--muted:#64748b;--hi:rgba(37,99,235,.08);--hi-border:rgba(37,99,235,.25);}
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;}
-nav{height:56px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 20px;position:sticky;top:0;z-index:10;}
+nav{height:56px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:10;}
+.nav-links{display:flex;align-items:center;gap:20px;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{background:var(--accent);color:#fff;padding:7px 15px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;text-decoration:none;}
+@media(max-width:520px){.nav-links .hide-mobile{display:none;}}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px;}
 .logo-mark{width:28px;height:28px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;}
 .logo span{color:var(--accent);}
@@ -39,7 +44,14 @@ footer a{color:var(--accent);text-decoration:none;margin:0 8px;}
 </style>
 </head>
 <body>
-<nav><a class="logo" href="index.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a></nav>
+<nav>
+  <a class="logo" href="index.html"><div class="logo-mark">⚡</div>HomeGadget<span>Pro</span></a>
+  <div class="nav-links">
+    <a href="homespec.html" class="hide-mobile">Compare</a>
+    <a href="blog.html" class="hide-mobile">Blog</a>
+    <a class="nav-cta" href="homespec.html">Browse Products</a>
+  </div>
+</nav>
 <div class="page">
   <div class="tag">Legal</div>
   <h1>Privacy Policy</h1>
@@ -73,4 +85,12 @@ footer a{color:var(--accent);text-decoration:none;margin:0 8px;}
 <footer>
   © 2026 HomeGadgetPro.co.uk
   <div style="margin-top:8px">
-    <a href="ind
+    <a href="index.html">Home</a>
+    <a href="homespec.html">Compare Products</a>
+    <a href="disclosure.html">Affiliate Disclosure</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+</body>
+</html>
