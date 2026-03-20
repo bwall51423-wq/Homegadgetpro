@@ -75,7 +75,7 @@ h1 em{font-style:normal;color:var(--accent);}
 .product-card:nth-child(5){animation-delay:.20s}.product-card:nth-child(6){animation-delay:.24s}
 .product-card:hover{border-color:var(--hi-border);box-shadow:0 6px 20px var(--shadow);}
 .product-card.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 8px 24px var(--shadow);}
-.sponsored-badge{position:absolute;top:0;right:0;background:var(--surface3);color:var(--muted);font-size:9px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:0 14px 0 8px;border-left:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sponsored-badge{position:absolute;top:0;right:0;background:#fef3c7;color:#92400e;font-size:9px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:0 14px 0 8px;border-left:1px solid #fcd34d;border-bottom:1px solid #fcd34d;}
 .card-check{position:absolute;top:10px;right:10px;width:20px;height:20px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--btn-fg);font-weight:900;opacity:0;transform:scale(.4);transition:all .2s cubic-bezier(.34,1.56,.64,1);}
 .product-card.selected .card-check{opacity:1;transform:scale(1);}
 .product-img{ overflow:hidden; display:flex; align-items:center; justify-content:center;width:56px;height:56px;background:var(--surface2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:9px;border:1px solid var(--border);}
@@ -324,7 +324,8 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 </div>
 <footer>
   <div class="footer-logo">HomeGadget<em>Pro</em></div>
-  <div class="footer-text">Specs updated weekly · © 2026 HomeGadgetPro.co.uk · We may earn commission on purchases</div>
+  <div class="footer-text">Specs updated weekly · © 2026 HomeGadgetPro.co.uk</div>
+  <div class="footer-text" style="margin-top:4px;font-size:11px;">As an Amazon Associate we earn from qualifying purchases at no extra cost to you. <a href="disclosure.html" style="color:var(--accent);text-decoration:none;">Affiliate Disclosure</a></div>
 </footer>
 <script src="products.js"></script>
 <script>
@@ -719,6 +720,24 @@ if (typeof ALL_PRODUCTS === 'undefined') {
   checkUrlParams();
 }
 
+</script>
+<!-- HGP COOKIE BANNER -->
+<div id="hgpCookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0f172a;color:#f0f4ff;padding:14px 20px;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:3px solid #2563eb;box-shadow:0 -4px 24px rgba(0,0,0,.35);">
+  <div style="flex:1;min-width:200px;font-size:13px;line-height:1.6;">
+    <strong style="font-size:14px;color:#fff;">🍪 Cookies &amp; affiliate links</strong><br>
+    We use cookies and Amazon affiliate links to keep this site free. Your price is never affected. <a href="privacy.html" style="color:#60a5fa;text-decoration:underline;">Privacy Policy</a> · <a href="disclosure.html" style="color:#60a5fa;text-decoration:underline;">Affiliate Disclosure</a>
+  </div>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="hgpCookieChoice('declined')" style="background:transparent;border:1px solid rgba(255,255,255,.25);color:#94a3b8;padding:9px 18px;border-radius:8px;font-size:13px;font-family:inherit;cursor:pointer;white-space:nowrap;">Decline</button>
+    <button onclick="hgpCookieChoice('accepted')" style="background:#2563eb;border:none;color:#fff;padding:9px 22px;border-radius:8px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('hgpCookieBanner');
+  if(!localStorage.getItem('hgp_consent')){b.style.display='flex';}
+  window.hgpCookieChoice=function(v){localStorage.setItem('hgp_consent',v);b.style.display='none';};
+})();
 </script>
 </body>
 </html>

@@ -93,5 +93,23 @@ footer a{color:var(--accent);text-decoration:none;margin:0 8px;}
     <a href="contact.html">Contact</a>
   </div>
 </footer>
+<!-- HGP COOKIE BANNER -->
+<div id="hgpCookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0f172a;color:#f0f4ff;padding:14px 20px;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:3px solid #2563eb;box-shadow:0 -4px 24px rgba(0,0,0,.35);">
+  <div style="flex:1;min-width:200px;font-size:13px;line-height:1.6;">
+    <strong style="font-size:14px;color:#fff;">🍪 Cookies &amp; affiliate links</strong><br>
+    We use cookies and Amazon affiliate links to keep this site free. Your price is never affected. <a href="privacy.html" style="color:#60a5fa;text-decoration:underline;">Privacy Policy</a> · <a href="disclosure.html" style="color:#60a5fa;text-decoration:underline;">Affiliate Disclosure</a>
+  </div>
+  <div style="display:flex;gap:10px;flex-shrink:0;">
+    <button onclick="hgpCookieChoice('declined')" style="background:transparent;border:1px solid rgba(255,255,255,.25);color:#94a3b8;padding:9px 18px;border-radius:8px;font-size:13px;font-family:inherit;cursor:pointer;white-space:nowrap;">Decline</button>
+    <button onclick="hgpCookieChoice('accepted')" style="background:#2563eb;border:none;color:#fff;padding:9px 22px;border-radius:8px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;white-space:nowrap;">Accept All</button>
+  </div>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('hgpCookieBanner');
+  if(!localStorage.getItem('hgp_consent')){b.style.display='flex';}
+  window.hgpCookieChoice=function(v){localStorage.setItem('hgp_consent',v);b.style.display='none';};
+})();
+</script>
 </body>
 </html>
