@@ -185,9 +185,12 @@ tbody td{padding:10px 13px;font-size:13px;}
 .result-match{display:inline-flex;align-items:center;gap:4px;background:var(--hi);border:1px solid var(--hi-border);color:var(--accent);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;}
 .result-price{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--accent);flex-shrink:0;}
 .quiz-restart{width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--muted);padding:11px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;margin-top:4px;}
-footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;position:relative;z-index:1;}
-.footer-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:4px;}
+footer{border-top:1px solid var(--border);padding:24px 16px;text-align:center;position:relative;z-index:1;}
+.footer-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px;}
 .footer-logo em{font-style:normal;color:var(--accent);}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;}
+.footer-links a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--text);}
 .footer-text{font-size:12px;color:var(--muted);}
 
 /* ── MOBILE FIXES ─────────────────────────── */
@@ -324,6 +327,15 @@ footer{border-top:1px solid var(--border);padding:20px 16px;text-align:center;po
 </div>
 <footer>
   <div class="footer-logo">HomeGadget<em>Pro</em></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="howwescore.html">How We Score</a>
+    <a href="blog.html">Blog</a>
+    <a href="disclosure.html">Affiliate Disclosure</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+  </div>
   <div class="footer-text">Specs updated weekly · © 2026 HomeGadgetPro.co.uk</div>
   <div class="footer-text" style="margin-top:4px;font-size:11px;">As an Amazon Associate we earn from qualifying purchases at no extra cost to you. <a href="disclosure.html" style="color:var(--accent);text-decoration:none;">Affiliate Disclosure</a></div>
 </footer>

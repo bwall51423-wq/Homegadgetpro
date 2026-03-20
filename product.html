@@ -256,6 +256,21 @@ nav{position:sticky;top:0;z-index:200;background:var(--nav-bg);backdrop-filter:b
   <div style="text-align:center;padding:80px 20px;color:var(--muted)">Loading product...</div>
 </div>
 
+<footer style="border-top:1px solid var(--border);padding:24px 16px;text-align:center;margin-top:40px;">
+  <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px;">HomeGadget<span style="color:var(--accent)">Pro</span></div>
+  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px;">
+    <a href="index.html" style="font-size:12px;color:var(--muted);text-decoration:none;">Home</a>
+    <a href="homespec.html" style="font-size:12px;color:var(--muted);text-decoration:none;">Compare</a>
+    <a href="about.html" style="font-size:12px;color:var(--muted);text-decoration:none;">About</a>
+    <a href="howwescore.html" style="font-size:12px;color:var(--muted);text-decoration:none;">How We Score</a>
+    <a href="blog.html" style="font-size:12px;color:var(--muted);text-decoration:none;">Blog</a>
+    <a href="disclosure.html" style="font-size:12px;color:var(--muted);text-decoration:none;">Affiliate Disclosure</a>
+    <a href="privacy.html" style="font-size:12px;color:var(--muted);text-decoration:none;">Privacy Policy</a>
+    <a href="contact.html" style="font-size:12px;color:var(--muted);text-decoration:none;">Contact</a>
+  </div>
+  <div style="font-size:11px;color:var(--muted2);">© 2026 HomeGadgetPro.co.uk · As an Amazon Associate we earn from qualifying purchases.</div>
+</footer>
+
 <div class="sticky-bar">
   <div class="sticky-inner">
     <div class="sticky-price" id="stickyPrice">£—</div>
@@ -344,7 +359,7 @@ function renderPage() {
         <span class="r-num">${p.rating}</span>
         <span class="r-count">(${p.reviews.toLocaleString()} reviews)</span>
         <div class="r-div"></div>
-        <div class="homescore"><span class="hs-num">${p.specs.Score}</span><span class="hs-lbl">/100 HGP Score</span></div>
+        <a class="homescore" href="howwescore.html" title="How we calculate this score" style="text-decoration:none;cursor:pointer;"><span class="hs-num">${p.specs.Score}</span><span class="hs-lbl">/100 HGP Score ↗</span></a>
       </div>
       <div class="price-block">
         <div class="price-row">
@@ -409,12 +424,13 @@ function renderPage() {
   </div>
 
   <div class="tab-panel" id="panel-specs">
+    ${specEntries.length === 0 ? `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;margin-bottom:16px;"><div style="font-size:28px;margin-bottom:10px">🔧</div><div style="font-weight:600;margin-bottom:6px">Detailed specs coming soon</div><div style="font-size:13px;color:var(--muted)">We're expanding our spec database. In the meantime, check the Amazon listing for full technical details.</div></div>` : ''}
     <table class="specs-table">
       <thead><tr><th>Specification</th><th style="text-align:right">Value</th></tr></thead>
       <tbody>
         ${specEntries.map(([k,v])=>`<tr><td class="spec-key">${k}</td><td class="spec-val${typeof v==='boolean'?(v?' spec-best':''):''}">
           ${typeof v==='boolean'?(v?'✓ Yes':'✕ No'):v}</td></tr>`).join('')}
-        <tr><td class="spec-key">HGP Score</td><td class="spec-val spec-best">${p.specs.Score} / 100</td></tr>
+        <tr><td class="spec-key">HGP Score</td><td class="spec-val spec-best"><a href="howwescore.html" style="color:var(--accent);text-decoration:none;">${p.specs.Score} / 100 ↗</a></td></tr>
       </tbody>
     </table>
   </div>
@@ -469,7 +485,7 @@ function renderPage() {
 
   <div class="tab-panel" id="panel-video">
     <div class="video-wrap" id="videoWrap" ${p.videoId ? 'onclick="loadVideo()" style="cursor:pointer"' : 'style="cursor:default"'}>
-      ${p.videoId ? `<div class="video-play-btn">▶</div><div class="video-lbl">${p.brand} ${p.name} — Full Review</div><div style="font-size:12px;color:var(--muted2)">YouTube · tap to play</div>` : `<div style="text-align:center;padding:20px"><div style="font-size:40px;margin-bottom:12px">🎬</div><div style="font-size:14px;font-weight:600;margin-bottom:6px">No video available yet</div><div style="font-size:12px;color:var(--muted2)">Check back soon or search YouTube for a review.</div></div>`}
+      ${p.videoId ? `<div class="video-play-btn">▶</div><div class="video-lbl">${p.brand} ${p.name} — Full Review</div><div style="font-size:12px;color:var(--muted2)">YouTube · tap to play</div>` : `<div style="text-align:center;padding:30px 20px"><div style="font-size:40px;margin-bottom:12px">🎬</div><div style="font-size:14px;font-weight:600;margin-bottom:6px">No video review yet</div><div style="font-size:12px;color:var(--muted2);margin-bottom:16px">We're adding video reviews regularly. Search YouTube in the meantime.</div><a href="https://www.youtube.com/results?search_query=${encodeURIComponent(p.brand+' '+p.name+' review UK')}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#ff0000;color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">▶ Search on YouTube</a></div>`}
     </div>
     <div class="related-video"><div class="rv-icon">▶</div><div><div class="rv-title">How to get the best out of your ${p.name}</div><div class="rv-sub">YouTube · 8 min</div></div></div>
     <div class="related-video"><div class="rv-icon">▶</div><div><div class="rv-title">${p.brand} ${p.name} vs competitors — full comparison</div><div class="rv-sub">YouTube · 14 min</div></div></div>
