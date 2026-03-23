@@ -45,7 +45,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DFCRHTNM"
         }
       ],
-      "videoId": "",
+      "videoId": "HSwZR_a4U7I",
       "priceHistory": [
         561,
         538,
@@ -116,7 +116,7 @@ const ALL_PRODUCTS = {
           "asin": "B0B3RP5HS8"
         }
       ],
-      "videoId": "",
+      "videoId": "oC2G-Lc1-NY",
       "priceHistory": [
         100,
         112,
@@ -187,7 +187,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DL3L9WLM"
         }
       ],
-      "videoId": "",
+      "videoId": "8XFqjvzCFvM",
       "priceHistory": [
         143,
         145,
@@ -258,7 +258,7 @@ const ALL_PRODUCTS = {
           "asin": "B07Z92BYLJ"
         }
       ],
-      "videoId": "",
+      "videoId": "JRiH8fYsAiU",
       "priceHistory": [
         51,
         54,
@@ -329,7 +329,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FX33V398"
         }
       ],
-      "videoId": "",
+      "videoId": "8mCTSMjqbww",
       "priceHistory": [
         94,
         105,
@@ -471,7 +471,7 @@ const ALL_PRODUCTS = {
           "asin": "B07RPP471M"
         }
       ],
-      "videoId": "",
+      "videoId": "WQbDu1Tg1zA",
       "priceHistory": [
         161,
         168,
@@ -542,7 +542,7 @@ const ALL_PRODUCTS = {
           "asin": "B09RQZW5F2"
         }
       ],
-      "videoId": "",
+      "videoId": "tJDmF3zl0ug",
       "priceHistory": [
         96,
         95,
@@ -613,7 +613,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DG34WRW1"
         }
       ],
-      "videoId": "",
+      "videoId": "jSzfdoAn0KA",
       "priceHistory": [
         163,
         153,
@@ -684,7 +684,7 @@ const ALL_PRODUCTS = {
           "asin": "B00KRGER1A"
         }
       ],
-      "videoId": "",
+      "videoId": "HN0YPMYOkr8",
       "priceHistory": [
         52,
         47,
@@ -755,7 +755,7 @@ const ALL_PRODUCTS = {
           "asin": "B07VTMQLY1"
         }
       ],
-      "videoId": "",
+      "videoId": "MkSD6aAEgVo",
       "priceHistory": [
         34,
         31,
@@ -826,7 +826,7 @@ const ALL_PRODUCTS = {
           "asin": "B00400OMU0"
         }
       ],
-      "videoId": "",
+      "videoId": "wakUxFZCJko",
       "priceHistory": [
         361,
         368,
@@ -899,7 +899,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DJDNZF17"
         }
       ],
-      "videoId": "",
+      "videoId": "3FM9NUgHwUU",
       "priceHistory": [
         86,
         78,
@@ -970,7 +970,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BPD4LBSK"
         }
       ],
-      "videoId": "",
+      "videoId": "HEB-iD61Vc0",
       "priceHistory": [
         81,
         79,
@@ -1041,7 +1041,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CYH88L3D"
         }
       ],
-      "videoId": "",
+      "videoId": "WbyJm2gaDk8",
       "priceHistory": [
         97,
         80,
@@ -1112,7 +1112,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C9JD2B4D"
         }
       ],
-      "videoId": "",
+      "videoId": "-ZKklCD76x0",
       "priceHistory": [
         296,
         284,
@@ -1183,7 +1183,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DCG1YCXT"
         }
       ],
-      "videoId": "",
+      "videoId": "uuPfg1zG0C4",
       "priceHistory": [
         79,
         75,
@@ -1254,7 +1254,7 @@ const ALL_PRODUCTS = {
           "asin": "B08CN3G4N9"
         }
       ],
-      "videoId": "",
+      "videoId": "f86HCU83XeU",
       "priceHistory": [
         216,
         229,
@@ -1325,7 +1325,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BQ8LRJ98"
         }
       ],
-      "videoId": "",
+      "videoId": "1UiNdbRDxBQ",
       "priceHistory": [
         74,
         86,
@@ -1396,7 +1396,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DQQ2XCFF"
         }
       ],
-      "videoId": "",
+      "videoId": "6CVfCOKG-rs",
       "priceHistory": [
         118,
         100,
@@ -1467,7 +1467,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BQ7H52BZ"
         }
       ],
-      "videoId": "",
+      "videoId": "f1HMsJTTrdE",
       "priceHistory": [
         58,
         66,
@@ -1538,7 +1538,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DGH5C3HT"
         }
       ],
-      "videoId": "",
+      "videoId": "gu4QRbJZkkU",
       "priceHistory": [
         32,
         32,
@@ -1609,7 +1609,7 @@ const ALL_PRODUCTS = {
           "asin": "B08HFYS4JH"
         }
       ],
-      "videoId": "",
+      "videoId": "U_SSoWjBs2s",
       "priceHistory": [
         79,
         75,
@@ -1680,7 +1680,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DLCG59Y7"
         }
       ],
-      "videoId": "",
+      "videoId": "bacx6fG3wZI",
       "priceHistory": [
         79,
         74,
@@ -1753,7 +1753,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CQR5C144"
         }
       ],
-      "videoId": "",
+      "videoId": "1Gqwq58yoDk",
       "priceHistory": [
         122,
         107,
@@ -1824,7 +1824,7 @@ const ALL_PRODUCTS = {
           "asin": "B0G1TCR7KJ"
         }
       ],
-      "videoId": "",
+      "videoId": "bSTaVJc-Se4",
       "priceHistory": [
         288,
         306,
@@ -1895,7 +1895,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FYMCR7KV"
         }
       ],
-      "videoId": "",
+      "videoId": "BNRXd-o0g-A",
       "priceHistory": [
         134,
         154,
@@ -1966,7 +1966,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FN34DRRM"
         }
       ],
-      "videoId": "",
+      "videoId": "yDTzo8LJyWU",
       "priceHistory": [
         172,
         167,
@@ -2037,7 +2037,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DR8XJ9XZ"
         }
       ],
-      "videoId": "",
+      "videoId": "KbLZR8NZ8EA",
       "priceHistory": [
         204,
         202,
@@ -2108,7 +2108,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FHQFY6RQ"
         }
       ],
-      "videoId": "",
+      "videoId": "BNRXd-o0g-A",
       "priceHistory": [
         180,
         195,
@@ -2179,7 +2179,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DSJF3JLT"
         }
       ],
-      "videoId": "",
+      "videoId": "C2VzGIq5NYQ",
       "priceHistory": [
         319,
         353,
@@ -2250,7 +2250,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DGV8GTZY"
         }
       ],
-      "videoId": "",
+      "videoId": "CYgAtTEAFww",
       "priceHistory": [
         284,
         338,
@@ -2321,7 +2321,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DSL8S7DB"
         }
       ],
-      "videoId": "",
+      "videoId": "jm3SQpl1Y6Q",
       "priceHistory": [
         332,
         375,
@@ -2392,7 +2392,7 @@ const ALL_PRODUCTS = {
           "asin": "B0F26P4FT8"
         }
       ],
-      "videoId": "",
+      "videoId": "B7d9P_MrFbA",
       "priceHistory": [
         145,
         146,
@@ -2463,7 +2463,7 @@ const ALL_PRODUCTS = {
           "asin": "B0GDQBFJC7"
         }
       ],
-      "videoId": "",
+      "videoId": "2SYFG8DhTDM",
       "priceHistory": [
         120,
         111,
@@ -2534,7 +2534,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D9W9T1WB"
         }
       ],
-      "videoId": "",
+      "videoId": "7TaqdVC658U",
       "priceHistory": [
         367,
         369,
@@ -2607,7 +2607,7 @@ const ALL_PRODUCTS = {
           "asin": "B01MTB55WH"
         }
       ],
-      "videoId": "",
+      "videoId": "tGuQEgC-cSQ",
       "priceHistory": [
         28,
         26,
@@ -2678,7 +2678,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DMWM5YTD"
         }
       ],
-      "videoId": "",
+      "videoId": "TKyIJxKIlIA",
       "priceHistory": [
         14,
         13,
@@ -2749,7 +2749,7 @@ const ALL_PRODUCTS = {
           "asin": "B0GNH3QD8M"
         }
       ],
-      "videoId": "",
+      "videoId": "n1Ndew1Bgog",
       "priceHistory": [
         33,
         30,
@@ -2820,7 +2820,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DGLYLKWF"
         }
       ],
-      "videoId": "",
+      "videoId": "-ErIVVBnTf4",
       "priceHistory": [
         18,
         16,
@@ -2891,7 +2891,7 @@ const ALL_PRODUCTS = {
           "asin": "B0GJL5RFSW"
         }
       ],
-      "videoId": "",
+      "videoId": "9PvVPdJagYk",
       "priceHistory": [
         16,
         17,
@@ -3033,7 +3033,7 @@ const ALL_PRODUCTS = {
           "asin": "B08QF9F8BC"
         }
       ],
-      "videoId": "",
+      "videoId": "b8nZivcO6uE",
       "priceHistory": [
         25,
         26,
@@ -3104,7 +3104,7 @@ const ALL_PRODUCTS = {
           "asin": "B016MO90GW"
         }
       ],
-      "videoId": "",
+      "videoId": "N826TtJWxu4",
       "priceHistory": [
         25,
         27,
@@ -3246,7 +3246,7 @@ const ALL_PRODUCTS = {
           "asin": "B0GPLGWW7Y"
         }
       ],
-      "videoId": "",
+      "videoId": "zd_0nN2K95A",
       "priceHistory": [
         6,
         5,
@@ -3317,7 +3317,7 @@ const ALL_PRODUCTS = {
           "asin": "B0G3NSVBR3"
         }
       ],
-      "videoId": "",
+      "videoId": "SGKoMrnZxqc",
       "priceHistory": [
         36,
         31,
@@ -3388,7 +3388,7 @@ const ALL_PRODUCTS = {
           "asin": "B0F9S3DWGF"
         }
       ],
-      "videoId": "",
+      "videoId": "wqvPo2tfe8Y",
       "priceHistory": [
         16,
         17,
@@ -3461,7 +3461,7 @@ const ALL_PRODUCTS = {
           "asin": "B07KB9BQ6C"
         }
       ],
-      "videoId": "",
+      "videoId": "b21qhMn66vQ",
       "priceHistory": [
         21,
         22,
@@ -3532,7 +3532,7 @@ const ALL_PRODUCTS = {
           "asin": "B00K8S89YI"
         }
       ],
-      "videoId": "",
+      "videoId": "68N33vCKq7o",
       "priceHistory": [
         34,
         32,
@@ -3674,7 +3674,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D91Y2S8C"
         }
       ],
-      "videoId": "",
+      "videoId": "rVSlq6BiQIo",
       "priceHistory": [
         18,
         17,
@@ -3745,7 +3745,7 @@ const ALL_PRODUCTS = {
           "asin": "B00FQJGRX4"
         }
       ],
-      "videoId": "",
+      "videoId": "_OkJgZcpxGc",
       "priceHistory": [
         34,
         34,
@@ -3887,7 +3887,7 @@ const ALL_PRODUCTS = {
           "asin": "B01A84QLG4"
         }
       ],
-      "videoId": "",
+      "videoId": "C_jC53ny_L0",
       "priceHistory": [
         22,
         23,
@@ -3958,7 +3958,7 @@ const ALL_PRODUCTS = {
           "asin": "B07PDYW9D7"
         }
       ],
-      "videoId": "",
+      "videoId": "jaTGY8PyT0Q",
       "priceHistory": [
         28,
         29,
@@ -4029,7 +4029,7 @@ const ALL_PRODUCTS = {
           "asin": "B09R9XCZ7P"
         }
       ],
-      "videoId": "",
+      "videoId": "rVSlq6BiQIo",
       "priceHistory": [
         41,
         36,
@@ -4100,7 +4100,7 @@ const ALL_PRODUCTS = {
           "asin": "B0G2M24SYN"
         }
       ],
-      "videoId": "",
+      "videoId": "NQoN67_0n8E",
       "priceHistory": [
         24,
         22,
@@ -4171,7 +4171,7 @@ const ALL_PRODUCTS = {
           "asin": "B0942XQJYX"
         }
       ],
-      "videoId": "",
+      "videoId": "zeA1g-OMhDo",
       "priceHistory": [
         28,
         23,
@@ -4242,7 +4242,7 @@ const ALL_PRODUCTS = {
           "asin": "B0833NW6SN"
         }
       ],
-      "videoId": "",
+      "videoId": "epf3KiLFe4U",
       "priceHistory": [
         28,
         24,
@@ -4315,7 +4315,7 @@ const ALL_PRODUCTS = {
           "asin": "B07B9NGHWF"
         }
       ],
-      "videoId": "",
+      "videoId": "Fq3jmWZqeX0",
       "priceHistory": [
         36,
         34,
@@ -4386,7 +4386,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D8LHGBM4"
         }
       ],
-      "videoId": "",
+      "videoId": "noGFi-2X4HI",
       "priceHistory": [
         39,
         39,
@@ -4457,7 +4457,7 @@ const ALL_PRODUCTS = {
           "asin": "B010FMO1XO"
         }
       ],
-      "videoId": "",
+      "videoId": "zElsfkaAttk",
       "priceHistory": [
         15,
         18,
@@ -4528,7 +4528,7 @@ const ALL_PRODUCTS = {
           "asin": "B07B9NS9SH"
         }
       ],
-      "videoId": "",
+      "videoId": "Fq3jmWZqeX0",
       "priceHistory": [
         43,
         47,
@@ -4599,7 +4599,7 @@ const ALL_PRODUCTS = {
           "asin": "B07Q6GT98V"
         }
       ],
-      "videoId": "",
+      "videoId": "VzksFVeTsWo",
       "priceHistory": [
         55,
         59,
@@ -4670,7 +4670,7 @@ const ALL_PRODUCTS = {
           "asin": "B0B2KPCBJZ"
         }
       ],
-      "videoId": "",
+      "videoId": "7zBRNx9uEZI",
       "priceHistory": [
         21,
         22,
@@ -4741,7 +4741,7 @@ const ALL_PRODUCTS = {
           "asin": "B01N27W15O"
         }
       ],
-      "videoId": "",
+      "videoId": "ctM44RNyEg0",
       "priceHistory": [
         78,
         72,
@@ -4812,7 +4812,7 @@ const ALL_PRODUCTS = {
           "asin": "B078H22NBQ"
         }
       ],
-      "videoId": "",
+      "videoId": "noGFi-2X4HI",
       "priceHistory": [
         34,
         37,
@@ -4883,7 +4883,7 @@ const ALL_PRODUCTS = {
           "asin": "B06XBS3CT7"
         }
       ],
-      "videoId": "",
+      "videoId": "ctM44RNyEg0",
       "priceHistory": [
         76,
         74,
@@ -4954,7 +4954,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DHW14DJ1"
         }
       ],
-      "videoId": "",
+      "videoId": "MHdYP_X5r8A",
       "priceHistory": [
         84,
         76,
@@ -5098,7 +5098,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DSR14R6J"
         }
       ],
-      "videoId": "",
+      "videoId": "yWEzoTSKAbY",
       "priceHistory": [
         190,
         206,
@@ -5169,7 +5169,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FC2VJH5N"
         }
       ],
-      "videoId": "",
+      "videoId": "TJFUWAB0S7Q",
       "priceHistory": [
         108,
         109,
@@ -5240,7 +5240,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FB36DTHD"
         }
       ],
-      "videoId": "",
+      "videoId": "DnQBcfjtw1M",
       "priceHistory": [
         123,
         128,
@@ -5311,7 +5311,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FP52K4J1"
         }
       ],
-      "videoId": "",
+      "videoId": "TWIjEbJ1b0Y",
       "priceHistory": [
         147,
         153,
@@ -5382,7 +5382,7 @@ const ALL_PRODUCTS = {
           "asin": "B0G8MSDL67"
         }
       ],
-      "videoId": "",
+      "videoId": "D4YZiXNwFcQ",
       "priceHistory": [
         73,
         64,
@@ -5453,7 +5453,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DYCBZ86N"
         }
       ],
-      "videoId": "",
+      "videoId": "r0pqvHDvgSU",
       "priceHistory": [
         117,
         113,
@@ -5524,7 +5524,7 @@ const ALL_PRODUCTS = {
           "asin": "B0F13KXRG8"
         }
       ],
-      "videoId": "",
+      "videoId": "r0pqvHDvgSU",
       "priceHistory": [
         155,
         145,
@@ -5595,7 +5595,7 @@ const ALL_PRODUCTS = {
           "asin": "B0G71NBL32"
         }
       ],
-      "videoId": "",
+      "videoId": "bqTQ1zQLgJY",
       "priceHistory": [
         86,
         91,
@@ -5666,7 +5666,7 @@ const ALL_PRODUCTS = {
           "asin": "B0GHY95X4J"
         }
       ],
-      "videoId": "",
+      "videoId": "DnQBcfjtw1M",
       "priceHistory": [
         159,
         177,
@@ -5737,7 +5737,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DJPLRBW6"
         }
       ],
-      "videoId": "",
+      "videoId": "odAjrn_06IM",
       "priceHistory": [
         51,
         54,
@@ -5808,7 +5808,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DHW1BFNS"
         }
       ],
-      "videoId": "",
+      "videoId": "0gtb5JfGLOw",
       "priceHistory": [
         115,
         123,
@@ -5879,7 +5879,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FT2LTJRF"
         }
       ],
-      "videoId": "",
+      "videoId": "rPYroIO2jyg",
       "priceHistory": [
         172,
         161,
@@ -5952,7 +5952,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CG1N11DV"
         }
       ],
-      "videoId": "",
+      "videoId": "OT2Eag8ix1s",
       "priceHistory": [
         59,
         56,
@@ -6023,7 +6023,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BX4LB7HL"
         }
       ],
-      "videoId": "",
+      "videoId": "1KFsFiceoA4",
       "priceHistory": [
         103,
         99,
@@ -6094,7 +6094,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DBLLS94G"
         }
       ],
-      "videoId": "",
+      "videoId": "x6KjSe7VlWI",
       "priceHistory": [
         40,
         40,
@@ -6165,7 +6165,7 @@ const ALL_PRODUCTS = {
           "asin": "B08BR1CR78"
         }
       ],
-      "videoId": "",
+      "videoId": "OT2Eag8ix1s",
       "priceHistory": [
         46,
         40,
@@ -6236,7 +6236,7 @@ const ALL_PRODUCTS = {
           "asin": "B0F6L7D51B"
         }
       ],
-      "videoId": "",
+      "videoId": "0sL9-w-9beI",
       "priceHistory": [
         70,
         67,
@@ -6307,7 +6307,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CMQPZC72"
         }
       ],
-      "videoId": "",
+      "videoId": "OT2Eag8ix1s",
       "priceHistory": [
         87,
         81,
@@ -6378,7 +6378,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CJ38JC8K"
         }
       ],
-      "videoId": "",
+      "videoId": "OT2Eag8ix1s",
       "priceHistory": [
         114,
         109,
@@ -6449,7 +6449,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FWKBS2G6"
         }
       ],
-      "videoId": "",
+      "videoId": "0sL9-w-9beI",
       "priceHistory": [
         112,
         110,
@@ -6520,7 +6520,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FD3FH875"
         }
       ],
-      "videoId": "",
+      "videoId": "vOQC-ZocgOc",
       "priceHistory": [
         34,
         36,
@@ -6591,7 +6591,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FHD3K9XR"
         }
       ],
-      "videoId": "",
+      "videoId": "Mt90hN-pW2A",
       "priceHistory": [
         61,
         73,
@@ -6662,7 +6662,7 @@ const ALL_PRODUCTS = {
           "asin": "B09WQDGZPB"
         }
       ],
-      "videoId": "",
+      "videoId": "p712twUbKGA",
       "priceHistory": [
         25,
         24,
@@ -6733,7 +6733,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FVWY65ZZ"
         }
       ],
-      "videoId": "",
+      "videoId": "W2AYP8G_r0g",
       "priceHistory": [
         18,
         18,
@@ -6806,7 +6806,7 @@ const ALL_PRODUCTS = {
           "asin": "B01A84QLGY"
         }
       ],
-      "videoId": "",
+      "videoId": "_bVL3C550gM",
       "priceHistory": [
         23,
         22,
@@ -6877,7 +6877,7 @@ const ALL_PRODUCTS = {
           "asin": "B0833MWZMP"
         }
       ],
-      "videoId": "",
+      "videoId": "-mQTL5ajHW8",
       "priceHistory": [
         46,
         45,
@@ -7019,7 +7019,7 @@ const ALL_PRODUCTS = {
           "asin": "B07DPP4FGM"
         }
       ],
-      "videoId": "",
+      "videoId": "_bVL3C550gM",
       "priceHistory": [
         20,
         20,
@@ -7161,7 +7161,7 @@ const ALL_PRODUCTS = {
           "asin": "B07QP9978Y"
         }
       ],
-      "videoId": "",
+      "videoId": "E9hepeQhZng",
       "priceHistory": [
         26,
         24,
@@ -7232,7 +7232,7 @@ const ALL_PRODUCTS = {
           "asin": "B0B2DKSJRW"
         }
       ],
-      "videoId": "",
+      "videoId": "_bVL3C550gM",
       "priceHistory": [
         25,
         26,
@@ -7303,7 +7303,7 @@ const ALL_PRODUCTS = {
           "asin": "B08LHGQH5Q"
         }
       ],
-      "videoId": "",
+      "videoId": "O6ezQzlgn_g",
       "priceHistory": [
         29,
         27,
@@ -7374,7 +7374,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D2L6SFVD"
         }
       ],
-      "videoId": "",
+      "videoId": "zl5j69j1nxA",
       "priceHistory": [
         21,
         21,
@@ -7445,7 +7445,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C661227C"
         }
       ],
-      "videoId": "",
+      "videoId": "_bVL3C550gM",
       "priceHistory": [
         28,
         30,
@@ -7587,7 +7587,7 @@ const ALL_PRODUCTS = {
           "asin": "B08BPPLGYB"
         }
       ],
-      "videoId": "",
+      "videoId": "lX5nEzTUiXI",
       "priceHistory": [
         33,
         32,
@@ -7660,7 +7660,7 @@ const ALL_PRODUCTS = {
           "asin": "B0GMMTPDGX"
         }
       ],
-      "videoId": "",
+      "videoId": "nPghKX_IJAU",
       "priceHistory": [
         35,
         31,
@@ -7731,7 +7731,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C3HCD34R"
         }
       ],
-      "videoId": "",
+      "videoId": "S3e74IsdKPI",
       "priceHistory": [
         38,
         38,
@@ -7802,7 +7802,7 @@ const ALL_PRODUCTS = {
           "asin": "B09PQSVFQT"
         }
       ],
-      "videoId": "",
+      "videoId": "oSenTqSVyzo",
       "priceHistory": [
         19,
         20,
@@ -7873,7 +7873,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BTJD6LCL"
         }
       ],
-      "videoId": "",
+      "videoId": "kQE6N9483W8",
       "priceHistory": [
         32,
         38,
@@ -7944,7 +7944,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CHVYVPW8"
         }
       ],
-      "videoId": "",
+      "videoId": "zakPRMGlRbw",
       "priceHistory": [
         19,
         19,
@@ -8015,7 +8015,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BYWMLVG1"
         }
       ],
-      "videoId": "",
+      "videoId": "hrzKirkEbqU",
       "priceHistory": [
         27,
         29,
@@ -8086,7 +8086,7 @@ const ALL_PRODUCTS = {
           "asin": "B07XRX18ZZ"
         }
       ],
-      "videoId": "",
+      "videoId": "lCkwof9mSIU",
       "priceHistory": [
         17,
         17,
@@ -8157,7 +8157,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BTDX26B2"
         }
       ],
-      "videoId": "",
+      "videoId": "8rCcx-H5hpY",
       "priceHistory": [
         72,
         82,
@@ -8228,7 +8228,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BNKGHX12"
         }
       ],
-      "videoId": "",
+      "videoId": "Km3mkmkwykY",
       "priceHistory": [
         18,
         16,
@@ -8299,7 +8299,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C3KWT5V6"
         }
       ],
-      "videoId": "",
+      "videoId": "S3e74IsdKPI",
       "priceHistory": [
         36,
         36,
@@ -8370,7 +8370,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C2CNHX82"
         }
       ],
-      "videoId": "",
+      "videoId": "nPghKX_IJAU",
       "priceHistory": [
         25,
         25,
@@ -8441,7 +8441,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D83SGSLD"
         }
       ],
-      "videoId": "",
+      "videoId": "U358E_318NE",
       "priceHistory": [
         11,
         12,
@@ -8514,7 +8514,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BHW94BCC"
         }
       ],
-      "videoId": "",
+      "videoId": "xAzIMBvtz-Y",
       "priceHistory": [
         40,
         40,
@@ -8585,7 +8585,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C6XXJKHV"
         }
       ],
-      "videoId": "",
+      "videoId": "kDd-vNlFfMI",
       "priceHistory": [
         45,
         41,
@@ -8656,7 +8656,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FGDJ9XTW"
         }
       ],
-      "videoId": "",
+      "videoId": "U1tGC1595_Y",
       "priceHistory": [
         47,
         43,
@@ -8727,7 +8727,7 @@ const ALL_PRODUCTS = {
           "asin": "B07B6MZW9F"
         }
       ],
-      "videoId": "",
+      "videoId": "YKNvWNnNHhk",
       "priceHistory": [
         28,
         24,
@@ -8798,7 +8798,7 @@ const ALL_PRODUCTS = {
           "asin": "B08FB994L8"
         }
       ],
-      "videoId": "",
+      "videoId": "WmMD9GaCyVE",
       "priceHistory": [
         16,
         15,
@@ -8869,7 +8869,7 @@ const ALL_PRODUCTS = {
           "asin": "B087GS3ZS7"
         }
       ],
-      "videoId": "",
+      "videoId": "WmMD9GaCyVE",
       "priceHistory": [
         26,
         28,
@@ -8940,7 +8940,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BHWC6F4Q"
         }
       ],
-      "videoId": "",
+      "videoId": "xnRlALV6qK4",
       "priceHistory": [
         41,
         37,
@@ -9011,7 +9011,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CSYR5HB1"
         }
       ],
-      "videoId": "",
+      "videoId": "WmMD9GaCyVE",
       "priceHistory": [
         29,
         26,
@@ -9082,7 +9082,7 @@ const ALL_PRODUCTS = {
           "asin": "B08YRSWQXQ"
         }
       ],
-      "videoId": "",
+      "videoId": "0It-JHFul0U",
       "priceHistory": [
         30,
         34,
@@ -9224,7 +9224,7 @@ const ALL_PRODUCTS = {
           "asin": "B07CQ4X9G8"
         }
       ],
-      "videoId": "",
+      "videoId": "dmbwzxkidJw",
       "priceHistory": [
         55,
         47,
@@ -9368,7 +9368,7 @@ const ALL_PRODUCTS = {
           "asin": "B0B18Z7VRK"
         }
       ],
-      "videoId": "",
+      "videoId": "uNElJCI8_W4",
       "priceHistory": [
         25,
         26,
@@ -9439,7 +9439,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DNG35BVM"
         }
       ],
-      "videoId": "",
+      "videoId": "_kg2jWS5qgI",
       "priceHistory": [
         53,
         52,
@@ -9510,7 +9510,7 @@ const ALL_PRODUCTS = {
           "asin": "B0B18V92KS"
         }
       ],
-      "videoId": "",
+      "videoId": "1ekRW0fOG1o",
       "priceHistory": [
         23,
         22,
@@ -9581,7 +9581,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C3JBKSR7"
         }
       ],
-      "videoId": "",
+      "videoId": "uNElJCI8_W4",
       "priceHistory": [
         26,
         24,
@@ -9652,7 +9652,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DNFZNMFC"
         }
       ],
-      "videoId": "",
+      "videoId": "jfsvWGmkWJI",
       "priceHistory": [
         52,
         55,
@@ -9722,7 +9722,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DNFX5LYG"
         }
       ],
-      "videoId": "",
+      "videoId": "jfsvWGmkWJI",
       "priceHistory": [
         105,
         115,
@@ -9793,7 +9793,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DCGK4MT7"
         }
       ],
-      "videoId": "",
+      "videoId": "UhN0B2XDPRI",
       "priceHistory": [
         66,
         64,
@@ -9864,7 +9864,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D9YBSL8S"
         }
       ],
-      "videoId": "",
+      "videoId": "2IGpsOziojQ",
       "priceHistory": [
         69,
         81,
@@ -9935,7 +9935,7 @@ const ALL_PRODUCTS = {
           "asin": "B08CD8KPRG"
         }
       ],
-      "videoId": "",
+      "videoId": "tlvH5_mdl40",
       "priceHistory": [
         102,
         99,
@@ -10006,7 +10006,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BZPTRLVN"
         }
       ],
-      "videoId": "",
+      "videoId": "tlvH5_mdl40",
       "priceHistory": [
         64,
         58,
@@ -10077,7 +10077,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FLXZCYWN"
         }
       ],
-      "videoId": "",
+      "videoId": "VbH69k72y1o",
       "priceHistory": [
         11,
         11,
@@ -10148,7 +10148,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BXDSRQWB"
         }
       ],
-      "videoId": "",
+      "videoId": "UhN0B2XDPRI",
       "priceHistory": [
         54,
         47,
@@ -10221,7 +10221,7 @@ const ALL_PRODUCTS = {
           "asin": "B0BQRVTJBW"
         }
       ],
-      "videoId": "",
+      "videoId": "NRecqU1FBoo",
       "priceHistory": [
         22,
         22,
@@ -10363,7 +10363,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DPKKQRQX"
         }
       ],
-      "videoId": "",
+      "videoId": "xFt_LuCesfU",
       "priceHistory": [
         37,
         32,
@@ -10434,7 +10434,7 @@ const ALL_PRODUCTS = {
           "asin": "B000WIYILW"
         }
       ],
-      "videoId": "",
+      "videoId": "xYNeB03oyVY",
       "priceHistory": [
         20,
         21,
@@ -10505,7 +10505,7 @@ const ALL_PRODUCTS = {
           "asin": "B006UJDGB0"
         }
       ],
-      "videoId": "",
+      "videoId": "PihLZD2Gk4A",
       "priceHistory": [
         17,
         16,
@@ -10576,7 +10576,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FJQY8WD6"
         }
       ],
-      "videoId": "",
+      "videoId": "LC-Lk9vTC-A",
       "priceHistory": [
         14,
         15,
@@ -10647,7 +10647,7 @@ const ALL_PRODUCTS = {
           "asin": "B07HWV59ZX"
         }
       ],
-      "videoId": "",
+      "videoId": "vU1JvFqvkWw",
       "priceHistory": [
         22,
         23,
@@ -10718,7 +10718,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C9D4KL9D"
         }
       ],
-      "videoId": "",
+      "videoId": "rGn14D1RKD8",
       "priceHistory": [
         71,
         61,
@@ -10789,7 +10789,7 @@ const ALL_PRODUCTS = {
           "asin": "B0F9YJKCM8"
         }
       ],
-      "videoId": "",
+      "videoId": "xFt_LuCesfU",
       "priceHistory": [
         41,
         41,
@@ -10860,7 +10860,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FPMPWGYT"
         }
       ],
-      "videoId": "",
+      "videoId": "63yDd7s16tY",
       "priceHistory": [
         12,
         12,
@@ -10931,7 +10931,7 @@ const ALL_PRODUCTS = {
           "asin": "B0FK9F7RG6"
         }
       ],
-      "videoId": "",
+      "videoId": "j8uW3vSVNL0",
       "priceHistory": [
         14,
         14,
@@ -11002,7 +11002,7 @@ const ALL_PRODUCTS = {
           "asin": "B08NWD9LGR"
         }
       ],
-      "videoId": "",
+      "videoId": "YxIzqwBTIYQ",
       "priceHistory": [
         21,
         24,
@@ -11075,7 +11075,7 @@ const ALL_PRODUCTS = {
           "asin": "B08Z4HXHR7"
         }
       ],
-      "videoId": "",
+      "videoId": "Z_mvnt3OfCc",
       "priceHistory": [
         24,
         24,
@@ -11146,7 +11146,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CNWC6FXC"
         }
       ],
-      "videoId": "",
+      "videoId": "Z_mvnt3OfCc",
       "priceHistory": [
         10,
         10,
@@ -11217,7 +11217,7 @@ const ALL_PRODUCTS = {
           "asin": "B08JZHXQC4"
         }
       ],
-      "videoId": "",
+      "videoId": "jzD9vM41CNQ",
       "priceHistory": [
         8,
         9,
@@ -11288,7 +11288,7 @@ const ALL_PRODUCTS = {
           "asin": "B08GKYYK7X"
         }
       ],
-      "videoId": "",
+      "videoId": "Z_mvnt3OfCc",
       "priceHistory": [
         9,
         10,
@@ -11359,7 +11359,7 @@ const ALL_PRODUCTS = {
           "asin": "B08Z4HSBQM"
         }
       ],
-      "videoId": "",
+      "videoId": "Z_mvnt3OfCc",
       "priceHistory": [
         15,
         16,
@@ -11430,7 +11430,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CXXFLTDT"
         }
       ],
-      "videoId": "",
+      "videoId": "z40FidGV12k",
       "priceHistory": [
         8,
         9,
@@ -11501,7 +11501,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C8TF3T2T"
         }
       ],
-      "videoId": "",
+      "videoId": "s_lwsJMYKpI",
       "priceHistory": [
         13,
         12,
@@ -11572,7 +11572,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DTP74W45"
         }
       ],
-      "videoId": "",
+      "videoId": "eK0ZkzsVkKY",
       "priceHistory": [
         11,
         9,
@@ -11643,7 +11643,7 @@ const ALL_PRODUCTS = {
           "asin": "B0875HVWTK"
         }
       ],
-      "videoId": "",
+      "videoId": "jzD9vM41CNQ",
       "priceHistory": [
         8,
         8,
@@ -11714,7 +11714,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DCBPDGTJ"
         }
       ],
-      "videoId": "",
+      "videoId": "cA6spAivPlw",
       "priceHistory": [
         10,
         11,
@@ -11785,7 +11785,7 @@ const ALL_PRODUCTS = {
           "asin": "B0C3VRT5TS"
         }
       ],
-      "videoId": "",
+      "videoId": "mpACkhxbq7w",
       "priceHistory": [
         22,
         22,
@@ -11856,7 +11856,7 @@ const ALL_PRODUCTS = {
           "asin": "B0F483QT5K"
         }
       ],
-      "videoId": "",
+      "videoId": "V38ilPF8Gkk",
       "priceHistory": [
         9,
         10,
@@ -11929,7 +11929,7 @@ const ALL_PRODUCTS = {
           "asin": "B0068FMLRG"
         }
       ],
-      "videoId": "",
+      "videoId": "7R_ljdLWCo8",
       "priceHistory": [
         16,
         16,
@@ -12000,7 +12000,7 @@ const ALL_PRODUCTS = {
           "asin": "B01N5M0HTL"
         }
       ],
-      "videoId": "",
+      "videoId": "pE8x2_6NOjk",
       "priceHistory": [
         15,
         13,
@@ -12071,7 +12071,7 @@ const ALL_PRODUCTS = {
           "asin": "B072ZVX9QM"
         }
       ],
-      "videoId": "",
+      "videoId": "I74XnjezIXs",
       "priceHistory": [
         42,
         40,
@@ -12142,7 +12142,7 @@ const ALL_PRODUCTS = {
           "asin": "B08FPBHWFR"
         }
       ],
-      "videoId": "",
+      "videoId": "j8QLylO0IBk",
       "priceHistory": [
         29,
         27,
@@ -12213,7 +12213,7 @@ const ALL_PRODUCTS = {
           "asin": "B0719R5L94"
         }
       ],
-      "videoId": "",
+      "videoId": "rpuoGeklZE8",
       "priceHistory": [
         41,
         36,
@@ -12284,7 +12284,7 @@ const ALL_PRODUCTS = {
           "asin": "B010FPYKU0"
         }
       ],
-      "videoId": "",
+      "videoId": "7vf6g9oNZoQ",
       "priceHistory": [
         14,
         13,
@@ -12355,7 +12355,7 @@ const ALL_PRODUCTS = {
           "asin": "B07H717SXV"
         }
       ],
-      "videoId": "",
+      "videoId": "opEdBlrbC_g",
       "priceHistory": [
         70,
         73,
@@ -12426,7 +12426,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DD7HMWPC"
         }
       ],
-      "videoId": "",
+      "videoId": "rpuoGeklZE8",
       "priceHistory": [
         23,
         25,
@@ -12497,7 +12497,7 @@ const ALL_PRODUCTS = {
           "asin": "B0DGT8PMBV"
         }
       ],
-      "videoId": "",
+      "videoId": "ipWWPsrFdhk",
       "priceHistory": [
         20,
         22,
@@ -12568,7 +12568,7 @@ const ALL_PRODUCTS = {
           "asin": "B0D8BRJZJH"
         }
       ],
-      "videoId": "",
+      "videoId": "1hPnrIFmlVo",
       "priceHistory": [
         15,
         15,
@@ -12639,7 +12639,7 @@ const ALL_PRODUCTS = {
           "asin": "B0CM6D3BCZ"
         }
       ],
-      "videoId": "",
+      "videoId": "1hPnrIFmlVo",
       "priceHistory": [
         73,
         68,
@@ -12710,7 +12710,7 @@ const ALL_PRODUCTS = {
           "asin": "B00NIAHX86"
         }
       ],
-      "videoId": "",
+      "videoId": "7vf6g9oNZoQ",
       "priceHistory": [
         25,
         25,
