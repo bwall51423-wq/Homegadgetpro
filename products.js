@@ -1,7 +1,7 @@
 // ═══════════════════════════════════════════════════════════
 // HomeGadgetPro — Auto-generated product database
-// Generated: 09 March 2026 at 05:38
-// Total products: 179
+// Generated: 24 March 2026 at 18:33
+// Total products: 219
 // DO NOT EDIT MANUALLY — re-run hgp_pipeline.py to update
 // ═══════════════════════════════════════════════════════════
 
@@ -12743,6 +12743,1536 @@ const ALL_PRODUCTS = {
       "userReviews": [],
       "lastUpdated": "2026-03-09"
     }
+  ]
+,
+  "microwaves": [
+      {
+          "id": 280,
+          "asin": "B0BLP9C4RR",
+          "emoji": "📡",
+          "brand": "Daewoo",
+          "name": "800W 20L Manual Microwave with 30-Minute Timer",
+          "price": 49.99,
+          "rating": 4.2,
+          "reviews": 1800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0BLP9C4RR.01._SX300_.jpg",
+          "badge": "Budget Pick",
+          "bestFor": [
+              "Budget buyers",
+              "Students",
+              "Small kitchens"
+          ],
+          "verdict": "The most affordable way into a reliable microwave. Daewoo's 20L 800W model keeps things simple with manual controls and a 30-minute timer — no confusing menus, just heat and go. At £49.99 it's hard to argue with.",
+          "pros": [
+              "Excellent price point",
+              "Simple manual controls",
+              "30-minute timer",
+              "Easy to clean interior"
+          ],
+          "cons": [
+              "No digital display",
+              "Manual timer less precise",
+              "800W slightly lower power",
+              "No auto-defrost programs"
+          ],
+          "score": 72,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 49.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 281,
+          "asin": "B0CQ2Y79L9",
+          "emoji": "📡",
+          "brand": "Russell Hobbs",
+          "name": "RHMM827SS 20L 800W Solo Manual Microwave Stainless Steel",
+          "price": 49.99,
+          "rating": 4.3,
+          "reviews": 1100,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CQ2Y79L9.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Budget buyers",
+              "Small families",
+              "Kitchens needing a compact model"
+          ],
+          "verdict": "Russell Hobbs delivers a reliable stainless steel microwave at budget price. Five power levels cover most tasks and the stainless interior wipes clean easily. A solid, unfussy workhorse for everyday use.",
+          "pros": [
+              "Stainless steel interior — easy to clean",
+              "5 power levels",
+              "Compact 20L footprint",
+              "Russell Hobbs reliability"
+          ],
+          "cons": [
+              "800W — slower than 900W models",
+              "Manual only — no digital programs",
+              "1,100 reviews — less proven than rivals"
+          ],
+          "score": 74,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 49.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 282,
+          "asin": "B008NTCV6Q",
+          "emoji": "📡",
+          "brand": "Sharp",
+          "name": "R272KM Solo Microwave Oven 20 Litre 800W Black",
+          "price": 79.99,
+          "rating": 4.3,
+          "reviews": 5400,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B008NTCV6Q.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Mid-range buyers",
+              "Everyday cooking",
+              "Small households"
+          ],
+          "verdict": "Sharp makes some of the most dependable microwaves in the UK and the R272KM is no exception. Over 5,400 reviews at 4.3 stars proves its staying power. Clean black design, easy controls, and consistent heating performance.",
+          "pros": [
+              "5,400+ reviews — proven reliability",
+              "800W consistent heating",
+              "Sleek black design",
+              "Easy dial controls"
+          ],
+          "cons": [
+              "800W rather than 900W",
+              "No grill or combination modes",
+              "No digital display"
+          ],
+          "score": 76,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 79.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 283,
+          "asin": "B00GYU8SFY",
+          "emoji": "📡",
+          "brand": "Russell Hobbs",
+          "name": "RHM2076B 20L 800W Black Digital Solo Microwave with 8 Auto Cook Menus",
+          "price": 79.99,
+          "rating": 4.4,
+          "reviews": 8200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B00GYU8SFY.01._SX300_.jpg",
+          "badge": "Best Seller",
+          "bestFor": [
+              "Most households",
+              "First microwave buyers",
+              "Digital display fans"
+          ],
+          "verdict": "With over 8,200 reviews at 4.4 stars, this is one of the best-selling microwaves on Amazon UK. The digital display and 8 auto-cook menus make it genuinely easy to use, while the compact 20L footprint suits most kitchens. The sweet spot of price and features.",
+          "pros": [
+              "8,200+ reviews — one of Amazon's best sellers",
+              "Digital display + 8 auto-cook menus",
+              "5 power levels + defrost",
+              "Compact black design"
+          ],
+          "cons": [
+              "800W — not the most powerful",
+              "20L may feel small for larger families",
+              "No grill function"
+          ],
+          "score": 83,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 79.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 284,
+          "asin": "B07HCSL8JN",
+          "emoji": "📡",
+          "brand": "Sharp",
+          "name": "YC-MS252AU-S 25 Litre 900W Digital Microwave with 11 Power Levels ECO Mode",
+          "price": 99.99,
+          "rating": 4.4,
+          "reviews": 2600,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B07HCSL8JN.01._SX300_.jpg",
+          "badge": "Best Overall",
+          "bestFor": [
+              "Families",
+              "Frequent microwave users",
+              "Eco-conscious buyers"
+          ],
+          "verdict": "Sharp steps it up with a larger 25L cavity, 900W power, and 11 power levels for precision heating. The ECO mode reduces standby power consumption — a nice touch. At £99.99 it's the best all-round microwave in this price bracket.",
+          "pros": [
+              "25L — larger capacity for families",
+              "900W — faster heating",
+              "11 power levels — precise control",
+              "ECO standby mode"
+          ],
+          "cons": [
+              "No grill or oven modes",
+              "Costs £20 more than 20L models",
+              "Silver finish can show fingerprints"
+          ],
+          "score": 86,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 99.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 285,
+          "asin": "B0CQ2YGMCR",
+          "emoji": "📡",
+          "brand": "Russell Hobbs",
+          "name": "RHM2366B 23L 3-in-1 900W Microwave with 1000W Grill and 1700W Oven",
+          "price": 109.99,
+          "rating": 4.3,
+          "reviews": 900,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CQ2YGMCR.01._SX300_.jpg",
+          "badge": "Best Combination",
+          "bestFor": [
+              "Small oven replacement",
+              "Students in catered accommodation",
+              "Space-limited kitchens"
+          ],
+          "verdict": "Three appliances in one box: 900W microwave, 1000W grill, and 1700W oven. If your kitchen is small or you want to replace a standalone oven, this Russell Hobbs combination unit does a remarkable amount of cooking in a compact package.",
+          "pros": [
+              "3-in-1: microwave + grill + oven",
+              "900W microwave power",
+              "23L capacity",
+              "Replaces multiple appliances"
+          ],
+          "cons": [
+              "Takes up worktop space of a full oven",
+              "Fewer reviews — newer model",
+              "More expensive than solo microwaves"
+          ],
+          "score": 80,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 109.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 286,
+          "asin": "B0D8WBTWVM",
+          "emoji": "📡",
+          "brand": "Russell Hobbs",
+          "name": "RHMI2503B 25L 900W Digital Inverter Microwave with 8 Auto Cook Settings",
+          "price": 129.99,
+          "rating": 4.4,
+          "reviews": 400,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0D8WBTWVM.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Power users",
+              "Even heating enthusiasts",
+              "Cooks who hate cold spots"
+          ],
+          "verdict": "Inverter technology is the upgrade most people don't know they need. Unlike standard microwaves that cycle power on and off, inverter models deliver continuous power for more even heating and better defrosting. The 25L cavity and 900W output make this one of the most capable mid-range microwaves available.",
+          "pros": [
+              "Inverter tech — even, consistent heating",
+              "25L capacity — family size",
+              "900W power",
+              "8 auto-cook settings"
+          ],
+          "cons": [
+              "£129.99 — significantly pricier than basics",
+              "Only 400 reviews — newer model",
+              "No grill function"
+          ],
+          "score": 82,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 129.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 287,
+          "asin": "B00X80UH7U",
+          "emoji": "📡",
+          "brand": "Panasonic",
+          "name": "NN-SF464MBPQ Flatbed Microwave Oven 27 Litre 900W Silver",
+          "price": 189.99,
+          "rating": 4.3,
+          "reviews": 3500,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B00X80UH7U.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Large families",
+              "No-turntable fans",
+              "Premium buyers"
+          ],
+          "verdict": "Panasonic's flatbed design removes the turntable — which means no annoying spinning, no carousel to wash, and more usable interior space. The 27L cavity is one of the largest in its class. If you hate cleaning the turntable, this model alone is worth the upgrade.",
+          "pros": [
+              "Flatbed — no turntable to clean",
+              "27L — largest capacity here",
+              "900W power",
+              "3,500+ proven reviews"
+          ],
+          "cons": [
+              "£189.99 — premium price",
+              "No grill or combination modes",
+              "Silver finish can look dated"
+          ],
+          "score": 84,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 189.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 288,
+          "asin": "B07DJKXSK4",
+          "emoji": "📡",
+          "brand": "Panasonic",
+          "name": "NN-CT56JBBPQ Slimline Combination Microwave Oven 27L Black",
+          "price": 199.0,
+          "rating": 4.4,
+          "reviews": 2800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B07DJKXSK4.01._SX300_.jpg",
+          "badge": "Premium Pick",
+          "bestFor": [
+              "Serious cooks",
+              "Small oven replacement",
+              "Premium kitchen setups"
+          ],
+          "verdict": "The premium combination microwave to beat. Panasonic's 27L slimline model combines full microwave, grill, and convection oven functions with inverter technology for superior results. If you want one box to do everything well, this is it.",
+          "pros": [
+              "Full combination: microwave + grill + convection oven",
+              "Inverter technology for even cooking",
+              "27L large cavity",
+              "2,800+ reviews at 4.4★"
+          ],
+          "cons": [
+              "£199 — most expensive here",
+              "Slimline design limits depth",
+              "Overkill if you only reheat food"
+          ],
+          "score": 91,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 199.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 289,
+          "asin": "B0CNTR1VSJ",
+          "emoji": "📡",
+          "brand": "Daewoo",
+          "name": "Actuate 26L 5-in-1 Air Fryer Microwave Oven with Grill 2400W",
+          "price": 179.99,
+          "rating": 4.3,
+          "reviews": 700,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CNTR1VSJ.01._SX300_.jpg",
+          "badge": "Most Versatile",
+          "bestFor": [
+              "Air fryer fans",
+              "Space savers",
+              "Multi-appliance replacers"
+          ],
+          "verdict": "Five appliances in one: microwave, air fryer, grill, convection oven, and keep-warm function. The air fryer integration is genuinely useful and works well for chips, reheated pizza, and small roasts. A space-saving powerhouse for compact kitchens.",
+          "pros": [
+              "5-in-1: includes air fryer function",
+              "26L capacity",
+              "Replaces microwave + air fryer + more",
+              "Saves worktop space"
+          ],
+          "cons": [
+              "Only 700 reviews — newer model",
+              "£179.99 — mid-high price",
+              "2400W draws significant power"
+          ],
+          "score": 79,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 179.99
+              }
+          ],
+          "userReviews": []
+      }
+  ],
+  "earbuds": [
+      {
+          "id": 290,
+          "asin": "B0BTYCRJSS",
+          "emoji": "🎧",
+          "brand": "Soundcore",
+          "name": "P20i True Wireless Earbuds by Anker 30H Playtime IPX5 Bluetooth 5.3",
+          "price": 19.99,
+          "rating": 4.4,
+          "reviews": 14000,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0BTYCRJSS.01._SX300_.jpg",
+          "badge": "Best Budget",
+          "bestFor": [
+              "Budget buyers",
+              "First wireless earbuds",
+              "Gym use"
+          ],
+          "verdict": "14,000 reviews at 4.4 stars for a £19.99 pair of earbuds — Soundcore by Anker has cracked the budget wireless market. The P20i delivers solid audio quality, genuine 30-hour total playtime (7.5h per charge + case), and IPX5 water resistance. Remarkable value.",
+          "pros": [
+              "Unbeatable value at £19.99",
+              "14,000+ reviews at 4.4★",
+              "30H total playtime",
+              "IPX5 water resistant"
+          ],
+          "cons": [
+              "No ANC at this price",
+              "10mm drivers — not audiophile quality",
+              "Basic mic quality"
+          ],
+          "score": 80,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 19.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 291,
+          "asin": "B0BHDMHHM9",
+          "emoji": "🎧",
+          "brand": "JBL",
+          "name": "Wave Buds True Wireless Earbuds IP54 Deep Bass 32H Playtime",
+          "price": 34.99,
+          "rating": 4.3,
+          "reviews": 6200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0BHDMHHM9.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "JBL fans",
+              "Bass lovers",
+              "Gym and commute"
+          ],
+          "verdict": "JBL brings its trademark deep bass to a very affordable package. The Wave Buds have IP54 dust and water protection, 32-hour total battery life, and the JBL brand recognition that justifies a small premium over Soundcore alternatives.",
+          "pros": [
+              "JBL bass sound signature",
+              "IP54 dust and water protection",
+              "32H total battery life",
+              "Comfortable fit for long wear"
+          ],
+          "cons": [
+              "No ANC",
+              "Basic mic quality for calls",
+              "Not the clearest mids/highs"
+          ],
+          "score": 76,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 34.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 292,
+          "asin": "B0CQXG17RL",
+          "emoji": "🎧",
+          "brand": "Soundcore",
+          "name": "P40i ANC Wireless Earbuds by Anker Adaptive Noise Cancelling 60H Playtime IPX5",
+          "price": 39.99,
+          "rating": 4.4,
+          "reviews": 6500,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CQXG17RL.01._SX300_.jpg",
+          "badge": "Best Value ANC",
+          "bestFor": [
+              "Commuters on a budget",
+              "Office workers",
+              "ANC at low cost"
+          ],
+          "verdict": "Active noise cancellation for under £40 — the Soundcore P40i makes that possible. Adaptive ANC adjusts to your environment, the 60-hour total playtime (with case) is exceptional, and 6,500 reviews prove it delivers. The best-value ANC earbuds in the UK right now.",
+          "pros": [
+              "ANC at £39.99 — outstanding value",
+              "60H total battery life",
+              "Adaptive ANC adjusts automatically",
+              "6,500+ reviews at 4.4★"
+          ],
+          "cons": [
+              "ANC not as effective as Sony/Apple",
+              "Bulkier case than premium rivals",
+              "Call quality is average"
+          ],
+          "score": 84,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 39.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 293,
+          "asin": "B09HGR1DVC",
+          "emoji": "🎧",
+          "brand": "JBL",
+          "name": "Tune 230NC TWS True Wireless Earbuds ANC 40H Battery IPX4",
+          "price": 49.99,
+          "rating": 4.3,
+          "reviews": 9100,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B09HGR1DVC.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Commuters",
+              "JBL fans wanting ANC",
+              "All-day wear"
+          ],
+          "verdict": "JBL's entry into noise-cancelling earbuds is competitive at £49.99. The Tune 230NC delivers the brand's signature bass-forward sound alongside functional ANC and a massive 40-hour total battery life. Over 9,100 reviews confirm this is a reliable daily driver.",
+          "pros": [
+              "9,100+ reviews at 4.3★",
+              "40H total battery life",
+              "Active Noise Cancelling",
+              "JBL sound signature"
+          ],
+          "cons": [
+              "ANC is basic vs premium models",
+              "IPX4 — not fully waterproof",
+              "Bass-heavy — not for all tastes"
+          ],
+          "score": 79,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 49.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 294,
+          "asin": "B0CJHNJF62",
+          "emoji": "🎧",
+          "brand": "Samsung",
+          "name": "Galaxy Buds FE Wireless Bluetooth Earbuds ANC Deep Bass Graphite",
+          "price": 74.99,
+          "rating": 4.3,
+          "reviews": 5800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CJHNJF62.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Samsung phone users",
+              "Galaxy ecosystem fans",
+              "ANC on a mid budget"
+          ],
+          "verdict": "Samsung's most affordable Galaxy Buds with ANC. They integrate beautifully with Samsung Galaxy phones — auto-switch, Samsung Wearable app, Find My Buds — and deliver solid sound quality. The best option if you're already in the Samsung ecosystem.",
+          "pros": [
+              "Seamless Samsung ecosystem integration",
+              "ANC with ambient sound mode",
+              "5,800+ reviews at 4.3★",
+              "Comfortable wing-tip fit"
+          ],
+          "cons": [
+              "£74.99 — other brands offer ANC cheaper",
+              "Less impressive on non-Samsung phones",
+              "Limited EQ customisation"
+          ],
+          "score": 78,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 74.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 295,
+          "asin": "B0BTM5RCY6",
+          "emoji": "🎧",
+          "brand": "Jabra",
+          "name": "Elite 4 Wireless Earbuds ANC Spotify Tap Google Fast Pair Dark Grey",
+          "price": 69.99,
+          "rating": 4.3,
+          "reviews": 3600,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0BTM5RCY6.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Android users",
+              "Work from home",
+              "Spotify users"
+          ],
+          "verdict": "Jabra brings professional call quality to affordable earbuds. The Elite 4 has four microphones for crystal-clear calls, adjustable ANC, and Spotify Tap for instant music without unlocking your phone. Jabra's expertise in headsets shows.",
+          "pros": [
+              "4-mic call quality — excellent for calls",
+              "Adjustable ANC + HearThrough",
+              "Spotify Tap integration",
+              "Google Fast Pair"
+          ],
+          "cons": [
+              "Battery life only 28H total — below rivals",
+              "Sound is neutral — not exciting for music",
+              "£69.99 — similar to ANC rivals"
+          ],
+          "score": 79,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 69.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 296,
+          "asin": "B0D7CF2FTW",
+          "emoji": "🎧",
+          "brand": "EarFun",
+          "name": "Air Pro 4 Adaptive ANC Wireless Earbuds aptX Lossless BT5.4 52H Playtime",
+          "price": 69.99,
+          "rating": 4.5,
+          "reviews": 3800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0D7CF2FTW.01._SX300_.jpg",
+          "badge": "Best Mid-Range",
+          "bestFor": [
+              "Audiophiles on a budget",
+              "Android users",
+              "Long commutes"
+          ],
+          "verdict": "EarFun punches well above its price with the Air Pro 4. aptX Lossless audio gives Android users CD-quality wireless sound, the ANC is genuinely effective, and 52-hour total battery life is class-leading at this price. At 4.5 stars it's the highest-rated mid-range pick here.",
+          "pros": [
+              "aptX Lossless — CD-quality audio on Android",
+              "52H total battery life",
+              "Adaptive ANC",
+              "4.5★ — highest rated mid-range pick"
+          ],
+          "cons": [
+              "Brand less known than Sony/JBL",
+              "aptX Lossless only works on compatible Android phones",
+              "No wireless charging case"
+          ],
+          "score": 85,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 69.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 297,
+          "asin": "B0D4F7CW1N",
+          "emoji": "🎧",
+          "brand": "Samsung",
+          "name": "Galaxy Buds3 Wireless Earbuds ANC Galaxy AI 360 Audio Silver",
+          "price": 119.0,
+          "rating": 4.3,
+          "reviews": 2400,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0D4F7CW1N.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Samsung ecosystem users",
+              "Galaxy AI users",
+              "Premium mid-range"
+          ],
+          "verdict": "Samsung's latest Galaxy Buds3 bring Galaxy AI features — real-time translation, chat assist — alongside improved ANC and 360 Audio spatial sound. Best experienced with a Samsung Galaxy phone where AI features unlock properly.",
+          "pros": [
+              "Galaxy AI integration — real-time translation",
+              "360 Audio spatial sound",
+              "Improved ANC over Buds FE",
+              "Open-type design — comfortable long wear"
+          ],
+          "cons": [
+              "AI features limited without Galaxy phone",
+              "ANC less effective than Sony/Apple",
+              "Open design lets in some ambient noise"
+          ],
+          "score": 81,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 119.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 298,
+          "asin": "B0CHWZ9TZS",
+          "emoji": "🎧",
+          "brand": "Apple",
+          "name": "AirPods Pro 2 Wireless Earbuds ANC H2 Chip USB-C Charging",
+          "price": 160.0,
+          "rating": 4.8,
+          "reviews": 20000,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CHWZ9TZS.01._SX300_.jpg",
+          "badge": "Premium Pick",
+          "bestFor": [
+              "iPhone users",
+              "Best overall ANC",
+              "Apple ecosystem"
+          ],
+          "verdict": "The AirPods Pro 2 are simply the best earbuds for iPhone users. The H2 chip delivers class-leading ANC and Transparency mode, Adaptive Audio adjusts automatically to your environment, and the 4.8 stars from 20,000 reviews speaks for itself. If you have an iPhone, these are the answer.",
+          "pros": [
+              "4.8★ from 20,000+ reviews — best rated here",
+              "Industry-leading ANC for earbuds",
+              "Seamless Apple ecosystem integration",
+              "Adaptive Audio + Conversation Awareness"
+          ],
+          "cons": [
+              "£160 — significant premium",
+              "Mediocre with Android devices",
+              "Smaller sound stage vs over-ear headphones"
+          ],
+          "score": 93,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 160.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 299,
+          "asin": "B0C4TLFZSZ",
+          "emoji": "🎧",
+          "brand": "Sony",
+          "name": "WF-1000XM5 Wireless Noise Cancelling Earbuds Bluetooth 24H IPX4",
+          "price": 189.0,
+          "rating": 4.5,
+          "reviews": 7200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0C4TLFZSZ.01._SX300_.jpg",
+          "badge": "Best for Android",
+          "bestFor": [
+              "Android users",
+              "Audiophiles",
+              "Heavy ANC users"
+          ],
+          "verdict": "Sony's flagship earbuds are the best you can buy if you're not in the Apple ecosystem. The WF-1000XM5 feature Sony's best-in-class noise cancellation, LDAC hi-res audio support, and premium sound quality in a smaller form factor than previous generations. The benchmark for Android wireless earbuds.",
+          "pros": [
+              "Best-in-class ANC for earbuds (non-Apple)",
+              "LDAC hi-res audio",
+              "7,200+ reviews at 4.5★",
+              "Improved smaller size vs XM4"
+          ],
+          "cons": [
+              "£189 — near Apple Pro pricing",
+              "No aptX support",
+              "IPX4 — not sweat-proof enough for sport"
+          ],
+          "score": 91,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 189.0
+              }
+          ],
+          "userReviews": []
+      }
+  ],
+  "dehumidifiers": [
+      {
+          "id": 300,
+          "asin": "B07D8SZJGM",
+          "emoji": "💧",
+          "brand": "Pro Breeze",
+          "name": "10L Desiccant Dehumidifier with Timer Air Filter Continuous Drainage",
+          "price": 129.99,
+          "rating": 4.4,
+          "reviews": 5300,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B07D8SZJGM.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Unheated rooms",
+              "Garages",
+              "Winter use"
+          ],
+          "verdict": "A desiccant dehumidifier works differently to compressor models — it uses a rotor instead of refrigeration, making it effective even in cold unheated rooms and garages where compressor models struggle. Good value entry point into desiccant technology with a built-in timer and continuous drain option.",
+          "pros": [
+              "Desiccant — works in cold rooms/garages",
+              "Continuous drainage option",
+              "Built-in timer",
+              "5,300+ reviews at 4.4★"
+          ],
+          "cons": [
+              "Uses more electricity than compressor models",
+              "10L/day capacity — mid-range",
+              "Larger and heavier than compressor units"
+          ],
+          "score": 77,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 129.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 301,
+          "asin": "B07DFPH8PD",
+          "emoji": "💧",
+          "brand": "Meaco",
+          "name": "MeacoDry ABC 10L Quiet Dehumidifier for Home Low Energy Digital Humidistat",
+          "price": 139.99,
+          "rating": 4.6,
+          "reviews": 9800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B07DFPH8PD.01._SX300_.jpg",
+          "badge": "Best Value",
+          "bestFor": [
+              "Quiet operation",
+              "Energy saving",
+              "Living rooms and bedrooms"
+          ],
+          "verdict": "Nearly 10,000 reviews at 4.6 stars — the MeacoDry ABC 10L is the people's champion of UK dehumidifiers. Meaco is a British company that specialises in dehumidifiers and it shows: exceptionally quiet operation, low energy consumption, a precise digital humidistat, and a laundry drying mode. Outstanding value.",
+          "pros": [
+              "9,800+ reviews at 4.6★ — proven favourite",
+              "Ultra-quiet — suitable for bedrooms",
+              "Low energy consumption",
+              "Digital humidistat for precision"
+          ],
+          "cons": [
+              "10L/day — not enough for very damp large properties",
+              "No HEPA air purification",
+              "Basic design"
+          ],
+          "score": 87,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 139.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 302,
+          "asin": "B00474K8SY",
+          "emoji": "💧",
+          "brand": "EcoAir",
+          "name": "DD1 Simple MK3 Desiccant Dehumidifier 7.5L/Day Quiet 34dB Anti-Bacterial Filter",
+          "price": 149.99,
+          "rating": 4.4,
+          "reviews": 5600,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B00474K8SY.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Garages and utility rooms",
+              "Cold spaces",
+              "Year-round use"
+          ],
+          "verdict": "EcoAir's desiccant dehumidifier is ideal for cold spaces like garages, utility rooms, and conservatories where compressor models lose effectiveness. At 34dB it's genuinely quiet and the anti-bacterial filter helps maintain air quality. A dependable workhorse for tough conditions.",
+          "pros": [
+              "Desiccant — effective in cold spaces",
+              "Very quiet at 34dB",
+              "Anti-bacterial filter",
+              "5,600+ proven reviews"
+          ],
+          "cons": [
+              "7.5L/day — lower than compressor models at same price",
+              "Higher running costs than compressor models",
+              "Rotary dial controls — no digital display"
+          ],
+          "score": 78,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 149.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 303,
+          "asin": "B073XNK45P",
+          "emoji": "💧",
+          "brand": "Pro Breeze",
+          "name": "12L/Day Dehumidifier with Automatic Humidity Sensor & Display Sleep Mode 24h Timer",
+          "price": 159.99,
+          "rating": 4.5,
+          "reviews": 12000,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B073XNK45P.01._SX300_.jpg",
+          "badge": "Which? Best Buy",
+          "bestFor": [
+              "Most homes",
+              "Medium-large rooms",
+              "Value seekers"
+          ],
+          "verdict": "Which? Best Buy status and 12,000 reviews at 4.5 stars — the Pro Breeze 12L is the most reviewed dehumidifier in the UK and earns that distinction. Automatic humidity sensor, sleep mode, 24-hour timer, and 12L/day extraction make it the right tool for most UK homes dealing with condensation and damp.",
+          "pros": [
+              "12,000+ reviews at 4.5★ — UK's most reviewed",
+              "Which? Best Buy award",
+              "12L/day — handles most UK homes",
+              "Automatic humidity sensor + sleep mode"
+          ],
+          "cons": [
+              "Not as quiet as Meaco models",
+              "No HEPA air filtration",
+              "Slightly bulky design"
+          ],
+          "score": 88,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 159.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 304,
+          "asin": "B09TBKCCSS",
+          "emoji": "💧",
+          "brand": "Meaco",
+          "name": "MeacoDry Arete One 12L Dual Dehumidifier & HEPA Air Purifier Ultra-Quiet 5 Year Warranty",
+          "price": 169.99,
+          "rating": 4.7,
+          "reviews": 4200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B09TBKCCSS.01._SX300_.jpg",
+          "badge": "Best Overall",
+          "bestFor": [
+              "Best all-rounder",
+              "Asthma and allergy sufferers",
+              "Quiet homes"
+          ],
+          "verdict": "The Arete One does two jobs at once: dehumidifier and HEPA air purifier in one unit. This is the best all-round dehumidifier available in the UK right now — ultra-quiet, laundry mode, auto mode, and a 5-year warranty that backs Meaco's confidence in the product. 4.7 stars from over 4,000 reviews confirms it.",
+          "pros": [
+              "HEPA air purifier built in — dual function",
+              "4.7★ from 4,200+ reviews",
+              "Ultra-quiet operation",
+              "5-year warranty — outstanding for the category"
+          ],
+          "cons": [
+              "£169.99 — premium price",
+              "12L/day — same as cheaper Pro Breeze",
+              "Larger footprint due to dual function"
+          ],
+          "score": 92,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 169.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 305,
+          "asin": "B0C62J7S74",
+          "emoji": "💧",
+          "brand": "Pro Breeze",
+          "name": "20L/Day Compressor Dehumidifier Energy Efficient Laundry Mode Humidity Sensor",
+          "price": 179.99,
+          "rating": 4.5,
+          "reviews": 2100,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0C62J7S74.01._SX300_.jpg",
+          "badge": "Best for Large Homes",
+          "bestFor": [
+              "Large homes",
+              "Heavy damp problems",
+              "Open-plan living"
+          ],
+          "verdict": "When 12L/day isn't enough, step up to 20L. The Pro Breeze 20L handles large open-plan rooms, severely damp properties, and serious condensation problems with ease. Energy-efficient compressor technology keeps running costs down despite the higher extraction rate.",
+          "pros": [
+              "20L/day — handles serious damp",
+              "Energy-efficient compressor",
+              "Laundry mode",
+              "Automatic humidity sensor"
+          ],
+          "cons": [
+              "£179.99 — higher price point",
+              "Larger and heavier than smaller models",
+              "Overkill for average UK homes"
+          ],
+          "score": 83,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 179.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 306,
+          "asin": "B0CYZYR3NC",
+          "emoji": "💧",
+          "brand": "Pro Breeze",
+          "name": "OmniDry 20L WiFi Dehumidifier with Smart App Control Auto Humidity Sensor",
+          "price": 209.99,
+          "rating": 4.5,
+          "reviews": 1600,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CYZYR3NC.01._SX300_.jpg",
+          "badge": "Best Smart",
+          "bestFor": [
+              "Smart home setups",
+              "Remote monitoring",
+              "Tech-savvy buyers"
+          ],
+          "verdict": "The smart dehumidifier for the smart home era. WiFi connectivity lets you monitor humidity, set schedules, and control the unit from your phone via the Pro Breeze app. The 20L/day extraction makes it serious enough for large damp spaces, and smart control makes it genuinely convenient.",
+          "pros": [
+              "WiFi smart control via app",
+              "20L/day extraction — serious capacity",
+              "Auto humidity sensor",
+              "Schedule and remote monitoring"
+          ],
+          "cons": [
+              "£209.99 — most expensive here",
+              "App required for full features",
+              "Fewer reviews as newer model"
+          ],
+          "score": 82,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 209.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 307,
+          "asin": "B00GC44C5C",
+          "emoji": "💧",
+          "brand": "EcoAir",
+          "name": "DD128 Blue Desiccant Dehumidifier 8L/Day Quiet 39dB Ioniser IonPure",
+          "price": 219.99,
+          "rating": 4.4,
+          "reviews": 3800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B00GC44C5C.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Cold garages",
+              "Unheated outbuildings",
+              "Year-round damp control"
+          ],
+          "verdict": "EcoAir's higher-capacity desiccant model adds an ioniser (IonPure) that helps neutralise bacteria and odours in addition to moisture removal. 8L/day desiccant extraction means it maintains effectiveness even in cold British winters where compressor models slow down significantly.",
+          "pros": [
+              "Desiccant — effective in cold conditions year-round",
+              "IonPure ioniser for air quality",
+              "3,800+ reviews at 4.4★",
+              "Quiet 39dB operation"
+          ],
+          "cons": [
+              "£219.99 — expensive",
+              "8L/day desiccant vs 20L compressor at similar price",
+              "Higher energy consumption than compressor"
+          ],
+          "score": 78,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 219.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 308,
+          "asin": "B0D96F1RXV",
+          "emoji": "💧",
+          "brand": "EcoAir",
+          "name": "DD1 Classic MK6 Grey Desiccant Dehumidifier Electronic Control 7.5L/Day Quiet 34dB",
+          "price": 199.99,
+          "rating": 4.5,
+          "reviews": 1200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0D96F1RXV.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Cold rooms",
+              "Garages",
+              "Allergy sufferers"
+          ],
+          "verdict": "The latest MK6 version of EcoAir's classic desiccant dehumidifier brings electronic control and a refreshed design. At 34dB it's impressively quiet and works effectively down to 1°C — ideal for unheated British garages and utility rooms.",
+          "pros": [
+              "Electronic controls — updated design",
+              "Works effectively at 1°C",
+              "Very quiet at 34dB",
+              "Trusted EcoAir brand"
+          ],
+          "cons": [
+              "Only 1,200 reviews — newer model",
+              "£199.99 — premium desiccant pricing",
+              "7.5L/day — modest extraction"
+          ],
+          "score": 79,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 199.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 309,
+          "asin": "B0CTKPZ5FJ",
+          "emoji": "💧",
+          "brand": "Meaco",
+          "name": "MeacoDry Arete Two 12L Dehumidifier & HEPA H13 Air Purifier Wi-Fi App Smart Mode",
+          "price": 199.99,
+          "rating": 4.7,
+          "reviews": 800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CTKPZ5FJ.01._SX300_.jpg",
+          "badge": "Premium Pick",
+          "bestFor": [
+              "Smart homes",
+              "Asthma and allergy sufferers",
+              "Premium buyers"
+          ],
+          "verdict": "The upgraded Arete Two adds Wi-Fi connectivity and HEPA H13 air purification to Meaco's already-excellent dual-function formula. Control via app, monitor air quality, and get alerts when humidity levels change — the most capable dehumidifier in this roundup. New model with fewer reviews but already at 4.7 stars.",
+          "pros": [
+              "Wi-Fi app control — smart monitoring",
+              "HEPA H13 purifier + dehumidifier in one",
+              "4.7★ from early reviews",
+              "Meaco 5-year warranty"
+          ],
+          "cons": [
+              "£199.99 — premium price",
+              "Only 800 reviews — very new model",
+              "App-dependent for smart features"
+          ],
+          "score": 88,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 199.99
+              }
+          ],
+          "userReviews": []
+      }
+  ],
+  "straighteners": [
+      {
+          "id": 310,
+          "asin": "B073SZSRBR",
+          "emoji": "💇",
+          "brand": "BaByliss",
+          "name": "Rose Lustre Hair Straighteners Ceramic Smooth-Glide Plates 30s Heat-Up 180-230°C",
+          "price": 29.99,
+          "rating": 4.4,
+          "reviews": 15700,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B073SZSRBR.01._SX300_.jpg",
+          "badge": "Best Budget",
+          "bestFor": [
+              "Budget buyers",
+              "Occasional straightening",
+              "Students"
+          ],
+          "verdict": "15,700 reviews at 4.4 stars for a £29.99 straightener — the BaByliss Rose Lustre is the budget pick that genuinely earns its place. Ceramic smooth-glide plates heat up in 30 seconds and reach 230°C, which is enough for most hair types. The rose-gold finish looks far more expensive than it is.",
+          "pros": [
+              "15,700+ reviews at 4.4★ — proven popular",
+              "30-second heat-up time",
+              "Ceramic plates — smooth glide",
+              "Up to 230°C — handles most hair types"
+          ],
+          "cons": [
+              "No heat sensor technology",
+              "Basic temperature control",
+              "No steam function"
+          ],
+          "score": 78,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 29.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 311,
+          "asin": "B008BDSZFK",
+          "emoji": "💇",
+          "brand": "Remington",
+          "name": "Shine Therapy Advanced Ceramic Moroccan Argan Oil Hair Straightener 9 Settings S8500",
+          "price": 34.99,
+          "rating": 4.4,
+          "reviews": 21000,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B008BDSZFK.01._SX300_.jpg",
+          "badge": "Most Reviewed",
+          "bestFor": [
+              "Most hair types",
+              "Shine seekers",
+              "Daily use"
+          ],
+          "verdict": "21,000 reviews at 4.4 stars — the most reviewed hair straightener in the UK. The Remington S8500's Moroccan Argan Oil-infused ceramic plates add shine while straightening, and 9 temperature settings give genuine control for different hair types. An enduring bestseller for good reason.",
+          "pros": [
+              "21,000+ reviews — UK's most reviewed straightener",
+              "Argan Oil ceramic plates — adds shine",
+              "9 temperature settings",
+              "Floating plates adjust to hair thickness"
+          ],
+          "cons": [
+              "Basic heat sensing — no intelligent adjustment",
+              "No steam function",
+              "Takes ~30 seconds longer than premium models"
+          ],
+          "score": 82,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 34.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 312,
+          "asin": "B0B63ZWN4N",
+          "emoji": "💇",
+          "brand": "BaByliss",
+          "name": "Super Styler Ceramic Hair Straightener Black",
+          "price": 39.99,
+          "rating": 4.3,
+          "reviews": 3400,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0B63ZWN4N.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "BaByliss fans",
+              "Everyday styling",
+              "Mid-range budget"
+          ],
+          "verdict": "BaByliss's Super Styler sits in the £40 bracket and delivers reliable ceramic straightening performance. Heats quickly, glides smoothly, and the slim profile plates work well for both straightening and creating waves or curls. A solid mid-range choice.",
+          "pros": [
+              "BaByliss build quality",
+              "Slim profile plates — versatile styling",
+              "Quick heat-up",
+              "Good for waves and curls too"
+          ],
+          "cons": [
+              "No heat sensor or smart adjustment",
+              "No steam",
+              "£39.99 — slight premium over Remington S8500"
+          ],
+          "score": 75,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 39.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 313,
+          "asin": "B075M8GK1K",
+          "emoji": "💇",
+          "brand": "BaByliss",
+          "name": "Keratin Shine Wide Plate Straightener 2179KU Ceramic",
+          "price": 49.99,
+          "rating": 4.4,
+          "reviews": 7600,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B075M8GK1K.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Thick or long hair",
+              "Faster straightening",
+              "Keratin-treated hair"
+          ],
+          "verdict": "Wide plates cover more hair per pass, making this significantly faster for thick or long hair. The keratin-infused ceramic plates reduce frizz and add smoothness. 7,600 reviews at 4.4 stars confirms this is a dependable pick for anyone who struggles with the time taken by standard-width straighteners.",
+          "pros": [
+              "Wide plates — faster for thick/long hair",
+              "Keratin-infused ceramic — extra smoothness",
+              "7,600+ reviews at 4.4★",
+              "Multiple heat settings"
+          ],
+          "cons": [
+              "Wide plates less useful for short hair",
+              "No heat sensor technology",
+              "No steam"
+          ],
+          "score": 80,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 49.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 314,
+          "asin": "B07DT9TTL2",
+          "emoji": "💇",
+          "brand": "Remington",
+          "name": "Keratin Protect Intelligent Hair Straightener with Heat Sensor Keratin & Almond Oil S8598",
+          "price": 49.99,
+          "rating": 4.4,
+          "reviews": 9200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B07DT9TTL2.01._SX300_.jpg",
+          "badge": "Best Mid-Range",
+          "bestFor": [
+              "Damaged or fine hair",
+              "Heat protection seekers",
+              "Daily straighteners"
+          ],
+          "verdict": "The intelligent upgrade over the S8500: a built-in heat sensor monitors temperature 10 times per second and adjusts power to maintain consistent heat without spikes that damage hair. Keratin and almond oil-infused plates smooth and protect. At £49.99 it's excellent value for smart heat technology.",
+          "pros": [
+              "Intelligent heat sensor — protects hair",
+              "Keratin + almond oil plates",
+              "9,200+ reviews at 4.4★",
+              "Consistent temperature prevents hot spots"
+          ],
+          "cons": [
+              "No steam function",
+              "Slightly slower than ghd-level models",
+              "Floating plates only adjust so far for very thick hair"
+          ],
+          "score": 84,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 49.99
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 315,
+          "asin": "B081B3ZKJR",
+          "emoji": "💇",
+          "brand": "L'Oréal",
+          "name": "Professionnel SteamPod 3 Steam Hair Straightener All Hair Types UK Plug",
+          "price": 149.0,
+          "rating": 4.4,
+          "reviews": 8300,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B081B3ZKJR.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Frizzy or curly hair",
+              "Long-lasting results",
+              "Smooth salon finish"
+          ],
+          "verdict": "The L'Oréal SteamPod uses steam infusion rather than dry heat — this fundamentally changes the result. Steam penetrates the hair shaft to straighten from within, producing longer-lasting results with far less heat damage. For frizzy, wavy, or coarse hair the difference vs a standard straightener is immediately noticeable.",
+          "pros": [
+              "Steam technology — longer-lasting results",
+              "Less heat damage than dry straighteners",
+              "8,300+ reviews at 4.4★",
+              "Suits all hair types including frizzy/coarse"
+          ],
+          "cons": [
+              "£149 — significant jump in price",
+              "Needs water refilling",
+              "Heavier than standard straighteners"
+          ],
+          "score": 85,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 149.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 316,
+          "asin": "B0CFFXF7WB",
+          "emoji": "💇",
+          "brand": "ghd",
+          "name": "Platinum+ Hair Straightener Professional Styler Black Ultra-Zone Technology",
+          "price": 199.0,
+          "rating": 4.7,
+          "reviews": 6800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CFFXF7WB.01._SX300_.jpg",
+          "badge": "Best Overall",
+          "bestFor": [
+              "Professional results at home",
+              "All hair types",
+              "Premium buyers"
+          ],
+          "verdict": "The ghd Platinum+ is the benchmark for home hair straighteners. Ultra-Zone technology predicts and reacts to your straightening technique, maintaining a consistent 185°C — the optimal temperature for smooth results without heat damage. It's professional-grade performance in a home product, and 6,800 reviews at 4.7 stars confirms it.",
+          "pros": [
+              "Ultra-Zone intelligent temperature control",
+              "185°C optimal heat — minimises damage",
+              "6,800+ reviews at 4.7★ — highest rated here",
+              "Professional salon quality results"
+          ],
+          "cons": [
+              "£199 — premium price",
+              "Only reaches 185°C — some prefer higher heat",
+              "No steam function"
+          ],
+          "score": 93,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 199.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 317,
+          "asin": "B0BH9BZ5TK",
+          "emoji": "💇",
+          "brand": "L'Oréal",
+          "name": "Professionnel SteamPod 4 Steam Hair Straightener All Hair Types UK Plug",
+          "price": 199.0,
+          "rating": 4.5,
+          "reviews": 2900,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0BH9BZ5TK.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "Frizzy/curly hair premium option",
+              "Long-lasting straightening",
+              "Colour-treated hair"
+          ],
+          "verdict": "The SteamPod 4 refines everything that made the SteamPod 3 great — faster heat-up, improved steam distribution, and better performance on colour-treated and damaged hair. If steam straightening is your method, the SteamPod 4 is the best version of it available.",
+          "pros": [
+              "Latest generation steam technology",
+              "Faster heat-up than SteamPod 3",
+              "Better performance on colour-treated hair",
+              "4.5★ from early reviews"
+          ],
+          "cons": [
+              "£199 — same as ghd Platinum+",
+              "Fewer reviews than SteamPod 3",
+              "Heavier and bulkier than ghd"
+          ],
+          "score": 87,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 199.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 318,
+          "asin": "B0CFG17XMT",
+          "emoji": "💇",
+          "brand": "ghd",
+          "name": "Platinum+ Hair Straightener Professional Styler White Ultra-Zone Technology",
+          "price": 199.0,
+          "rating": 4.7,
+          "reviews": 3200,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0CFG17XMT.01._SX300_.jpg",
+          "badge": null,
+          "bestFor": [
+              "ghd Platinum+ in white",
+              "Premium buyers",
+              "White kitchen/bathroom aesthetic"
+          ],
+          "verdict": "The white version of the ghd Platinum+ — identical performance to the black model, just in a clean white colourway. Same Ultra-Zone technology, same 185°C optimal temperature, same professional results. Choose based on aesthetic preference.",
+          "pros": [
+              "Identical performance to black Platinum+",
+              "4.7★ from 3,200+ reviews",
+              "Clean white aesthetic",
+              "Professional Ultra-Zone technology"
+          ],
+          "cons": [
+              "£199 — premium",
+              "White can show product residue more than black",
+              "Same limitations as black model"
+          ],
+          "score": 92,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 199.0
+              }
+          ],
+          "userReviews": []
+      },
+      {
+          "id": 319,
+          "asin": "B0DQ5YDZ53",
+          "emoji": "💇",
+          "brand": "Shark",
+          "name": "FlexStyle 5-in-1 Air Styler & Hair Dryer Auto-Wrap Curlers Paddle Brush HD446SLUK",
+          "price": 329.99,
+          "rating": 4.4,
+          "reviews": 1800,
+          "image": "https://images-na.ssl-images-amazon.com/images/P/B0DQ5YDZ53.01._SX300_.jpg",
+          "badge": "Premium All-in-One",
+          "bestFor": [
+              "All-in-one styling",
+              "Curly and wavy styles",
+              "Dyson Airwrap alternative"
+          ],
+          "verdict": "Shark's answer to the Dyson Airwrap — a multi-styler that straightens, curls, waves, and dries using airflow rather than extreme direct heat. The 5 attachments give you a full salon toolkit in one device. At £329.99 it's expensive but significantly cheaper than the Dyson Airwrap while performing comparably.",
+          "pros": [
+              "5 styling attachments — straight, curl, wave, dry",
+              "Uses airflow styling — less heat damage",
+              "Dyson Airwrap quality at lower price",
+              "1,800+ reviews at 4.4★"
+          ],
+          "cons": [
+              "£329.99 — most expensive here",
+              "Learning curve for airflow styling",
+              "Bulkier than a standard straightener"
+          ],
+          "score": 84,
+          "videoId": "",
+          "priceHistory": [
+              {
+                  "date": "2026-03-23",
+                  "price": 329.99
+              }
+          ],
+          "userReviews": []
+      }
   ]
 };
 
